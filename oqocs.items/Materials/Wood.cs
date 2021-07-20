@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace oqocs.items
+namespace oqocs.items.materials
 {
     public class Wood : BasicItem
     {

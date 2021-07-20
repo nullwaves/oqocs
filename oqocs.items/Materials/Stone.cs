@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace oqocs.items
+namespace oqocs.items.materials
 {
     public class Stone : BasicItem
     {

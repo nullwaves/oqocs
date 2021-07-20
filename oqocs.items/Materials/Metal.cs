@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace oqocs.items
+namespace oqocs.items.materials
 {
     public class Metal : BasicItem
     {
         public Metal(string name, string description, decimal value, int durability)
         {
-            Name = name + " Metal";
+            Name = name;
             Description = description;
             CostInPence = value;
             Durability = durability;
