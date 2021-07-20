@@ -1,112 +1,9 @@
 ﻿using System.Collections.Generic;
 
-namespace oqocs.items.recipes
+namespace oqocs.items.recipes.tools
 {
-    public static class Toolcraft
+    public class MiningTools
     {
-        // Logging Tools
-        public static BasicRecipe MetalWoodaxe => new BasicRecipe()
-        {
-            Product = "Woodaxe",
-            DifficultyValue = 18,
-            PriceMultiplier = 1.25m,
-            DurabilityMultiplier = 4,
-            Components = new List<RecipeComponent>()
-            {
-                new RecipeComponent(ComponentType.Metal, 4),
-                new RecipeComponent(ComponentType.CraftableItem, 1, Carpentry.Dowel),
-            }
-        };
-
-        public static BasicRecipe StoneWoodaxe => new BasicRecipe()
-        {
-            Product = "Woodaxe",
-            DifficultyValue = 18,
-            PriceMultiplier = 1.25m,
-            DurabilityMultiplier = 4,
-            Components = new List<RecipeComponent>()
-            {
-                new RecipeComponent(ComponentType.Stone, 4),
-                new RecipeComponent(ComponentType.CraftableItem, 1, Carpentry.Dowel),
-            }
-        };
-
-        public static BasicRecipe MetalWoodLoggingSaw => new BasicRecipe()
-        {
-            Product = "Logging Saw",
-            DifficultyValue = 23,
-            PriceMultiplier = 1.5m,
-            DurabilityMultiplier = 1.5m,
-            Components = new List<RecipeComponent>()
-            {
-                new RecipeComponent(ComponentType.Metal, 5),
-                new RecipeComponent(ComponentType.Wood, 1),
-            }
-        };
-
-        public static BasicRecipe StoneWoodLoggingSaw => new BasicRecipe()
-        {
-            Product = "Logging Saw",
-            DifficultyValue = 23,
-            PriceMultiplier = 1.5m,
-            DurabilityMultiplier = 1.5m,
-            Components = new List<RecipeComponent>()
-            {
-                new RecipeComponent(ComponentType.Stone, 5),
-                new RecipeComponent(ComponentType.Wood, 1),
-            }
-        };
-
-        public static BasicRecipe MetalLoggingSaw => new BasicRecipe()
-        {
-            Product = "Logging Saw",
-            DifficultyValue = 23,
-            PriceMultiplier = 1.5m,
-            DurabilityMultiplier = 1.5m,
-            Components = new List<RecipeComponent>()
-            {
-                new RecipeComponent(ComponentType.Metal, 6),
-            }
-        };
-
-        public static BasicRecipe StoneMetalLoggingSaw => new BasicRecipe()
-        {
-            Product = "Logging Saw",
-            DifficultyValue = 23,
-            PriceMultiplier = 1.5m,
-            DurabilityMultiplier = 1.5m,
-            Components = new List<RecipeComponent>()
-            {
-                new RecipeComponent(ComponentType.Stone, 5),
-                new RecipeComponent(ComponentType.Metal, 1),
-            }
-        };
-
-        public static BasicRecipe MetalStoneLoggingSaw => new BasicRecipe()
-        {
-            Product = "Logging Saw",
-            DifficultyValue = 23,
-            PriceMultiplier = 1.5m,
-            DurabilityMultiplier = 1.5m,
-            Components = new List<RecipeComponent>()
-            {
-                new RecipeComponent(ComponentType.Metal, 5),
-                new RecipeComponent(ComponentType.Stone, 1),
-            }
-        };
-
-        public static BasicRecipe StoneLoggingSaw => new BasicRecipe()
-        {
-            Product = "Logging Saw",
-            DifficultyValue = 23,
-            PriceMultiplier = 1.5m,
-            DurabilityMultiplier = 1.5m,
-            Components = new List<RecipeComponent>()
-            {
-                new RecipeComponent(ComponentType.Stone, 6),
-            }
-        };
-
         // Mining Tools
         public static BasicRecipe MetalPick => new BasicRecipe()
         {
@@ -450,14 +347,35 @@ namespace oqocs.items.recipes
             }
         };
 
-        // Carpentry Tools
-        public static BasicRecipe Nail => new BasicRecipe()
+        public static List<BasicRecipe> All => new List<BasicRecipe>()
         {
-            Product = "Nail",
-            DifficultyValue = 12,
-            PriceMultiplier = 1.25m,
-            DurabilityMultiplier = 2,
-            Components = new List<RecipeComponent>() { new RecipeComponent(ComponentType.Metal, 0.0125m) }
+            MetalPick,
+            StonePick,
+            MetalWoodStoneSaw,
+            StoneWoodStoneSaw,
+            MetalStoneSaw,
+            StoneMetalStoneSaw,
+            MetalStoneStoneSaw,
+            StoneStoneSaw,
+            MetalWoodGemSaw,
+            StoneWoodGemSaw,
+            MetalGemSaw,
+            StoneMetalGemSaw,
+            MetalStoneGemSaw,
+            StoneGemSaw,
+            Wedge,
+            MetalStoneAuger,
+            StoneStoneAuger,
+            WoodShovel,
+            MetalShovel,
+            StoneShovel,
+            Forge,
+            Crucible,
+            MetalTongs,
+            StoneTongs,
+            SmithingHammer,
+            Sledgehammer,
+            Anvil
         };
     }
 }
