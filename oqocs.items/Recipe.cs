@@ -36,6 +36,12 @@ namespace oqocs.items
                         localDurability += s.Durability;
                         localValue += s.CostInPence * component.Quantity * s.Quality.PriceMultiplier;
                         break;
+
+                    case ComponentType.CraftableItem:
+                        var localItem = component.CraftableItem.ProduceFrom(w, m, s);
+                        localDurability = localItem.Durability;
+                        localValue = localItem.CostInPence * component.Quantity * localItem.Quality.PriceMultiplier;
+                        break;
                 }
                 if (localValue > 0 && localValue < 1) localValue = 1; // Round up component costs.
                 sumDurability += localDurability;
@@ -61,12 +67,14 @@ namespace oqocs.items
         Wood,
         Metal,
         Stone,
+        CraftableItem,
     }
 
     public class RecipeComponent
     {
         public decimal Quantity { get; set; }
         public ComponentType Type { get; set; }
+        public BasicRecipe CraftableItem { get; set; }
 
         public RecipeComponent(ComponentType type, decimal qty)
         {

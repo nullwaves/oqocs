@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace oqocs.items
+﻿namespace oqocs.items
 {
     public class Unit
     {
