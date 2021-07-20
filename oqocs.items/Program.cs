@@ -11,7 +11,7 @@ namespace oqocs.items
             {
                 foreach (Stone m in Stone.All)
                 {
-                    var n = recipes.Toolcraft.StoneWoodaxe.ProduceFrom(w, null, m);
+                    var n = recipes.tools.LoggingTools.StoneWoodaxe.ProduceFrom(w, null, m);
                     Console.WriteLine($"{n.Name} - Value: {CurrencyFormatter.PrettyCopperFromPence(n.QualityAdjustedValueInPence())} - DUR: {n.Durability}");
                 }
             }
