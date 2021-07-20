@@ -76,10 +76,11 @@ namespace oqocs.items
         public ComponentType Type { get; set; }
         public BasicRecipe CraftableItem { get; set; }
 
-        public RecipeComponent(ComponentType type, decimal qty)
+        public RecipeComponent(ComponentType type, decimal qty, BasicRecipe recipe = null)
         {
             Type = type;
             Quantity = qty;
+            CraftableItem = recipe;
         }
     }
 }

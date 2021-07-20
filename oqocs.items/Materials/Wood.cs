@@ -6,7 +6,7 @@ namespace oqocs.items.materials
     {
         public Wood(string name, string description, decimal value, int durability)
         {
-            Name = name + " Wood";
+            Name = name;
             Description = description;
             CostInPence = value;
             Durability = durability;

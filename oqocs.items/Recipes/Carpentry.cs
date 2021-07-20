@@ -4,7 +4,7 @@ namespace oqocs.items.recipes
 {
     public static class Carpentry
     {
-        public static BasicRecipe Dowel = new BasicRecipe()
+        public static BasicRecipe Dowel => new BasicRecipe()
         {
             Product = "Dowel",
             DifficultyValue = 12,

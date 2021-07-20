@@ -9,13 +9,11 @@ namespace oqocs.items
         {
             foreach (Wood w in Wood.All)
             {
-                var d = recipes.Carpentry.Dowel.ProduceFrom(w);
-                Console.WriteLine($"{d.Name} - Value: {d.QualityAdjustedValueInPence()} - DUR: {d.Durability}");
-            }
-            foreach (Metal m in Metal.All)
-            {
-                var n = recipes.Toolcraft.Nail.ProduceFrom(null, m);
-                Console.WriteLine($"{n.Name} - Value: {n.QualityAdjustedValueInPence()} - DUR: {n.Durability}");
+                foreach (Stone m in Stone.All)
+                {
+                    var n = recipes.Toolcraft.StoneWoodaxe.ProduceFrom(w, null, m);
+                    Console.WriteLine($"{n.Name} - Value: {CurrencyFormatter.PrettyCopperFromPence(n.QualityAdjustedValueInPence())} - DUR: {n.Durability}");
+                }
             }
             Console.ReadKey();
         }
