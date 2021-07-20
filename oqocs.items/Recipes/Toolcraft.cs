@@ -412,6 +412,44 @@ namespace oqocs.items.recipes
             }
         };
 
+        public static BasicRecipe SmithingHammer => new BasicRecipe()
+        {
+            Product = "Smithing Hammer",
+            DifficultyValue = 18,
+            PriceMultiplier = 1.5m,
+            DurabilityMultiplier = 4,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(ComponentType.Metal, 8),
+                new RecipeComponent(ComponentType.CraftableItem, 1, Carpentry.Dowel),
+            }
+        };
+
+        public static BasicRecipe Sledgehammer => new BasicRecipe()
+        {
+            Product = "Sledgehammer",
+            DifficultyValue = 18,
+            PriceMultiplier = 1.25m,
+            DurabilityMultiplier = 4,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(ComponentType.Metal, 16),
+                new RecipeComponent(ComponentType.CraftableItem, 1, Carpentry.Dowel),
+            }
+        };
+
+        public static BasicRecipe Anvil => new BasicRecipe()
+        {
+            Product = "Anvil",
+            DifficultyValue = 28,
+            PriceMultiplier = 1,
+            DurabilityMultiplier = 4,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(ComponentType.Metal, 110),
+            }
+        };
+
         // Carpentry Tools
         public static BasicRecipe Nail => new BasicRecipe()
         {
