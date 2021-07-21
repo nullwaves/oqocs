@@ -83,7 +83,7 @@ namespace oqocs.items.recipes
             }
         };
 
-        /*public static BasicRecipe BoltOfWovenCloth => new BasicRecipe()
+        public static BasicRecipe BoltOfWovenCloth => new BasicRecipe()
         {
             Product = "Bolt of Woven Cloth",
             DifficultyValue = 23,
@@ -91,8 +91,44 @@ namespace oqocs.items.recipes
             DurabilityMultiplier = 10,
             Components = new List<RecipeComponent>()
             {
-                new RecipeComponent(ComponentType.Multi)
+                new RecipeComponent(8, SpoolsAndBundles),
             }
-        }*/
+        };
+
+        public static BasicRecipe BoltOfKnitCloth => new BasicRecipe()
+        {
+            Product = "Bolt of Knit Cloth",
+            DifficultyValue = 28,
+            PriceMultiplier = 9,
+            DurabilityMultiplier = 5,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(4, Bundles),
+            }
+        };
+
+        public static BasicRecipe BoltOfLace => new BasicRecipe()
+        {
+            Product = "Bolt of Lace",
+            DifficultyValue = 33,
+            PriceMultiplier = 10,
+            DurabilityMultiplier = 8,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(8, SpoolsAndBundles),
+            }
+        };
+
+        public static BasicRecipe BoltOfCarpet => new BasicRecipe()
+        {
+            Product = "Bolt of Carpet",
+            DifficultyValue = 28,
+            PriceMultiplier = 6,
+            DurabilityMultiplier = 10,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(15, SpoolsAndBundles),
+            }
+        };
     }
 }
