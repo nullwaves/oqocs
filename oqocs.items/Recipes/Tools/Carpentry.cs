@@ -42,7 +42,7 @@ namespace oqocs.items.recipes.tools
             Components = new List<RecipeComponent>()
             {
                 new RecipeComponent(ComponentType.Metal, 2),
-                new RecipeComponent(ComponentType.CraftableItem, 1, Carpentry.Dowel),
+                new RecipeComponent(1, Carpentry.Dowel),
             }
         };
 
@@ -54,7 +54,7 @@ namespace oqocs.items.recipes.tools
             DurabilityMultiplier = 1.1m,
             Components = new List<RecipeComponent>()
             {
-                new RecipeComponent(ComponentType.Unique, 2, Unique.GlassBead),
+                new RecipeComponent(2, Unique.GlassBead),
                 new RecipeComponent(ComponentType.Wood, 1)
             }
         };
@@ -68,7 +68,7 @@ namespace oqocs.items.recipes.tools
             Components = new List<RecipeComponent>()
             {
                 new RecipeComponent(ComponentType.Metal, 1),
-                new RecipeComponent(ComponentType.CraftableItem, 1, Carpentry.Dowel),
+                new RecipeComponent(1, Carpentry.Dowel),
             }
         };
 
@@ -81,7 +81,7 @@ namespace oqocs.items.recipes.tools
             Components = new List<RecipeComponent>()
             {
                 new RecipeComponent(ComponentType.Stone, 1),
-                new RecipeComponent(ComponentType.CraftableItem, 1, Carpentry.Dowel),
+                new RecipeComponent(1, Carpentry.Dowel),
             }
         };
 

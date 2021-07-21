@@ -55,6 +55,13 @@ namespace oqocs.items
                         localDurability = localMulti.Durability;
                         localValue = localMulti.CostInPence * component.Quantity * localMulti.Quality.PriceMultiplier;
                         break;
+
+                    case ComponentType.MultiRecipe:
+                        var localRecipe = component.AcceptedCrafted.First();
+                        var localCrafted = localRecipe.ProduceFrom(w, m, s);
+                        localDurability = localCrafted.Durability;
+                        localValue = localCrafted.CostInPence * component.Quantity * localCrafted.Quality.PriceMultiplier;
+                        break;
                 }
                 if (localValue > 0 && localValue < 1) localValue = 1; // Round up component costs.
                 sumDurability += localDurability;
@@ -83,6 +90,7 @@ namespace oqocs.items
         CraftableItem,
         Unique,
         Multi,
+        MultiRecipe,
     }
 
     public class RecipeComponent
@@ -93,6 +101,7 @@ namespace oqocs.items
         public BasicItem UniqueItem { get; set; }
 
         public List<BasicItem> AcceptedInputs { get; set; }
+        public List<BasicRecipe> AcceptedCrafted { get; set; }
 
         public RecipeComponent(ComponentType type, decimal qty)
         {
@@ -100,25 +109,32 @@ namespace oqocs.items
             Quantity = qty;
         }
 
-        public RecipeComponent(ComponentType type, decimal qty, BasicRecipe recipe)
+        public RecipeComponent(decimal qty, BasicRecipe recipe)
         {
-            Type = type;
+            Type = ComponentType.CraftableItem;
             Quantity = qty;
             CraftableItem = recipe;
         }
 
-        public RecipeComponent(ComponentType type, decimal qty, BasicItem item)
+        public RecipeComponent(decimal qty, BasicItem item)
         {
-            Type = type;
+            Type = ComponentType.Unique;
             Quantity = qty;
             UniqueItem = item;
         }
 
-        public RecipeComponent(ComponentType type, decimal qty, List<BasicItem> choices)
+        public RecipeComponent(decimal qty, List<BasicItem> choices)
         {
-            Type = type;
+            Type = ComponentType.Multi;
             Quantity = qty;
             AcceptedInputs = choices;
+        }
+
+        public RecipeComponent(decimal qty, List<BasicRecipe> choices)
+        {
+            Type = ComponentType.MultiRecipe;
+            Quantity = qty;
+            AcceptedCrafted = choices;
         }
     }
 }

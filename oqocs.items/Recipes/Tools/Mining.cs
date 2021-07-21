@@ -14,7 +14,7 @@ namespace oqocs.items.recipes.tools
             Components = new List<RecipeComponent>()
             {
                 new RecipeComponent(ComponentType.Metal, 10),
-                new RecipeComponent(ComponentType.CraftableItem, 1, Carpentry.Dowel),
+                new RecipeComponent(1, Carpentry.Dowel),
             }
         };
 
@@ -27,7 +27,7 @@ namespace oqocs.items.recipes.tools
             Components = new List<RecipeComponent>()
             {
                 new RecipeComponent(ComponentType.Stone, 10),
-                new RecipeComponent(ComponentType.CraftableItem, 1, Carpentry.Dowel),
+                new RecipeComponent(1, Carpentry.Dowel),
             }
         };
 
@@ -230,7 +230,7 @@ namespace oqocs.items.recipes.tools
             Components = new List<RecipeComponent>()
             {
                 new RecipeComponent(ComponentType.Wood, 3),
-                new RecipeComponent(ComponentType.CraftableItem, 1, Carpentry.Dowel),
+                new RecipeComponent(1, Carpentry.Dowel),
             }
         };
 
@@ -243,7 +243,7 @@ namespace oqocs.items.recipes.tools
             Components = new List<RecipeComponent>()
             {
                 new RecipeComponent(ComponentType.Metal, 3),
-                new RecipeComponent(ComponentType.CraftableItem, 1, Carpentry.Dowel),
+                new RecipeComponent(1, Carpentry.Dowel),
             }
         };
 
@@ -256,7 +256,7 @@ namespace oqocs.items.recipes.tools
             Components = new List<RecipeComponent>()
             {
                 new RecipeComponent(ComponentType.Stone, 3),
-                new RecipeComponent(ComponentType.CraftableItem, 1, Carpentry.Dowel),
+                new RecipeComponent(1, Carpentry.Dowel),
             }
         };
 
@@ -318,7 +318,7 @@ namespace oqocs.items.recipes.tools
             Components = new List<RecipeComponent>()
             {
                 new RecipeComponent(ComponentType.Metal, 8),
-                new RecipeComponent(ComponentType.CraftableItem, 1, Carpentry.Dowel),
+                new RecipeComponent(1, Carpentry.Dowel),
             }
         };
 
@@ -331,7 +331,7 @@ namespace oqocs.items.recipes.tools
             Components = new List<RecipeComponent>()
             {
                 new RecipeComponent(ComponentType.Metal, 16),
-                new RecipeComponent(ComponentType.CraftableItem, 1, Carpentry.Dowel),
+                new RecipeComponent(1, Carpentry.Dowel),
             }
         };
 

@@ -31,7 +31,7 @@ namespace oqocs.items.recipes
             DurabilityMultiplier = 2,
             Components = new List<RecipeComponent>()
             {
-                new RecipeComponent(ComponentType.Multi, 1, CottonAndAlpaca),
+                new RecipeComponent(1, CottonAndAlpaca),
             }
         };
 
@@ -43,7 +43,7 @@ namespace oqocs.items.recipes
             DurabilityMultiplier = 1,
             Components = new List<RecipeComponent>()
             {
-                new RecipeComponent(ComponentType.Multi, 4, CottonAndAlpaca)
+                new RecipeComponent(4, CottonAndAlpaca)
             }
         };
 
@@ -55,7 +55,7 @@ namespace oqocs.items.recipes
             DurabilityMultiplier = 3,
             Components = new List<RecipeComponent>()
             {
-                new RecipeComponent(ComponentType.Unique, 2, Fiber.PlantFiber),
+                new RecipeComponent(2, Fiber.PlantFiber),
             }
         };
 
@@ -79,7 +79,7 @@ namespace oqocs.items.recipes
             DurabilityMultiplier = 3,
             Components = new List<RecipeComponent>()
             {
-                new RecipeComponent(ComponentType.Multi, 4, CottonAndAlpaca)
+                new RecipeComponent(4, CottonAndAlpaca)
             }
         };
 
