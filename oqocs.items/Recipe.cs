@@ -1,5 +1,6 @@
 ﻿using oqocs.items.materials;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace oqocs.items
 {
@@ -48,6 +49,12 @@ namespace oqocs.items
                         localDurability = localUnique.Durability;
                         localValue = localUnique.CostInPence * component.Quantity * localUnique.Quality.PriceMultiplier;
                         break;
+
+                    case ComponentType.Multi:
+                        var localMulti = component.AcceptedInputs.First();
+                        localDurability = localMulti.Durability;
+                        localValue = localMulti.CostInPence * component.Quantity * localMulti.Quality.PriceMultiplier;
+                        break;
                 }
                 if (localValue > 0 && localValue < 1) localValue = 1; // Round up component costs.
                 sumDurability += localDurability;
@@ -75,6 +82,7 @@ namespace oqocs.items
         Stone,
         CraftableItem,
         Unique,
+        Multi,
     }
 
     public class RecipeComponent
@@ -83,6 +91,8 @@ namespace oqocs.items
         public ComponentType Type { get; set; }
         public BasicRecipe CraftableItem { get; set; }
         public BasicItem UniqueItem { get; set; }
+
+        public List<BasicItem> AcceptedInputs { get; set; }
 
         public RecipeComponent(ComponentType type, decimal qty)
         {
@@ -102,6 +112,13 @@ namespace oqocs.items
             Type = type;
             Quantity = qty;
             UniqueItem = item;
+        }
+
+        public RecipeComponent(ComponentType type, decimal qty, List<BasicItem> choices)
+        {
+            Type = type;
+            Quantity = qty;
+            AcceptedInputs = choices;
         }
     }
 }

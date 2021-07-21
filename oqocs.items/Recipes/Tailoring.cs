@@ -1,19 +1,25 @@
 ﻿using oqocs.items.materials;
 using System.Collections.Generic;
 
-namespace oqocs.items.Recipes
+namespace oqocs.items.recipes
 {
     public static class Tailoring
     {
-        public static BasicRecipe SpoolOfAlpacaThread => new BasicRecipe()
+        internal static List<BasicItem> SpoolMulti => new List<BasicItem>()
         {
-            Product = "Spool of Alpaca Thread",
+            Fiber.CottonFiber,
+            Fiber.AlpacaFiber,
+        };
+
+        public static BasicRecipe SpoolOfThread => new BasicRecipe()
+        {
+            Product = "Spool of Thread",
             DifficultyValue = 23,
             PriceMultiplier = 3,
             DurabilityMultiplier = 2,
             Components = new List<RecipeComponent>()
             {
-                new RecipeComponent(ComponentType.Unique, 1, Fiber.AlpacaFiber),
+                new RecipeComponent(ComponentType.Multi, 1, SpoolMulti),
             }
         };
     }

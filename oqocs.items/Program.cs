@@ -1,4 +1,5 @@
 ﻿using oqocs.items.materials;
+using oqocs.items.recipes;
 using System;
 
 namespace oqocs.items
@@ -11,7 +12,7 @@ namespace oqocs.items
             {
                 foreach (Stone m in Stone.All)
                 {
-                    var n = recipes.tools.LoggingTools.StoneWoodaxe.ProduceFrom(w, null, m);
+                    var n = Tailoring.SpoolOfThread.ProduceFrom();
                     Console.WriteLine($"{n.Name} - Value: {CurrencyFormatter.PrettyCopperFromPence(n.QualityAdjustedValueInPence())} - DUR: {n.Durability}");
                 }
             }
