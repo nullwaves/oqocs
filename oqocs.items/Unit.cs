@@ -12,6 +12,9 @@
         }
 
         public static Unit Each => new Unit("", "Each");
+
         public static Unit Pounds => new Unit("lb", "Pounds");
+
+        public static Unit Pint => new Unit("pt", "Pints");
     }
 }

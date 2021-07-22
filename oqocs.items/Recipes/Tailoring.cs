@@ -130,5 +130,128 @@ namespace oqocs.items.recipes
                 new RecipeComponent(15, SpoolsAndBundles),
             }
         };
+
+        public static BasicRecipe MediumLeather => new BasicRecipe()
+        {
+            Product = "Medium Leather",
+            DifficultyValue = 15,
+            PriceMultiplier = 3,
+            DurabilityMultiplier = 10,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(1, Unique.MediumPelt),
+            }
+        };
+
+        public static BasicRecipe MediumFur => new BasicRecipe()
+        {
+            Product = "Medium Fur",
+            DifficultyValue = 15,
+            PriceMultiplier = 3,
+            DurabilityMultiplier = 10,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(1, Unique.MediumPelt),
+            }
+        };
+
+        public static BasicRecipe WoodScale => new BasicRecipe()
+        {
+            Product = "Wood Scale",
+            DifficultyValue = 23,
+            PriceMultiplier = 1.5m,
+            DurabilityMultiplier = 1.5m,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(0.1m, Wood.All.ToList<BasicItem>())
+            }
+        };
+
+        public static BasicRecipe LacqueredWoodScale => new BasicRecipe()
+        {
+            Product = "Lacquered Scale",
+            DifficultyValue = 28,
+            PriceMultiplier = 1.5m,
+            DurabilityMultiplier = 2,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(1, WoodScale),
+                new RecipeComponent(0.1m, Resin.All.ToList<BasicItem>()),
+            }
+        };
+
+        public static BasicRecipe MetalScale => new BasicRecipe()
+        {
+            Product = "Metal Scale",
+            DifficultyValue = 33,
+            PriceMultiplier = 1.5m,
+            DurabilityMultiplier = 1,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(0.1m, Metal.All.ToList<BasicItem>()),
+            }
+        };
+
+        public static BasicRecipe WoodLame => new BasicRecipe()
+        {
+            Product = "Wood Lame",
+            DifficultyValue = 23,
+            PriceMultiplier = 1.5m,
+            DurabilityMultiplier = 1.5m,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(1.5m, Wood.All.ToList<BasicItem>()),
+            }
+        };
+
+        public static BasicRecipe LacqueredWoodLame => new BasicRecipe()
+        {
+            Product = "Lacquered Lame",
+            DifficultyValue = 28,
+            PriceMultiplier = 1.5m,
+            DurabilityMultiplier = 1.5m,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(1, WoodLame),
+                new RecipeComponent(1, Resin.All.ToList<BasicItem>()),
+            }
+        };
+
+        public static BasicRecipe MetalLame => new BasicRecipe()
+        {
+            Product = "Metal Lame",
+            DifficultyValue = 33,
+            PriceMultiplier = 1.5m,
+            DurabilityMultiplier = 2,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(1.5m, Metal.All.ToList<BasicItem>()),
+            }
+        };
+
+        public static BasicRecipe Belt => new BasicRecipe()
+        {
+            Product = "Belt",
+            DifficultyValue = 18,
+            PriceMultiplier = 1,
+            DurabilityMultiplier = 1,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(1, MediumLeather),
+                new RecipeComponent(2, Fitting),
+            }
+        };
+
+        public static BasicRecipe Fitting = new BasicRecipe()
+        {
+            Product = "Fitting",
+            DifficultyValue = 15,
+            PriceMultiplier = 1,
+            DurabilityMultiplier = 1,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(0.05m, Metal.All.ToList<BasicItem>()),
+            }
+        };
     }
 }
