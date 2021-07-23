@@ -10,7 +10,10 @@ namespace oqocs.items.recipes
             DifficultyValue = 12,
             PriceMultiplier = 5,
             DurabilityMultiplier = 1,
-            Components = new List<RecipeComponent>() { new RecipeComponent(ComponentType.Wood, 1) }
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(1, Helpers.AnyWood)
+            }
         };
     }
 }

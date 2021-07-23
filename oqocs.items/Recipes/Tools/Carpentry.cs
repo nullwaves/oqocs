@@ -15,8 +15,8 @@ namespace oqocs.items.recipes.tools
             DurabilityMultiplier = 1.5m,
             Components = new List<RecipeComponent>()
             {
-                new RecipeComponent(ComponentType.Metal, 4),
-                new RecipeComponent(ComponentType.Wood, 1)
+                new RecipeComponent(4, Helpers.AnyMetal),
+                new RecipeComponent(1, Helpers.AnyWoodMetalOrStone)
             }
         };
 
@@ -28,8 +28,8 @@ namespace oqocs.items.recipes.tools
             DurabilityMultiplier = 1.5m,
             Components = new List<RecipeComponent>()
             {
-                new RecipeComponent(ComponentType.Metal, 1),
-                new RecipeComponent(ComponentType.Wood, 0.5m),
+                new RecipeComponent(1, Helpers.AnyMetal),
+                new RecipeComponent(0.5m, Helpers.AnyWoodMetalOrStone),
             }
         };
 
@@ -41,7 +41,7 @@ namespace oqocs.items.recipes.tools
             DurabilityMultiplier = 4,
             Components = new List<RecipeComponent>()
             {
-                new RecipeComponent(ComponentType.Metal, 2),
+                new RecipeComponent(2, Helpers.AnyMetal),
                 new RecipeComponent(1, Carpentry.Dowel),
             }
         };
@@ -55,11 +55,11 @@ namespace oqocs.items.recipes.tools
             Components = new List<RecipeComponent>()
             {
                 new RecipeComponent(2, Unique.GlassBead),
-                new RecipeComponent(ComponentType.Wood, 1)
+                new RecipeComponent(1, Helpers.AnyWood),
             }
         };
 
-        public static BasicRecipe MetalWoodAuger => new BasicRecipe()
+        public static BasicRecipe WoodAuger => new BasicRecipe()
         {
             Product = "Wood Auger",
             DifficultyValue = 20,
@@ -67,20 +67,7 @@ namespace oqocs.items.recipes.tools
             DurabilityMultiplier = 1.5m,
             Components = new List<RecipeComponent>()
             {
-                new RecipeComponent(ComponentType.Metal, 1),
-                new RecipeComponent(1, Carpentry.Dowel),
-            }
-        };
-
-        public static BasicRecipe StoneWoodAuger => new BasicRecipe()
-        {
-            Product = "Wood Auger",
-            DifficultyValue = 20,
-            PriceMultiplier = 1.25m,
-            DurabilityMultiplier = 1.5m,
-            Components = new List<RecipeComponent>()
-            {
-                new RecipeComponent(ComponentType.Stone, 1),
+                new RecipeComponent(1, Helpers.AnyMetalOrStone),
                 new RecipeComponent(1, Carpentry.Dowel),
             }
         };
@@ -93,7 +80,10 @@ namespace oqocs.items.recipes.tools
             DifficultyValue = 12,
             PriceMultiplier = 1.25m,
             DurabilityMultiplier = 2,
-            Components = new List<RecipeComponent>() { new RecipeComponent(ComponentType.Metal, 0.0125m) }
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(0.0125m, Helpers.AnyMetal),
+            }
         };
     }
 }

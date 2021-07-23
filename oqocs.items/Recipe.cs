@@ -13,7 +13,7 @@ namespace oqocs.items
         public decimal DurabilityMultiplier { get; set; }
         public string Knowledge { get; set; }
 
-        public BasicItem ProduceFrom(Wood w = null, Metal m = null, Stone s = null)
+        public BasicItem ProduceFrom()
         {
             int sumDurability = 0;
             decimal sumValue = 0;
@@ -23,23 +23,8 @@ namespace oqocs.items
                 decimal localValue = 0;
                 switch (component.Type)
                 {
-                    case ComponentType.Wood:
-                        localDurability += w.Durability;
-                        localValue += w.CostInPence * component.Quantity * w.Quality.PriceMultiplier;
-                        break;
-
-                    case ComponentType.Metal:
-                        localDurability += m.Durability;
-                        localValue += m.CostInPence * component.Quantity * m.Quality.PriceMultiplier;
-                        break;
-
-                    case ComponentType.Stone:
-                        localDurability += s.Durability;
-                        localValue += s.CostInPence * component.Quantity * s.Quality.PriceMultiplier;
-                        break;
-
                     case ComponentType.CraftableItem:
-                        var localItem = component.CraftableItem.ProduceFrom(w, m, s);
+                        var localItem = component.CraftableItem.ProduceFrom();
                         localDurability = localItem.Durability;
                         localValue = localItem.CostInPence * component.Quantity * localItem.Quality.PriceMultiplier;
                         break;
@@ -58,7 +43,7 @@ namespace oqocs.items
 
                     case ComponentType.MultiRecipe:
                         var localRecipe = component.AcceptedCrafted.First();
-                        var localCrafted = localRecipe.ProduceFrom(w, m, s);
+                        var localCrafted = localRecipe.ProduceFrom();
                         localDurability = localCrafted.Durability;
                         localValue = localCrafted.CostInPence * component.Quantity * localCrafted.Quality.PriceMultiplier;
                         break;
@@ -68,10 +53,9 @@ namespace oqocs.items
                 sumValue += localValue;
             }
 
-            string mats = (w != null ? w.Name + " " : string.Empty) + (m != null ? m.Name + " " : string.Empty) + (s != null ? s.Name + " " : string.Empty);
             var item = new BasicItem()
             {
-                Name = $"{mats} {Product}",
+                Name = $"{Product}",
                 Durability = (int)(sumDurability * DurabilityMultiplier),
                 CostInPence = sumValue * PriceMultiplier,
                 Quality = Grade.C,
@@ -84,9 +68,6 @@ namespace oqocs.items
 
     public enum ComponentType
     {
-        Wood,
-        Metal,
-        Stone,
         CraftableItem,
         Unique,
         Multi,
@@ -102,12 +83,6 @@ namespace oqocs.items
 
         public List<BasicItem> AcceptedInputs { get; set; }
         public List<BasicRecipe> AcceptedCrafted { get; set; }
-
-        public RecipeComponent(ComponentType type, decimal qty)
-        {
-            Type = type;
-            Quantity = qty;
-        }
 
         public RecipeComponent(decimal qty, BasicRecipe recipe)
         {

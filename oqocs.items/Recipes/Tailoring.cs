@@ -1,6 +1,5 @@
 ﻿using oqocs.items.materials;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace oqocs.items.recipes
 {
@@ -84,7 +83,7 @@ namespace oqocs.items.recipes
             DurabilityMultiplier = 0.5m,
             Components = new List<RecipeComponent>()
             {
-                new RecipeComponent(ComponentType.Metal, 2)
+                new RecipeComponent(2, Helpers.AnyMetal)
             }
         };
 
@@ -180,7 +179,7 @@ namespace oqocs.items.recipes
             DurabilityMultiplier = 1.5m,
             Components = new List<RecipeComponent>()
             {
-                new RecipeComponent(0.1m, Wood.All.ToList<BasicItem>())
+                new RecipeComponent(0.1m, Helpers.AnyWood)
             }
         };
 
@@ -193,7 +192,7 @@ namespace oqocs.items.recipes
             Components = new List<RecipeComponent>()
             {
                 new RecipeComponent(1, WoodScale),
-                new RecipeComponent(0.1m, Resin.All.ToList<BasicItem>()),
+                new RecipeComponent(0.1m, Helpers.AnyResin),
             }
         };
 
@@ -205,7 +204,7 @@ namespace oqocs.items.recipes
             DurabilityMultiplier = 1,
             Components = new List<RecipeComponent>()
             {
-                new RecipeComponent(0.1m, Metal.All.ToList<BasicItem>()),
+                new RecipeComponent(0.1m, Helpers.AnyMetal),
             }
         };
 
@@ -217,7 +216,7 @@ namespace oqocs.items.recipes
             DurabilityMultiplier = 1.5m,
             Components = new List<RecipeComponent>()
             {
-                new RecipeComponent(1.5m, Wood.All.ToList<BasicItem>()),
+                new RecipeComponent(1.5m, Helpers.AnyWood),
             }
         };
 
@@ -230,7 +229,7 @@ namespace oqocs.items.recipes
             Components = new List<RecipeComponent>()
             {
                 new RecipeComponent(1, WoodLame),
-                new RecipeComponent(1, Resin.All.ToList<BasicItem>()),
+                new RecipeComponent(1, Helpers.AnyResin),
             }
         };
 
@@ -242,7 +241,7 @@ namespace oqocs.items.recipes
             DurabilityMultiplier = 2,
             Components = new List<RecipeComponent>()
             {
-                new RecipeComponent(1.5m, Metal.All.ToList<BasicItem>()),
+                new RecipeComponent(1.5m, Helpers.AnyMetal),
             }
         };
 
@@ -267,7 +266,7 @@ namespace oqocs.items.recipes
             DurabilityMultiplier = 1,
             Components = new List<RecipeComponent>()
             {
-                new RecipeComponent(0.05m, Metal.All.ToList<BasicItem>()),
+                new RecipeComponent(0.05m, Helpers.AnyMetal),
             }
         };
 
