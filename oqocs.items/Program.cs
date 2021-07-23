@@ -1,5 +1,4 @@
-﻿using oqocs.items.materials;
-using oqocs.items.recipes;
+﻿using oqocs.items.recipes;
 using System;
 
 namespace oqocs.items
@@ -8,14 +7,10 @@ namespace oqocs.items
     {
         private static void Main(string[] args)
         {
-            foreach (Wood w in Wood.All)
-            {
-                foreach (Stone m in Stone.All)
-                {
-                    var n = Tailoring.SpoolOfThread.ProduceFrom();
-                    Console.WriteLine($"{n.Name} - Value: {CurrencyFormatter.PrettyCopperFromPence(n.QualityAdjustedValueInPence())} - DUR: {n.Durability}");
-                }
-            }
+            foreach (BasicRecipe r in Tailoring.WeaveKnitLace)
+                Console.WriteLine($"{r.Product}");
+            var n = Tailoring.Belt.ProduceFrom();
+            Console.WriteLine($"{n.Name} - Value: {CurrencyFormatter.PrettyCopperFromPence(n.QualityAdjustedValueInPence())} - DUR: {n.Durability}");
             Console.ReadKey();
         }
     }

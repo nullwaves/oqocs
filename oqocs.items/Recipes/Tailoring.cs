@@ -23,6 +23,23 @@ namespace oqocs.items.recipes
             SpoolOfThread,
         };
 
+        public static List<BasicRecipe> WeaveLace => new List<BasicRecipe>()
+        {
+            BoltOfWovenCloth,
+            BoltOfLace,
+        };
+
+        public static List<BasicRecipe> WeaveKnitLace => new List<BasicRecipe>(WeaveLace)
+        {
+            BoltOfKnitCloth,
+        };
+
+        public static List<BasicRecipe> LeatherFur => new List<BasicRecipe>()
+        {
+            MediumLeather,
+            MediumFur,
+        };
+
         public static BasicRecipe SpoolOfThread => new BasicRecipe()
         {
             Product = "Spool of Thread",
@@ -242,7 +259,7 @@ namespace oqocs.items.recipes
             }
         };
 
-        public static BasicRecipe Fitting = new BasicRecipe()
+        public static BasicRecipe Fitting => new BasicRecipe()
         {
             Product = "Fitting",
             DifficultyValue = 15,
@@ -251,6 +268,94 @@ namespace oqocs.items.recipes
             Components = new List<RecipeComponent>()
             {
                 new RecipeComponent(0.05m, Metal.All.ToList<BasicItem>()),
+            }
+        };
+
+        public static BasicRecipe Tsixataq => new BasicRecipe()
+        {
+            Product = "Tsixataq",
+            DifficultyValue = 18,
+            PriceMultiplier = 1.25m,
+            DurabilityMultiplier = 1.25m,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(0.02m, WeaveKnitLace),
+            }
+        };
+
+        public static BasicRecipe LeatherTsixataq => new BasicRecipe()
+        {
+            Product = "Tsixataq",
+            DifficultyValue = 18,
+            PriceMultiplier = 1.25m,
+            DurabilityMultiplier = 1.25m,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(2, LeatherFur)
+            }
+        };
+
+        public static BasicRecipe Tsixunomu => new BasicRecipe()
+        {
+            Product = "Tsixunomu",
+            DifficultyValue = 15,
+            PriceMultiplier = 1.25m,
+            DurabilityMultiplier = 1.25m,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(0.015m, WeaveLace),
+            }
+        };
+
+        public static BasicRecipe Tsixomu => new BasicRecipe()
+        {
+            Product = "Tsixomu",
+            DifficultyValue = 15,
+            PriceMultiplier = 1.1m,
+            DurabilityMultiplier = 1.25m,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(1, new List<BasicRecipe>() {Tsixataq, LeatherTsixataq}),
+                new RecipeComponent(0.00625m, SpoolOfThread),
+            }
+        };
+
+        public static BasicRecipe Tsixunjlj => new BasicRecipe()
+        {
+            Product = "Tsixunələ",
+            DifficultyValue = 15,
+            PriceMultiplier = 1.25m,
+            DurabilityMultiplier = 1.25m,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(0.01m, WeaveLace),
+            }
+        };
+
+        public static BasicRecipe Tsixawamj => new BasicRecipe()
+        {
+            Product = "Tsixawamə",
+            DifficultyValue = 23,
+            PriceMultiplier = 1.75m,
+            DurabilityMultiplier = 1.5m,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(0.08m, WeaveKnitLace),
+                new RecipeComponent(0.01875m, SpoolOfThread),
+            }
+        };
+
+        public static BasicRecipe LeatherTsixawamj => new BasicRecipe()
+        {
+            Product = "Tsixawamə",
+            DifficultyValue = 23,
+            PriceMultiplier = 1.75m,
+            DurabilityMultiplier = 1.5m,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(0.02m, WeaveKnitLace),
+                new RecipeComponent(2, LeatherFur),
+                new RecipeComponent(0.01875m, SpoolOfThread),
             }
         };
     }
