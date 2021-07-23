@@ -394,7 +394,7 @@ namespace oqocs.items.recipes
             Components = new List<RecipeComponent>()
             {
                 new RecipeComponent(0.32m, BoltOfWovenCloth),
-                new RecipeComponent(4, new List<BasicItem>() { Fiber.AlpacaFiber, Fiber.CottonFiber }),
+                new RecipeComponent(4, Helpers.AnyFiber),
                 new RecipeComponent(0.03125m, SpoolOfThread),
             }
         };

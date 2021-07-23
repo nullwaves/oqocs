@@ -26,6 +26,7 @@ namespace oqocs.items
         internal static List<BasicItem> AnyStone => Stone.All.ToList<BasicItem>();
         internal static List<BasicItem> AnyWood => Wood.All.ToList<BasicItem>();
         internal static List<BasicItem> AnyResin => Resin.All.ToList<BasicItem>();
+        internal static List<BasicItem> AnyFiber => Fiber.All.ToList<BasicItem>();
 
         internal static List<BasicItem> AnyMetalOrStone => CompileList(new List<BasicItem>[] { AnyMetal, AnyStone });
         internal static List<BasicItem> AnyWoodMetalOrStone => CompileList(new List<BasicItem>[] { AnyWood, AnyMetal, AnyStone });
