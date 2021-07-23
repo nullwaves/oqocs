@@ -358,5 +358,61 @@ namespace oqocs.items.recipes
                 new RecipeComponent(0.01875m, SpoolOfThread),
             }
         };
+
+        public static BasicRecipe Tsixeti => new BasicRecipe()
+        {
+            Product = "Tsixeti",
+            DifficultyValue = 15,
+            PriceMultiplier = 1.1m,
+            DurabilityMultiplier = 1.25m,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(0.01m, BoltOfWovenCloth),
+                new RecipeComponent(0.00625m, SpoolOfThread),
+            }
+        };
+
+        public static BasicRecipe Nyemka => new BasicRecipe()
+        {
+            Product = "Nyemka",
+            DifficultyValue = 28,
+            PriceMultiplier = 1.5m,
+            DurabilityMultiplier = 2,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(0.08m, BoltOfWovenCloth),
+                new RecipeComponent(2, MediumLeather),
+                new RecipeComponent(0.01875m, SpoolOfThread),
+            }
+        };
+
+        public static BasicRecipe Gambeson => new BasicRecipe()
+        {
+            Product = "Gambeson",
+            DifficultyValue = 33,
+            PriceMultiplier = 2,
+            DurabilityMultiplier = 4,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(0.32m, BoltOfWovenCloth),
+                new RecipeComponent(4, new List<BasicItem>() { Fiber.AlpacaFiber, Fiber.CottonFiber }),
+                new RecipeComponent(0.03125m, SpoolOfThread),
+            }
+        };
+
+        public static BasicRecipe Nawamanqa => new BasicRecipe()
+        {
+            Product = "Nawamanqa",
+            DifficultyValue = 33,
+            PriceMultiplier = 3,
+            DurabilityMultiplier = 3,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(0.24m, BoltOfWovenCloth),
+                new RecipeComponent(2, MediumLeather),
+                new RecipeComponent(2, MediumFur),
+                new RecipeComponent(0.01875m, SpoolOfThread),
+            }
+        };
     }
 }
