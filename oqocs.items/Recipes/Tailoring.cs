@@ -11,29 +11,29 @@ namespace oqocs.items.recipes
             Fiber.AlpacaFiber,
         };
 
-        public static List<BasicRecipe> Bundles => new List<BasicRecipe>()
+        internal static List<BasicRecipe> Bundles => new List<BasicRecipe>()
         {
             BundleOfYarn,
             BundleOfCord,
         };
 
-        public static List<BasicRecipe> SpoolsAndBundles => new List<BasicRecipe>(Bundles)
+        internal static List<BasicRecipe> SpoolsAndBundles => new List<BasicRecipe>(Bundles)
         {
             SpoolOfThread,
         };
 
-        public static List<BasicRecipe> WeaveLace => new List<BasicRecipe>()
+        internal static List<BasicRecipe> WeaveLace => new List<BasicRecipe>()
         {
             BoltOfWovenCloth,
             BoltOfLace,
         };
 
-        public static List<BasicRecipe> WeaveKnitLace => new List<BasicRecipe>(WeaveLace)
+        internal static List<BasicRecipe> WeaveKnitLace => new List<BasicRecipe>(WeaveLace)
         {
             BoltOfKnitCloth,
         };
 
-        public static List<BasicRecipe> LeatherFur => new List<BasicRecipe>()
+        internal static List<BasicRecipe> LeatherFur => new List<BasicRecipe>()
         {
             MediumLeather,
             MediumFur,
