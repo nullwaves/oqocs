@@ -7,8 +7,8 @@ namespace oqocs
     public class ItemBuilder
     {
         private BasicRecipe Recipe;
-        private List<string> AllComponents;
-        private static Random random;
+        private readonly List<string> AllComponents;
+        private static readonly Random random;
 
         public ItemBuilder()
         {
