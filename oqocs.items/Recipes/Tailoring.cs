@@ -413,5 +413,31 @@ namespace oqocs.items.recipes
                 new RecipeComponent(0.01875m, SpoolOfThread),
             }
         };
+
+        public static BasicRecipe Tsixuke => new BasicRecipe()
+        {
+            Product = "Tsixuke",
+            DifficultyValue = 18,
+            PriceMultiplier = 1.25m,
+            DurabilityMultiplier = 2,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(0.03m, BoltOfWovenCloth),
+                new RecipeComponent(0.00625m, SpoolOfThread),
+            }
+        };
+
+        public static BasicRecipe LeatherTsixuke => new BasicRecipe()
+        {
+            Product = "Tsixuke",
+            DifficultyValue = 18,
+            PriceMultiplier = 1.25m,
+            DurabilityMultiplier = 2,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(2, MediumLeather),
+                new RecipeComponent(0.00625m, SpoolOfThread),
+            }
+        };
     }
 }

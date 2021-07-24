@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace oqocs
 {
@@ -6,7 +7,7 @@ namespace oqocs
     {
         private static void Main(string[] args)
         {
-            new ItemBuilder(items.recipes.Tailoring.Gambeson);
+            new ItemBuilder();
             Console.ReadKey();
         }
     }

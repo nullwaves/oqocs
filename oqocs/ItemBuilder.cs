@@ -8,7 +8,7 @@ namespace oqocs
     {
         private BasicRecipe Recipe;
         private readonly List<string> AllComponents;
-        private static readonly Random random;
+        private static readonly Random random = new Random();
 
         public ItemBuilder()
         {
@@ -16,7 +16,7 @@ namespace oqocs
             if (PromptRecipeSelect(items.recipes.tools.MiningTools.All))
             {
                 var finalItem = BuildItem(Recipe);
-                Console.WriteLine($"\n\nBuilt {finalItem.Name} Valued at {CurrencyFormatter.PrettyCopperFromPence(finalItem.QualityAdjustedValueInPence())}\n");
+                Console.WriteLine($"\n\nBuilt {finalItem.Name} Valued at {CurrencyFormatter.PrettyCopperFromPence(finalItem.QualityAdjustedValueInPence())} with DUR {finalItem.Durability}\n");
                 foreach (var c in AllComponents)
                 {
                     Console.WriteLine($"Used {c}");
