@@ -439,5 +439,17 @@ namespace oqocs.items.recipes
                 new RecipeComponent(0.00625m, SpoolOfThread),
             }
         };
+
+        /*public static BasicRecipe BasicSjnenli => new BasicRecipe()
+        {
+            Product = "Sənenli",
+            DifficultyValue = 15,
+            PriceMultiplier = 1.75m,
+            DurabilityMultiplier = 1.25m,
+            Components = new List<RecipeComponent>()
+            {
+            }
+        };
+        */
     }
 }
