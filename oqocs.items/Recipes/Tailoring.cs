@@ -5,6 +5,10 @@ namespace oqocs.items.recipes
 {
     public static class Tailoring
     {
+        public static List<BasicRecipe> All => Helpers.CompileList(new List<BasicRecipe>[] { BasicComponents, Products, Armors });
+
+        #region Helpers
+
         internal static List<BasicItem> CottonAndAlpaca => new List<BasicItem>()
         {
             Fiber.CottonFiber,
@@ -49,6 +53,33 @@ namespace oqocs.items.recipes
         {
             MediumLeather,
             MediumFur,
+        };
+
+        #endregion Helpers
+
+        #region Basic Components
+
+        public static List<BasicRecipe> BasicComponents => new List<BasicRecipe>()
+        {
+            SpoolOfThread,
+            BundleOfYarn,
+            BundleOfCord,
+            SpoolOfWire,
+            BoltOfFelt,
+            BoltOfWovenCloth,
+            BoltOfKnitCloth,
+            BoltOfLace,
+            BoltOfCarpet,
+            MediumLeather,
+            MediumFur,
+            WoodScale,
+            LacqueredWoodScale,
+            MetalScale,
+            WoodLame,
+            LacqueredWoodLame,
+            MetalLame,
+            Belt,
+            Fitting,
         };
 
         public static BasicRecipe SpoolOfThread => new BasicRecipe()
@@ -280,6 +311,41 @@ namespace oqocs.items.recipes
             {
                 new RecipeComponent(0.05m, Helpers.AnyMetal),
             }
+        };
+
+        #endregion Basic Components
+
+        #region Products
+
+        public static List<BasicRecipe> Products => new List<BasicRecipe>()
+        {
+            Tsixataq,
+            LeatherTsixataq,
+            Tsixunomu,
+            Tsixomu,
+            Tsixunjlj,
+            Tsixawamj,
+            LeatherTsixawamj,
+            Tsixeti,
+            Nyemka,
+            Gambeson,
+            Nawamanqa,
+            Tsixuke,
+            LeatherTsixuke,
+            Monchj,
+            Yezhipj,
+            Yezhipexem,
+            Yexhipanqa,
+            Socks,
+            Underwear,
+            Blanket,
+            Sheet,
+            Curtain,
+            Towel,
+            Rag,
+            Backpack,
+            Pillow,
+            Mattress,
         };
 
         public static BasicRecipe Tsixataq => new BasicRecipe()
@@ -647,6 +713,22 @@ namespace oqocs.items.recipes
             }
         };
 
+        #endregion Products
+
+        #region Armors
+
+        public static List<BasicRecipe> Armors = new List<BasicRecipe>()
+        {
+            //LeatherArmor,
+            //ReinforcedLeatherArmor,
+            WoodArmor,
+            WoodPlateArmor,
+            LacqueredWoodArmor,
+            LacqueredWoodPlateArmor,
+            MetalPlateArmor,
+            HeavyMetalPlateArmor,
+        };
+
         /*
         public static BasicRecipe LeatherArmor => new BasicRecipe()
         {
@@ -792,5 +874,7 @@ namespace oqocs.items.recipes
                 new RecipeComponent(160, Fitting),
             }
         };
+
+        #endregion Armors
     }
 }
