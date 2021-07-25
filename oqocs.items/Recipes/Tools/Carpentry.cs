@@ -6,7 +6,25 @@ namespace oqocs.items.recipes.tools
 {
     public class CarpentryTools
     {
-        // Carpentry Tools
+        public static List<BasicRecipe> All => new List<BasicRecipe>()
+        {
+            WoodSaw,
+            Handsaw,
+            Hammer,
+            Level,
+            WoodAuger,
+            Clamp,
+            Brush,
+            Trowel,
+            Ladder,
+            Pulley,
+            Sawhorse,
+            CarvingKnife,
+            Chisel,
+            Nail,
+            Hinge,
+            LockAndKey,
+        };
 
         public static BasicRecipe WoodSaw => new BasicRecipe()
         {
@@ -34,7 +52,7 @@ namespace oqocs.items.recipes.tools
             }
         };
 
-        public static BasicRecipe Hammer = new BasicRecipe()
+        public static BasicRecipe Hammer => new BasicRecipe()
         {
             Product = "Hammer",
             DifficultyValue = 18,

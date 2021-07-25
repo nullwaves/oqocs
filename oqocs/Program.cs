@@ -6,7 +6,7 @@ namespace oqocs
     {
         private static void Main(string[] args)
         {
-            new ItemBuilder();
+            new ItemBuilder(items.recipes.Carpentry.Furniture);
             Console.ReadKey();
         }
     }

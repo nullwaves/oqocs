@@ -10,10 +10,10 @@ namespace oqocs
         private readonly List<string> AllComponents;
         private static readonly Random random = new Random();
 
-        public ItemBuilder()
+        public ItemBuilder(List<BasicRecipe> recipes)
         {
             AllComponents = new List<string>();
-            if (PromptRecipeSelect(items.recipes.tools.MiningTools.All))
+            if (PromptRecipeSelect(recipes))
             {
                 var finalItem = BuildItem(Recipe);
                 Console.WriteLine($"\n\nBuilt {finalItem.Name} Valued at {CurrencyFormatter.PrettyCopperFromPence(finalItem.QualityAdjustedValueInPence())} with DUR {finalItem.Durability}\n");
