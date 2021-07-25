@@ -29,6 +29,7 @@ namespace oqocs.items
         internal static List<BasicItem> AnyFiber => Fiber.All.ToList<BasicItem>();
 
         internal static List<BasicItem> AnyMetalOrStone => CompileList(new List<BasicItem>[] { AnyMetal, AnyStone });
+        internal static List<BasicItem> AnyWoodOrMetal => CompileList(new List<BasicItem>[] { AnyWood, AnyMetal });
         internal static List<BasicItem> AnyWoodMetalOrStone => CompileList(new List<BasicItem>[] { AnyWood, AnyMetal, AnyStone });
     }
 }
