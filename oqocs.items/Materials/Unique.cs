@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace oqocs.items.materials
+﻿namespace oqocs.items.materials
 {
     public class Unique : BasicItem
     {
