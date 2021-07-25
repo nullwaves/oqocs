@@ -1,4 +1,5 @@
 ﻿using oqocs.items.materials;
+using oqocs.items.recipes.carpentry;
 using System.Collections.Generic;
 
 namespace oqocs.items.recipes.tools
@@ -15,7 +16,7 @@ namespace oqocs.items.recipes.tools
             Components = new List<RecipeComponent>()
             {
                 new RecipeComponent(10, Helpers.AnyMetalOrStone),
-                new RecipeComponent(1, Carpentry.Dowel),
+                new RecipeComponent(1, Furniture.Dowel),
             }
         };
 
@@ -79,7 +80,7 @@ namespace oqocs.items.recipes.tools
             Components = new List<RecipeComponent>()
             {
                 new RecipeComponent(3, Helpers.AnyWoodMetalOrStone),
-                new RecipeComponent(1, Carpentry.Dowel),
+                new RecipeComponent(1, Furniture.Dowel),
             }
         };
 
@@ -129,7 +130,7 @@ namespace oqocs.items.recipes.tools
             Components = new List<RecipeComponent>()
             {
                 new RecipeComponent(8, Helpers.AnyMetal),
-                new RecipeComponent(1, Carpentry.Dowel),
+                new RecipeComponent(1, Furniture.Dowel),
             }
         };
 
@@ -142,7 +143,7 @@ namespace oqocs.items.recipes.tools
             Components = new List<RecipeComponent>()
             {
                 new RecipeComponent(16, Helpers.AnyMetal),
-                new RecipeComponent(1, Carpentry.Dowel),
+                new RecipeComponent(1, Furniture.Dowel),
             }
         };
 

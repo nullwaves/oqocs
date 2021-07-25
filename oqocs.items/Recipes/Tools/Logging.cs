@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using oqocs.items.recipes.carpentry;
+using System.Collections.Generic;
 
 namespace oqocs.items.recipes.tools
 {
@@ -14,7 +15,7 @@ namespace oqocs.items.recipes.tools
             Components = new List<RecipeComponent>()
             {
                 new RecipeComponent(4, Helpers.AnyMetalOrStone),
-                new RecipeComponent(1, Carpentry.Dowel),
+                new RecipeComponent(1, Furniture.Dowel),
             }
         };
 
