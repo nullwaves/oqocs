@@ -72,6 +72,8 @@ namespace oqocs.items.recipes
             BoltOfCarpet,
             MediumLeather,
             MediumFur,
+            LeatherScale,
+            LeatherLame,
             WoodScale,
             LacqueredWoodScale,
             MetalScale,
@@ -211,6 +213,30 @@ namespace oqocs.items.recipes
             Components = new List<RecipeComponent>()
             {
                 new RecipeComponent(1, Unique.MediumPelt),
+            }
+        };
+
+        public static BasicRecipe LeatherScale => new BasicRecipe()
+        {
+            Product = "Leather Scale",
+            DifficultyValue = 18,
+            PriceMultiplier = 1.5m,
+            DurabilityMultiplier = 2,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(0.1m, MediumLeather),
+            }
+        };
+
+        public static BasicRecipe LeatherLame => new BasicRecipe()
+        {
+            Product = "Leather Lame",
+            DifficultyValue = 18,
+            PriceMultiplier = 1.5m,
+            DurabilityMultiplier = 2,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(0.2m, MediumLeather),
             }
         };
 
@@ -719,8 +745,8 @@ namespace oqocs.items.recipes
 
         public static List<BasicRecipe> Armors = new List<BasicRecipe>()
         {
-            //LeatherArmor,
-            //ReinforcedLeatherArmor,
+            LeatherArmor,
+            ReinforcedLeatherArmor,
             WoodArmor,
             WoodPlateArmor,
             LacqueredWoodArmor,
@@ -729,7 +755,6 @@ namespace oqocs.items.recipes
             HeavyMetalPlateArmor,
         };
 
-        /*
         public static BasicRecipe LeatherArmor => new BasicRecipe()
         {
             Product = "Leather Armor",
@@ -765,7 +790,6 @@ namespace oqocs.items.recipes
                 new RecipeComponent(160, Fitting),
             }
         };
-        */
 
         public static BasicRecipe WoodArmor => new BasicRecipe()
         {
