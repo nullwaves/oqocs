@@ -743,7 +743,7 @@ namespace oqocs.items.recipes
 
         #region Armors
 
-        public static List<BasicRecipe> Armors = new List<BasicRecipe>()
+        public static List<BasicRecipe> Armors => new List<BasicRecipe>()
         {
             LeatherArmor,
             ReinforcedLeatherArmor,
