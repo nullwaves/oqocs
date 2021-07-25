@@ -22,6 +22,18 @@ namespace oqocs.items.recipes
             SpoolOfThread,
         };
 
+        internal static List<BasicRecipe> ThreadOrYarn => new List<BasicRecipe>()
+        {
+            SpoolOfThread,
+            BundleOfYarn,
+        };
+
+        internal static List<BasicRecipe> ThreadOrCord => new List<BasicRecipe>()
+        {
+            SpoolOfThread,
+            BundleOfCord,
+        };
+
         internal static List<BasicRecipe> WeaveLace => new List<BasicRecipe>()
         {
             BoltOfWovenCloth,
@@ -451,5 +463,334 @@ namespace oqocs.items.recipes
             }
         };
         */
+
+        public static BasicRecipe Monchj => new BasicRecipe()
+        {
+            Product = "Monchə",
+            DifficultyValue = 15,
+            PriceMultiplier = 1.25m,
+            DurabilityMultiplier = 1.25m,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(1, Helpers.AnyWood),
+                new RecipeComponent(0.5m, MediumLeather),
+                new RecipeComponent(0.0025m, ThreadOrYarn),
+            }
+        };
+
+        public static BasicRecipe Yezhipj => new BasicRecipe()
+        {
+            Product = "Yezhipə",
+            DifficultyValue = 23,
+            PriceMultiplier = 1.5m,
+            DurabilityMultiplier = 2,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(2, MediumLeather),
+                new RecipeComponent(0.00625m, ThreadOrCord),
+                new RecipeComponent(1, Helpers.AnyWood),
+            }
+        };
+
+        public static BasicRecipe Yezhipexem => new BasicRecipe()
+        {
+            Product = "Yezhipexem",
+            DifficultyValue = 28,
+            PriceMultiplier = 2,
+            DurabilityMultiplier = 3,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(2, MediumLeather),
+                new RecipeComponent(0.01m, ThreadOrCord),
+                new RecipeComponent(1, Helpers.AnyWood),
+            }
+        };
+
+        public static BasicRecipe Yexhipanqa => new BasicRecipe()
+        {
+            Product = "Yexhipanqa",
+            DifficultyValue = 33,
+            PriceMultiplier = 2.5m,
+            DurabilityMultiplier = 3,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(3, MediumLeather),
+                new RecipeComponent(0.01m, ThreadOrCord),
+                new RecipeComponent(1, Helpers.AnyWood),
+            }
+        };
+
+        public static BasicRecipe Socks => new BasicRecipe()
+        {
+            Product = "Socks",
+            DifficultyValue = 15,
+            PriceMultiplier = 1.25m,
+            DurabilityMultiplier = 1.1m,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(0.01m, BoltOfWovenCloth),
+                new RecipeComponent(0.000025m, SpoolOfThread),
+            }
+        };
+
+        public static BasicRecipe Underwear => new BasicRecipe()
+        {
+            Product = "Underwear",
+            DifficultyValue = 15,
+            PriceMultiplier = 1.25m,
+            DurabilityMultiplier = 1.1m,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(0.02m, BoltOfWovenCloth),
+                new RecipeComponent(0.00625m, SpoolOfThread),
+            }
+        };
+
+        public static BasicRecipe Blanket => new BasicRecipe()
+        {
+            Product = "Blanket",
+            DifficultyValue = 15,
+            PriceMultiplier = 1.1m,
+            DurabilityMultiplier = 1.1m,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(0.09m, BoltOfWovenCloth),
+            }
+        };
+
+        public static BasicRecipe Sheet => new BasicRecipe()
+        {
+            Product = "Sheet",
+            DifficultyValue = 15,
+            PriceMultiplier = 1.1m,
+            DurabilityMultiplier = 1.1m,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(0.09m, BoltOfWovenCloth),
+            }
+        };
+
+        public static BasicRecipe Curtain => new BasicRecipe()
+        {
+            Product = "Curtain",
+            DifficultyValue = 15,
+            PriceMultiplier = 1.1m,
+            DurabilityMultiplier = 1.1m,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(0.02m, BoltOfWovenCloth),
+                new RecipeComponent(0.00625m, SpoolOfThread),
+            }
+        };
+
+        public static BasicRecipe Towel => new BasicRecipe()
+        {
+            Product = "Towel",
+            DifficultyValue = 15,
+            PriceMultiplier = 1.1m,
+            DurabilityMultiplier = 1.1m,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(0.02m, BoltOfWovenCloth),
+            }
+        };
+
+        public static BasicRecipe Rag => new BasicRecipe()
+        {
+            Product = "Rag",
+            DifficultyValue = 15,
+            PriceMultiplier = 1,
+            DurabilityMultiplier = 1.1m,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(0.00125m, BoltOfWovenCloth),
+            }
+        };
+
+        public static BasicRecipe Backpack => new BasicRecipe()
+        {
+            Product = "Backpack",
+            DifficultyValue = 18,
+            PriceMultiplier = 1.75m,
+            DurabilityMultiplier = 1.1m,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(4, MediumLeather),
+                new RecipeComponent(0.01m, ThreadOrCord),
+                new RecipeComponent(10, Fitting),
+            }
+        };
+
+        public static BasicRecipe Pillow => new BasicRecipe()
+        {
+            Product = "Pillow",
+            DifficultyValue = 15,
+            PriceMultiplier = 1.25m,
+            DurabilityMultiplier = 1.1m,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(0.02m, BoltOfWovenCloth),
+            }
+        };
+
+        public static BasicRecipe Mattress => new BasicRecipe()
+        {
+            Product = "Mattress",
+            DifficultyValue = 23,
+            PriceMultiplier = 1.75m,
+            DurabilityMultiplier = 1.1m,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(252, BoltOfWovenCloth),
+                new RecipeComponent(15, Helpers.AnyFiber),
+                new RecipeComponent(0.05m, SpoolOfThread),
+            }
+        };
+
+        /*
+        public static BasicRecipe LeatherArmor => new BasicRecipe()
+        {
+            Product = "Leather Armor",
+            DifficultyValue = 23,
+            PriceMultiplier = 1.1m,
+            DurabilityMultiplier = 1.1m,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(210, LeatherScale),
+                new RecipeComponent(0.05m, BundleOfCord),
+                new RecipeComponent(6, Belt),
+                new RecipeComponent(1, Gambeson),
+                new RecipeComponent(1, Yexhipanqa),
+                new RecipeComponent(0.1m, BoltOfWovenCloth),
+                new RecipeComponent(40, Fitting),
+            }
+        };
+
+        public static BasicRecipe ReinforcedLeatherArmor => new BasicRecipe()
+        {
+            Product = "Reinforced Leather Armor",
+            DifficultyValue = 23,
+            PriceMultiplier = 1.1m,
+            DurabilityMultiplier = 1.1m,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(35, LeatherLame),
+                new RecipeComponent(0.025m, BundleOfCord),
+                new RecipeComponent(11, Belt),
+                new RecipeComponent(1, Gambeson),
+                new RecipeComponent(1, Yexhipanqa),
+                new RecipeComponent(0.1m, BoltOfWovenCloth),
+                new RecipeComponent(160, Fitting),
+            }
+        };
+        */
+
+        public static BasicRecipe WoodArmor => new BasicRecipe()
+        {
+            Product = "Wood Armor",
+            DifficultyValue = 23,
+            PriceMultiplier = 1.1m,
+            DurabilityMultiplier = 1.5m,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(210, WoodScale),
+                new RecipeComponent(0.05m, BundleOfCord),
+                new RecipeComponent(6, Belt),
+                new RecipeComponent(1, Gambeson),
+                new RecipeComponent(1, Yexhipanqa),
+                new RecipeComponent(0.1m, BoltOfWovenCloth),
+                new RecipeComponent(40, Fitting),
+            }
+        };
+
+        public static BasicRecipe WoodPlateArmor => new BasicRecipe()
+        {
+            Product = "Wood Plate Armor",
+            DifficultyValue = 23,
+            PriceMultiplier = 1.1m,
+            DurabilityMultiplier = 1.5m,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(35, WoodLame),
+                new RecipeComponent(0.025m, BundleOfCord),
+                new RecipeComponent(11, Belt),
+                new RecipeComponent(1, Gambeson),
+                new RecipeComponent(1, Yexhipanqa),
+                new RecipeComponent(0.1m, BoltOfWovenCloth),
+                new RecipeComponent(160, Fitting),
+            }
+        };
+
+        public static BasicRecipe LacqueredWoodArmor => new BasicRecipe()
+        {
+            Product = "Lacquered Wood Armor",
+            DifficultyValue = 23,
+            PriceMultiplier = 1.1m,
+            DurabilityMultiplier = 2,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(210, LacqueredWoodScale),
+                new RecipeComponent(0.05m, BundleOfCord),
+                new RecipeComponent(6, Belt),
+                new RecipeComponent(1, Gambeson),
+                new RecipeComponent(1, Yexhipanqa),
+                new RecipeComponent(0.1m, BoltOfWovenCloth),
+                new RecipeComponent(40, Fitting),
+            }
+        };
+
+        public static BasicRecipe LacqueredWoodPlateArmor => new BasicRecipe()
+        {
+            Product = "Lacquered Wood Plate Armor",
+            DifficultyValue = 23,
+            PriceMultiplier = 1.1m,
+            DurabilityMultiplier = 2,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(35, LacqueredWoodLame),
+                new RecipeComponent(0.025m, BundleOfCord),
+                new RecipeComponent(11, Belt),
+                new RecipeComponent(1, Gambeson),
+                new RecipeComponent(1, Yexhipanqa),
+                new RecipeComponent(0.1m, BoltOfWovenCloth),
+                new RecipeComponent(160, Fitting),
+            }
+        };
+
+        public static BasicRecipe MetalPlateArmor => new BasicRecipe()
+        {
+            Product = "Metal Plate Armor",
+            DifficultyValue = 23,
+            PriceMultiplier = 1.1m,
+            DurabilityMultiplier = 1,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(210, MetalScale),
+                new RecipeComponent(0.05m, BundleOfCord),
+                new RecipeComponent(6, Belt),
+                new RecipeComponent(1, Gambeson),
+                new RecipeComponent(1, Yexhipanqa),
+                new RecipeComponent(0.1m, BoltOfWovenCloth),
+                new RecipeComponent(40, Fitting),
+            }
+        };
+
+        public static BasicRecipe HeavyMetalPlateArmor => new BasicRecipe()
+        {
+            Product = "Heavy Metal Plate Armor",
+            DifficultyValue = 23,
+            PriceMultiplier = 1.1m,
+            DurabilityMultiplier = 1.5m,
+            Components = new List<RecipeComponent>()
+            {
+                new RecipeComponent(35, MetalLame),
+                new RecipeComponent(0.025m, BundleOfCord),
+                new RecipeComponent(11, Belt),
+                new RecipeComponent(1, Gambeson),
+                new RecipeComponent(1, Yexhipanqa),
+                new RecipeComponent(0.1m, BoltOfWovenCloth),
+                new RecipeComponent(160, Fitting),
+            }
+        };
     }
 }
