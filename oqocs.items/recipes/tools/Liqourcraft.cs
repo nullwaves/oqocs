@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace oqocs.items.recipes.tools
 {
-    public static class Liqourcraft
+    public static class LiqourcraftTools
     {
         public static List<BasicRecipe> All => new List<BasicRecipe>()
         {
