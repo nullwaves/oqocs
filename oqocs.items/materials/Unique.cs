@@ -19,5 +19,7 @@
         public static Unique GlassBead => new Unique("Glass Bead", "", 1, 1, Unit.Each);
 
         public static Unique MediumPelt => new Unique("Medium Pelt", "", 6, 1, Unit.Each);
+
+        public static Unique Feather => new Unique("Feather", "", 0.04m, 1, Unit.Each);
     }
 }
