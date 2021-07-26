@@ -2,7 +2,7 @@
 
 namespace oqocs.items.recipes.tools
 {
-    public static class Husbandry
+    public static class HusbandryTools
     {
         public static List<BasicRecipe> All => new List<BasicRecipe>()
         {
