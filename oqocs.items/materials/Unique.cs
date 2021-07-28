@@ -21,5 +21,9 @@
         public static Unique MediumPelt => new Unique("Medium Pelt", "", 6, 1, Unit.Each);
 
         public static Unique Feather => new Unique("Feather", "", 0.04m, 1, Unit.Each);
+
+        public static Unique AtzhiyjpakFruitWax => new Unique("Atzhiyəpak Fruit Wax", "", 4, 1, Unit.Pounds);
+
+        public static Unique SjlaomoFruitWax => new Unique("Səlaomo Fruit Wax", "", 6, 1, Unit.Pounds);
     }
 }
