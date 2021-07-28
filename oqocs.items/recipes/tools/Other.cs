@@ -6,6 +6,13 @@ namespace oqocs.items.recipes.tools
 {
     public static class OtherTools
     {
+        public static List<BasicRecipe> All => new List<BasicRecipe>()
+        {
+            Candle,
+            Torch,
+            FireStarter,
+        };
+
         public static BasicRecipe Candle => new BasicRecipe()
         {
             Product = "Candle",

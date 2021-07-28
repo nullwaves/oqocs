@@ -19,8 +19,8 @@ namespace oqocs.items.recipes
             Survival,
             Tailoring,
             Weapons,
-            //Shields,
-            //Other,
+            Shields,
+            Other,
         });
 
         public static List<BasicRecipe> Butchery => ButcheryTools.All;
@@ -35,5 +35,7 @@ namespace oqocs.items.recipes
         public static List<BasicRecipe> Survival => SurvivalTools.All;
         public static List<BasicRecipe> Tailoring => TailoringTools.All;
         public static List<BasicRecipe> Weapons => tools.Weapons.All;
+        public static List<BasicRecipe> Shields => tools.Shields.All;
+        public static List<BasicRecipe> Other => OtherTools.All;
     }
 }
