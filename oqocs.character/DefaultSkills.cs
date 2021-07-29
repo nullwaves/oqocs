@@ -3,14 +3,10 @@
     public static class DefaultSkills
     {
         internal static int[] CarpentryTwo => new int[] { 500, 750 };
-
-        internal static int[] defaultThree => new int[] { 250, 500, 750 };
-
-        internal static int[] defaultFour => new int[] { 250, 500, 750, 1000 };
-
-        internal static int[] defaultSpread => new int[] { 250, 500, 750, 1000, 1500 };
-
-        internal static int[] lowStartSpread => new int[] { 125, 250, 500, 750, 1000 };
+        internal static int[] DefaultThree => new int[] { 250, 500, 750 };
+        internal static int[] DefaultFour => new int[] { 250, 500, 750, 1000 };
+        internal static int[] DefaultSpread => new int[] { 250, 500, 750, 1000, 1500 };
+        internal static int[] LowStartSpread => new int[] { 125, 250, 500, 750, 1000 };
         internal static int[] LowFour => new int[] { 125, 250, 500, 1000 };
         internal static int[] HighFour => new int[] { 500, 750, 1000, 1500 };
         internal static int[] StealthSpread => new int[] { 250, 500, 750, 1000, 1500, 2500 };
@@ -26,59 +22,59 @@
             "Fishing",
             new SkillBonus[]
             {
-                new SkillBonus("Rod Fishing", defaultSpread),
-                new SkillBonus("Net Fishing", defaultSpread),
-                new SkillBonus("Trap Fishing", defaultSpread),
+                new SkillBonus("Rod Fishing", DefaultSpread),
+                new SkillBonus("Net Fishing", DefaultSpread),
+                new SkillBonus("Trap Fishing", DefaultSpread),
             });
 
         public static Skill Mining => new Skill(
             "Mining",
             new SkillBonus[]
             {
-                new SkillBonus("Mining Yield Quality", defaultSpread),
-                new SkillBonus("Mining Rate", defaultSpread),
+                new SkillBonus("Mining Yield Quality", DefaultSpread),
+                new SkillBonus("Mining Rate", DefaultSpread),
             });
 
         public static Skill Survival => new Skill(
             "Survival",
             new SkillBonus[]
             {
-                new SkillBonus("Gather Food", defaultThree),
-                new SkillBonus("Gather Firewood", defaultThree),
-                new SkillBonus("Gather Medicine", defaultThree),
-                new SkillBonus("Gather Resin Components", defaultThree),
-                new SkillBonus("Small Game Tracking", defaultThree),
-                new SkillBonus("Medium Game Tracking", defaultThree),
-                new SkillBonus("Large Game Tracking", defaultThree),
-                new SkillBonus("Exotic Game Tracking", defaultThree),
-                new SkillBonus("Forest Tracking", defaultThree),
-                new SkillBonus("Desert Tracking", defaultThree),
-                new SkillBonus("Snowy Tracking", defaultThree),
-                new SkillBonus("Grassland Tracking", defaultThree),
-                new SkillBonus("Highland Tracking", defaultThree),
-                new SkillBonus("Snare Traps", defaultThree),
-                new SkillBonus("Pitfall Traps", defaultThree),
-                new SkillBonus("Cage Traps", defaultThree),
+                new SkillBonus("Gather Food", DefaultThree),
+                new SkillBonus("Gather Firewood", DefaultThree),
+                new SkillBonus("Gather Medicine", DefaultThree),
+                new SkillBonus("Gather Resin Components", DefaultThree),
+                new SkillBonus("Small Game Tracking", DefaultThree),
+                new SkillBonus("Medium Game Tracking", DefaultThree),
+                new SkillBonus("Large Game Tracking", DefaultThree),
+                new SkillBonus("Exotic Game Tracking", DefaultThree),
+                new SkillBonus("Forest Tracking", DefaultThree),
+                new SkillBonus("Desert Tracking", DefaultThree),
+                new SkillBonus("Snowy Tracking", DefaultThree),
+                new SkillBonus("Grassland Tracking", DefaultThree),
+                new SkillBonus("Highland Tracking", DefaultThree),
+                new SkillBonus("Snare Traps", DefaultThree),
+                new SkillBonus("Pitfall Traps", DefaultThree),
+                new SkillBonus("Cage Traps", DefaultThree),
             });
 
         public static Skill Husbandry => new Skill(
             "Husbandry",
             new SkillBonus[]
             {
-                new SkillBonus("Training", defaultThree),
-                new SkillBonus("Herd Size", lowStartSpread),
-                new SkillBonus("Riding", defaultSpread),
-                new SkillBonus("Breaking", defaultSpread),
-                new SkillBonus("Exotic Animal Taming", defaultSpread),
-                new SkillBonus("Breeding", lowStartSpread),
+                new SkillBonus("Training", DefaultThree),
+                new SkillBonus("Herd Size", LowStartSpread),
+                new SkillBonus("Riding", DefaultSpread),
+                new SkillBonus("Breaking", DefaultSpread),
+                new SkillBonus("Exotic Animal Taming", DefaultSpread),
+                new SkillBonus("Breeding", LowStartSpread),
             });
 
         public static Skill Carpentry => new Skill(
             "Carpentry",
             new SkillBonus[]
             {
-                new SkillBonus("Base Quality", defaultFour),
-                new SkillBonus("Base Rate", defaultFour),
+                new SkillBonus("Base Quality", DefaultFour),
+                new SkillBonus("Base Rate", DefaultFour),
                 new SkillBonus("Furniture Quality", CarpentryTwo),
                 new SkillBonus("Furniture Rate", CarpentryTwo),
                 new SkillBonus("Upholstery Quality", CarpentryTwo),
@@ -95,137 +91,137 @@
                 new SkillBonus("Housing Rate", CarpentryTwo),
                 new SkillBonus("Utility Quality", CarpentryTwo),
                 new SkillBonus("Utility Rate", CarpentryTwo),
-                new SkillBonus("Improvised Quality", defaultSpread),
-                new SkillBonus("Improvised Rate", defaultSpread),
+                new SkillBonus("Improvised Quality", DefaultSpread),
+                new SkillBonus("Improvised Rate", DefaultSpread),
             });
 
         public static Skill Cooking => new Skill(
             "Cooking",
             new SkillBonus[]
             {
-                new SkillBonus("Regional Cuisine Quality", defaultSpread),
-                new SkillBonus("Regional Cuisine Rate", defaultSpread),
-                new SkillBonus("Dish Quality", defaultSpread),
-                new SkillBonus("Dish Rate", defaultSpread),
+                new SkillBonus("Regional Cuisine Quality", DefaultSpread),
+                new SkillBonus("Regional Cuisine Rate", DefaultSpread),
+                new SkillBonus("Dish Quality", DefaultSpread),
+                new SkillBonus("Dish Rate", DefaultSpread),
             });
 
         public static Skill Liquorcraft => new Skill(
             "Liquorcraft",
             new SkillBonus[]
             {
-                new SkillBonus("Distilling", defaultSpread),
-                new SkillBonus("Brewing", defaultSpread),
-                new SkillBonus("Fermenting", defaultSpread),
+                new SkillBonus("Distilling", DefaultSpread),
+                new SkillBonus("Brewing", DefaultSpread),
+                new SkillBonus("Fermenting", DefaultSpread),
             });
 
         public static Skill Toolcraft => new Skill(
             "Toolcraft",
             new SkillBonus[]
             {
-                new SkillBonus("Tools Quality", defaultSpread),
-                new SkillBonus("Tools Rate", defaultSpread),
-                new SkillBonus("Weapons Quality", defaultSpread),
-                new SkillBonus("Weapons Rate", defaultSpread),
-                new SkillBonus("Mechanical Rate", defaultSpread),
-                new SkillBonus("Max Mechanical Complexity", defaultSpread),
+                new SkillBonus("Tools Quality", DefaultSpread),
+                new SkillBonus("Tools Rate", DefaultSpread),
+                new SkillBonus("Weapons Quality", DefaultSpread),
+                new SkillBonus("Weapons Rate", DefaultSpread),
+                new SkillBonus("Mechanical Rate", DefaultSpread),
+                new SkillBonus("Max Mechanical Complexity", DefaultSpread),
             });
 
         public static Skill Tailoring = new Skill(
             "Tailoring",
             new SkillBonus[]
             {
-                new SkillBonus("Shearing", defaultFour),
+                new SkillBonus("Shearing", DefaultFour),
                 new SkillBonus("Armorcraft Quality", HighFour),
                 new SkillBonus("Armorcraft Rate", HighFour),
-                new SkillBonus("Clothing Quality", defaultFour),
-                new SkillBonus("Clothing Rate", defaultFour),
-                new SkillBonus("Threadwork Quality", defaultFour),
-                new SkillBonus("Threadwork Rate", defaultFour),
+                new SkillBonus("Clothing Quality", DefaultFour),
+                new SkillBonus("Clothing Rate", DefaultFour),
+                new SkillBonus("Threadwork Quality", DefaultFour),
+                new SkillBonus("Threadwork Rate", DefaultFour),
             });
 
         public static Skill Medicine => new Skill(
             "Medicinecraft",
             new SkillBonus[]
             {
-                new SkillBonus("Diagnosis", defaultSpread),
-                new SkillBonus("Crafting Quality", defaultSpread),
-                new SkillBonus("Crafting Rate", defaultSpread),
+                new SkillBonus("Diagnosis", DefaultSpread),
+                new SkillBonus("Crafting Quality", DefaultSpread),
+                new SkillBonus("Crafting Rate", DefaultSpread),
             });
 
         public static Skill Butchery => new Skill(
             "Butchery",
             new SkillBonus[]
             {
-                new SkillBonus("Non-Sapient Yield", defaultFour),
-                new SkillBonus("Non-Sapient Rate", defaultFour),
-                new SkillBonus("Sapient Yield", defaultFour),
-                new SkillBonus("Sapient Rate", defaultFour),
+                new SkillBonus("Non-Sapient Yield", DefaultFour),
+                new SkillBonus("Non-Sapient Rate", DefaultFour),
+                new SkillBonus("Sapient Yield", DefaultFour),
+                new SkillBonus("Sapient Rate", DefaultFour),
             });
 
         public static Skill Inscriptions => new Skill(
             "Inscriptions",
             new SkillBonus[]
             {
-                new SkillBonus("Inscription Quality", defaultSpread),
-                new SkillBonus("Inscribing Rate", defaultSpread),
-                new SkillBonus("Rune Retention", defaultSpread),
+                new SkillBonus("Inscription Quality", DefaultSpread),
+                new SkillBonus("Inscribing Rate", DefaultSpread),
+                new SkillBonus("Rune Retention", DefaultSpread),
             });
 
         public static Skill Resin => new Skill(
             "Resin",
             new SkillBonus[]
             {
-                new SkillBonus("Resincraft Quality", defaultSpread),
-                new SkillBonus("Resincraft Rate", defaultSpread),
-                new SkillBonus("Component Preparation", defaultSpread),
+                new SkillBonus("Resincraft Quality", DefaultSpread),
+                new SkillBonus("Resincraft Rate", DefaultSpread),
+                new SkillBonus("Component Preparation", DefaultSpread),
             });
 
         public static Skill LightArms => new Skill(
             "Light Arms",
             new SkillBonus[]
             {
-                new SkillBonus("Daggers", defaultFour),
-                new SkillBonus("Swords", defaultFour),
-                new SkillBonus("Hand-Axes & Maces", defaultFour),
-                new SkillBonus("Light Polearms", defaultFour),
+                new SkillBonus("Daggers", DefaultFour),
+                new SkillBonus("Swords", DefaultFour),
+                new SkillBonus("Hand-Axes & Maces", DefaultFour),
+                new SkillBonus("Light Polearms", DefaultFour),
             });
 
         public static Skill HeavyArms => new Skill(
             "Heavy Arms",
             new SkillBonus[]
             {
-                new SkillBonus("Greatswords", defaultFour),
-                new SkillBonus("Heavy Axes", defaultFour),
-                new SkillBonus("Heavy Hammers", defaultFour),
-                new SkillBonus("Polearms", defaultFour),
+                new SkillBonus("Greatswords", DefaultFour),
+                new SkillBonus("Heavy Axes", DefaultFour),
+                new SkillBonus("Heavy Hammers", DefaultFour),
+                new SkillBonus("Polearms", DefaultFour),
             });
 
         public static Skill ThrownWeapons => new Skill(
             "Thrown Weapons",
             new SkillBonus[]
             {
-                new SkillBonus("Blades", defaultFour),
-                new SkillBonus("Bones", defaultFour),
-                new SkillBonus("Polearms", defaultFour),
-                new SkillBonus("Improvised", defaultFour),
+                new SkillBonus("Blades", DefaultFour),
+                new SkillBonus("Bones", DefaultFour),
+                new SkillBonus("Polearms", DefaultFour),
+                new SkillBonus("Improvised", DefaultFour),
             });
 
         public static Skill RangedWeapons => new Skill(
             "Ranged Weapons",
             new SkillBonus[]
             {
-                new SkillBonus("Shortbow", defaultFour),
-                new SkillBonus("Longbow", defaultFour),
-                new SkillBonus("Crossbow", defaultFour),
-                new SkillBonus("Mounted Archery", defaultFour),
+                new SkillBonus("Shortbow", DefaultFour),
+                new SkillBonus("Longbow", DefaultFour),
+                new SkillBonus("Crossbow", DefaultFour),
+                new SkillBonus("Mounted Archery", DefaultFour),
             });
 
         public static Skill Armor => new Skill(
             "Armor",
             new SkillBonus[]
             {
-                new SkillBonus("Improved Joints", defaultFour),
-                new SkillBonus("Shield Training", defaultFour),
+                new SkillBonus("Improved Joints", DefaultFour),
+                new SkillBonus("Shield Training", DefaultFour),
                 new SkillBonus("Heavy Lifting", new int[] { 1000, 1500 }),
             });
 
@@ -251,11 +247,11 @@
             "Performance",
             new SkillBonus[]
             {
-                new SkillBonus("Song", lowStartSpread),
-                new SkillBonus("Dance", lowStartSpread),
-                new SkillBonus("Public Speaking", lowStartSpread),
-                new SkillBonus("Intimidation", lowStartSpread),
-                new SkillBonus("Deception", lowStartSpread),
+                new SkillBonus("Song", LowStartSpread),
+                new SkillBonus("Dance", LowStartSpread),
+                new SkillBonus("Public Speaking", LowStartSpread),
+                new SkillBonus("Intimidation", LowStartSpread),
+                new SkillBonus("Deception", LowStartSpread),
             });
     }
 }
