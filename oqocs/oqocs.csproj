@@ -5,8 +5,4 @@
     <OutputType>Exe</OutputType>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\oqocs.items\oqocs.items.csproj" />
-  </ItemGroup>
-
 </Project>

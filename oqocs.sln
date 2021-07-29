@@ -5,10 +5,6 @@ VisualStudioVersion = 16.0.29230.47
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "oqocs", "oqocs\oqocs.csproj", "{29DFD8CA-E787-4C46-A509-538C24D33EB1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "oqocs.items", "oqocs.items\oqocs.items.csproj", "{6C00A982-9F6B-4A57-A17D-BA0F6980302E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "oqocs.character", "oqocs.character\oqocs.character.csproj", "{D0D50E55-7883-42F6-8388-53AF919D2472}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,14 +15,6 @@ Global
 		{29DFD8CA-E787-4C46-A509-538C24D33EB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29DFD8CA-E787-4C46-A509-538C24D33EB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29DFD8CA-E787-4C46-A509-538C24D33EB1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6C00A982-9F6B-4A57-A17D-BA0F6980302E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6C00A982-9F6B-4A57-A17D-BA0F6980302E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6C00A982-9F6B-4A57-A17D-BA0F6980302E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6C00A982-9F6B-4A57-A17D-BA0F6980302E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D0D50E55-7883-42F6-8388-53AF919D2472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D0D50E55-7883-42F6-8388-53AF919D2472}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D0D50E55-7883-42F6-8388-53AF919D2472}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D0D50E55-7883-42F6-8388-53AF919D2472}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
