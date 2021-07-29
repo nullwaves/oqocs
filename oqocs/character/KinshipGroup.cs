@@ -16,7 +16,8 @@ namespace oqocs.character
         public KinshipGroup SecondPrefChild { get; }
         public KinshipGroup SecondPrefAvoid { get; }
 
-        public KinshipGroup(string name,
+        public KinshipGroup(
+            string name,
             string totem,
             KinshipGroup p1,
             KinshipGroup p2,
