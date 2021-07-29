@@ -150,5 +150,75 @@ namespace oqocs
             }
             return PromptMaterial(acceptedInputs);
         }
+
+        internal static BasicItem BuildRandomItem(BasicRecipe recipe)
+        {
+            // Console.WriteLine($"Beginning to Build {recipe.Product}");
+            int sumDurability = 0;
+            decimal sumValue = 0;
+            List<string> sumDescription = new List<string>();
+            foreach (RecipeComponent component in recipe.Components)
+            {
+                int localDurability = 0;
+                decimal localValue = 0;
+                switch (component.Type)
+                {
+                    case ComponentType.CraftableItem:
+                        var localItem = BuildRandomItem(component.CraftableItem);
+                        localDurability = localItem.Durability;
+                        localValue = localItem.CostInPence * component.Quantity * localItem.Quality.PriceMultiplier;
+                        sumDescription.Add($"{component.Quantity}{localItem.Unit.Short} of {localItem.Name} - {localItem.Description}");
+                        break;
+
+                    case ComponentType.Unique:
+                        var localUnique = component.UniqueItem;
+                        localDurability = localUnique.Durability;
+                        localValue = localUnique.CostInPence * component.Quantity * localUnique.Quality.PriceMultiplier;
+                        sumDescription.Add($"{component.Quantity}{localUnique.Unit.Short} of {localUnique.Name}");
+                        break;
+
+                    case ComponentType.Multi:
+                        BasicItem localMulti = ChooseRandomMaterial(component.AcceptedInputs);
+                        localDurability = localMulti.Durability;
+                        localValue = localMulti.CostInPence * component.Quantity * localMulti.Quality.PriceMultiplier;
+                        sumDescription.Add($"{component.Quantity}{localMulti.Unit.Short} of {localMulti.Name}");
+                        break;
+
+                    case ComponentType.MultiRecipe:
+                        var localRecipe = ChooseRandomSubRecipe(component.AcceptedCrafted);
+                        var localCrafted = BuildRandomItem(localRecipe);
+                        localDurability = localCrafted.Durability;
+                        localValue = localCrafted.CostInPence * component.Quantity * localCrafted.Quality.PriceMultiplier;
+                        sumDescription.Add($"{component.Quantity}{localCrafted.Unit.Short} of {localCrafted.Name} - {localCrafted.Description}");
+                        break;
+                }
+                if (localValue > 0 && localValue < 1) localValue = 1; // Round up component costs.
+                sumDurability += localDurability;
+                sumValue += localValue;
+            }
+
+            string description = string.Join("\n", sumDescription).TrimEnd('\n');
+            var item = new BasicItem()
+            {
+                Name = $"{recipe.Product}",
+                Description = description,
+                Durability = (int)(sumDurability * recipe.DurabilityMultiplier),
+                CostInPence = sumValue * recipe.PriceMultiplier,
+                Quality = Grade.C,
+                Unit = Unit.Each
+            };
+
+            return item;
+        }
+
+        internal static BasicRecipe ChooseRandomSubRecipe(List<BasicRecipe> acceptedCrafted)
+        {
+            return acceptedCrafted[random.Next(acceptedCrafted.Count)];
+        }
+
+        internal static BasicItem ChooseRandomMaterial(List<BasicItem> acceptedInputs)
+        {
+            return acceptedInputs[random.Next(acceptedInputs.Count)];
+        }
     }
 }
