@@ -4,9 +4,12 @@
     {
         public string Name { get; }
 
-        public Skill(string name)
+        public SkillBonus[] Bonuses { get; }
+
+        public Skill(string name, SkillBonus[] bonuses)
         {
             Name = name;
+            Bonuses = bonuses;
         }
     }
 }
