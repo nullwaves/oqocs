@@ -2,11 +2,11 @@
 {
     public class SkillBonus
     {
-        public string Name { get; }
+        public string Name { get; set; }
 
-        public int CurrentBonus { get; }
+        public int CurrentBonus { get; set; }
 
-        public int[] BonusCosts { get; }
+        public int[] BonusCosts { get; set; }
 
         public int MaxBonus
         {

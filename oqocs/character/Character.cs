@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Text;
+﻿using System.Text;
 
 namespace oqocs.character
 {
@@ -20,7 +19,7 @@ namespace oqocs.character
         public string Job { get; set; }
 
         // Stats & Skills
-        public List<Skill> Skills { get; set; }
+        public SkillManager Skills { get; set; }
 
         public int MaxHP { get; set; }
         public int CurrentHP { get; set; }
@@ -61,7 +60,7 @@ namespace oqocs.character
             Ethnicity = "";
             SocialClass = "";
             Job = "";
-            Skills = new List<Skill>(DefaultSkills.All);
+            Skills = new SkillManager();
         }
 
         public override string ToString()
@@ -76,7 +75,8 @@ namespace oqocs.character
             retVal.AppendLine($"INS {CurrentINS}/{MaxINS} - PER {CurrentPER}/{MaxPER}");
             retVal.AppendLine($"SLP {CurrentSLP}/{MaxSLP} - HNG {CurrentHNG}/{MaxHNG} - THI {CurrentTHI}/{MaxTHI}");
             retVal.AppendLine();
-            foreach (Skill s in Skills)
+            retVal.AppendLine($"Unallocated XPH: {Skills.XPH}");
+            foreach (Skill s in Skills.Skills)
             {
                 foreach (SkillBonus b in s.Bonuses)
                     retVal.AppendLine($"{s.Name} - {b.Name} - {b.CurrentBonus}");

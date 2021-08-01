@@ -24,6 +24,9 @@ namespace oqocs
                 species.HNG,
                 species.THI);
 
+            retVal.Skills.GiveXPH(2900);
+            retVal.Skills.RandomInitBonuses();
+
             // Do steps 2-4
             return retVal;
         }
