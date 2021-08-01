@@ -1,4 +1,7 @@
-﻿namespace oqocs.character
+﻿using oqocs.items;
+using System.Collections.Generic;
+
+namespace oqocs.character
 {
     public static class DefaultSkills
     {
@@ -10,6 +13,46 @@
         internal static int[] LowFour => new int[] { 125, 250, 500, 1000 };
         internal static int[] HighFour => new int[] { 500, 750, 1000, 1500 };
         internal static int[] StealthSpread => new int[] { 250, 500, 750, 1000, 1500, 2500 };
+
+        public static List<Skill> All => Helpers.CompileList(new List<Skill>[] { Gathering, Crafting, Weapons, Social });
+
+        public static List<Skill> Gathering => new List<Skill>()
+        {
+            Logging,
+            Fishing,
+            Mining,
+            Survival,
+            Husbandry,
+        };
+
+        public static List<Skill> Crafting => new List<Skill>()
+        {
+            Carpentry,
+            Cooking,
+            Liquorcraft,
+            Toolcraft,
+            Tailoring,
+            Medicine,
+            Butchery,
+            Inscriptions,
+            Resin,
+        };
+
+        public static List<Skill> Weapons => new List<Skill>()
+        {
+            LightArms,
+            HeavyArms,
+            ThrownWeapons,
+            RangedWeapons,
+        };
+
+        public static List<Skill> Social => new List<Skill>()
+        {
+            Armor,
+            Stealth,
+            SleightOfHand,
+            Performance,
+        };
 
         public static Skill Logging => new Skill(
             "Logging",
@@ -126,7 +169,7 @@
                 new SkillBonus("Max Mechanical Complexity", DefaultSpread),
             });
 
-        public static Skill Tailoring = new Skill(
+        public static Skill Tailoring => new Skill(
             "Tailoring",
             new SkillBonus[]
             {
