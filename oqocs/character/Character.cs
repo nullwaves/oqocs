@@ -39,8 +39,9 @@ namespace oqocs.character
         public int MaxTHI { get; set; }
         public int CurrentTHI { get; set; }
 
-        public Character(int age, KinshipGroup group, int hp, int sta, int ev, int _ins, int per, int slp, int hng, int thi)
+        public Character(Species species, int age, KinshipGroup group, int hp, int sta, int ev, int _ins, int per, int slp, int hng, int thi)
         {
+            Species = species;
             Age = age;
             KinshipGroup = group;
             MaxHP = CurrentHP = hp;
@@ -66,7 +67,7 @@ namespace oqocs.character
         public override string ToString()
         {
             StringBuilder retVal = new StringBuilder();
-            retVal.AppendLine($"Name: {Name} - Kinship: {KinshipGroup.Name}");
+            retVal.AppendLine($"Name: {Name} - Kinship: {KinshipGroup.Name} - Species: {Species.Name}");
             retVal.AppendLine($"Age: {Age} - Height: {Height} - Weight: {Weight}");
             retVal.AppendLine($"Hair: {Hair} - Eyes: {Eyes}");
             retVal.AppendLine($"Ethnicity: {Ethnicity} - Social Class: {SocialClass} - Job: {Job}");

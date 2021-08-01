@@ -12,6 +12,7 @@ namespace oqocs
             Species species = Species.All[random.Next(Species.All.Count)];
             KinshipGroup group = KinshipGroup.All[random.Next(KinshipGroup.All.Count)];
             Character retVal = new Character(
+                species,
                 species.Adulthood,
                 group,
                 species.HP,
