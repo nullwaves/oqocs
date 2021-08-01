@@ -42,6 +42,7 @@ namespace oqocs
             int spent = 0;
             for (int i = 0; bonus.CanIncrease; i++)
             {
+
                 int cost = bonus.NextBonusCost;
                 if (spendable >= cost && spendable <= XPH)
                 {
@@ -49,6 +50,7 @@ namespace oqocs
                     {
                         spendable -= cost;
                         spent += cost;
+                        bonus.CurrentBonus++;
                     }
                 }
                 else
