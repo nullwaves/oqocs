@@ -79,7 +79,10 @@ namespace oqocs.character
             foreach (Skill s in Skills.Skills)
             {
                 foreach (SkillBonus b in s.Bonuses)
-                    retVal.AppendLine($"{s.Name} - {b.Name} - {b.CurrentBonus}");
+                    if (b.CurrentBonus > 0)
+                    {
+                        retVal.AppendLine($"{s.Name} - {b.Name} - {b.CurrentBonus}");
+                    }
             };
 
             return retVal.ToString();

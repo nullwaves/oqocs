@@ -10,7 +10,19 @@ namespace oqocs
         public static Character GenerateCharacter()
         {
             Species species = Species.All[random.Next(Species.All.Count)];
+            var retVal = GenerateCharacter(species);
+            return retVal;
+        }
+
+        public static Character GenerateCharacter(Species species)
+        {
             KinshipGroup group = KinshipGroup.All[random.Next(KinshipGroup.All.Count)];
+            var retVal = GenerateCharacter(species, group);
+            return retVal;
+        }
+
+        public static Character GenerateCharacter(Species species, KinshipGroup group)
+        {
             Character retVal = new Character(
                 species,
                 species.Adulthood,
@@ -26,8 +38,6 @@ namespace oqocs
 
             retVal.Skills.GiveXPH(2900);
             retVal.Skills.RandomInitBonuses();
-
-            // Do steps 2-4
             return retVal;
         }
     }

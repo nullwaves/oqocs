@@ -1,4 +1,5 @@
-﻿using System;
+﻿using oqocs.character;
+using System;
 using System.IO;
 
 namespace oqocs
@@ -12,12 +13,17 @@ namespace oqocs
                 Directory.CreateDirectory("output");
                 var fs = File.OpenWrite($"output\\{i}.txt");
                 var write = new StreamWriter(fs);
-                write.Write(CharacterManager.GenerateCharacter());
+                write.Write(CharacterManager.GenerateCharacter(Species.Human));
                 write.Flush();
                 write.Close();
             }
             Console.Write(CharacterManager.GenerateCharacter());
-            Console.ReadKey();
+            ConsoleKeyInfo c = Console.ReadKey();
+            while (c.Key != ConsoleKey.Escape)
+            {
+                Console.Write(CharacterManager.GenerateCharacter());
+                Console.ReadKey();
+            }
         }
     }
 }
