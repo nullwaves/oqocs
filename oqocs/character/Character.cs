@@ -56,6 +56,7 @@ namespace oqocs.character
             Height = height;
             Weight = weight;
             Hair = hair;
+
             Eyes = eyes;
             Ethnicity = "";
             SocialClass = "";
