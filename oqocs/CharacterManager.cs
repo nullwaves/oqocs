@@ -23,6 +23,9 @@ namespace oqocs
 
         public static Character GenerateCharacter(Species species, KinshipGroup group)
         {
+            double mod = random.NextDouble();
+            int height = species.MinHeightInInches + (int)(mod * (species.MaxHeightInInches - species.MinHeightInInches));
+            int weight = species.MinWeightInPounds + (int)(mod * (species.MinWeightInPounds - species.MinWeightInPounds)) + random.Next(-10, 10);
             Character retVal = new Character(
                 species,
                 species.Adulthood,
@@ -34,7 +37,12 @@ namespace oqocs
                 species.PER,
                 species.SLP,
                 species.HNG,
-                species.THI);
+                species.THI,
+                species.HairColors[random.Next(species.HairColors.Length)],
+                species.EyeColors[random.Next(species.EyeColors.Length)],
+                $"{height / 12}ft {height % 12}in",
+                $"{weight}lbs"
+                );
 
             retVal.Skills.GiveXPH(2900);
             retVal.Skills.RandomInitBonuses();
