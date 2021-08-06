@@ -25,7 +25,7 @@ namespace oqocs
         {
             double mod = random.NextDouble();
             int height = species.MinHeightInInches + (int)(mod * (species.MaxHeightInInches - species.MinHeightInInches));
-            int weight = species.MinWeightInPounds + (int)(mod * (species.MinWeightInPounds - species.MinWeightInPounds)) + random.Next(-10, 10);
+            int weight = species.MinWeightInPounds + (int)(mod * (species.MaxWeightInPounds - species.MinWeightInPounds)) + random.Next(-10, 10);
             Character retVal = new Character(
                 species,
                 species.Adulthood,
