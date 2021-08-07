@@ -77,13 +77,12 @@ namespace oqocs.character
             retVal.AppendLine($"SLP {CurrentSLP}/{MaxSLP} - HNG {CurrentHNG}/{MaxHNG} - THI {CurrentTHI}/{MaxTHI}");
             retVal.AppendLine();
             retVal.AppendLine($"Unallocated XPH: {Skills.XPH}");
-            foreach (Skill s in Skills.Skills)
+            foreach (SkillBonus s in Skills.Skills)
             {
-                foreach (SkillBonus b in s.Bonuses)
-                    if (b.CurrentBonus > 0)
-                    {
-                        retVal.AppendLine($"{s.Name} - {b.Name} - {b.CurrentBonus}");
-                    }
+                if (s.CurrentBonus > 0)
+                {
+                    retVal.AppendLine($"{s.Skill.Name} - {s.Name} - {s.CurrentBonus}");
+                }
             };
 
             return retVal.ToString();

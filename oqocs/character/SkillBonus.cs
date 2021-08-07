@@ -2,6 +2,8 @@
 {
     public class SkillBonus
     {
+        public Skill Skill { get; set; }
+
         public string Name { get; set; }
 
         public int CurrentBonus { get; set; }
@@ -32,8 +34,9 @@
             }
         }
 
-        public SkillBonus(string name, int[] costs)
+        public SkillBonus(Skill skill, string name, int[] costs)
         {
+            Skill = skill;
             Name = name;
             BonusCosts = costs;
             CurrentBonus = 0;

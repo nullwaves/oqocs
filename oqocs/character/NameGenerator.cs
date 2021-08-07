@@ -6,7 +6,7 @@ namespace oqocs.character
 {
     public static class NameGenerator
     {
-        internal static Random random => new Random();
+        internal static Random Random => new Random();
 
         public static List<string> Consonants => new List<string>()
         {
@@ -26,9 +26,9 @@ namespace oqocs.character
             "ɛ", "ɑ",
         };
 
-        internal static string RandomConsonant() => Consonants[random.Next(Consonants.Count)];
+        internal static string RandomConsonant() => Consonants[Random.Next(Consonants.Count)];
 
-        internal static string RandomVowel() => Vowels[random.Next(Vowels.Count)];
+        internal static string RandomVowel() => Vowels[Random.Next(Vowels.Count)];
 
         public static string GenerateName()
         {
@@ -36,7 +36,7 @@ namespace oqocs.character
             retVal.Append(RandomConsonant());
             retVal.Append(RandomVowel());
             retVal.Append(RandomConsonant());
-            if (random.NextDouble() < 0.66)
+            if (Random.NextDouble() < 0.66)
             {
                 retVal.Append(RandomConsonant());
             }

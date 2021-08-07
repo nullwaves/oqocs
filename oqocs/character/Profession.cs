@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace oqocs.character
+﻿namespace oqocs.character
 {
     public class Profession
     {

@@ -7,7 +7,7 @@ namespace oqocs
     public class SkillManager
     {
         public int XPH { get; private set; }
-        public List<Skill> Skills { get; private set; }
+        public List<SkillBonus> Skills { get; private set; }
 
         private readonly Random random = new Random();
 
@@ -28,25 +28,25 @@ namespace oqocs
             int combatXP = ((XPH / 200) + 1) * 100;
             if (combatXP < XPH)
             {
-                Skill combatSkill = DefaultSkills.Weapons[random.Next(DefaultSkills.Weapons.Count)];
+                Skill combatSkill = Skill.Weapons[random.Next(Skill.Weapons.Count)];
                 spentXPH += AllocateRandomBonus(combatXP, combatSkill);
             }
-            Skill remainderSkill = DefaultSkills.All[random.Next(DefaultSkills.All.Count)];
+            Skill remainderSkill = Skill.All[random.Next(Skill.All.Count)];
             spentXPH += AllocateRandomBonus(XPH, remainderSkill);
             return spentXPH;
         }
 
         private int AllocateRandomBonus(int spendable, Skill skill)
         {
-            SkillBonus bonus = skill.Bonuses[random.Next(skill.Bonuses.Length)];
+            var bonuses = BonusesForSkill(skill);
+            SkillBonus bonus = bonuses[random.Next(bonuses.Count)];
             int spent = 0;
             for (int i = 0; bonus.CanIncrease; i++)
             {
-
                 int cost = bonus.NextBonusCost;
                 if (spendable >= cost && spendable <= XPH)
                 {
-                    if (TryBuyBonus(skill, bonus))
+                    if (TryBuyBonus(bonus))
                     {
                         spendable -= cost;
                         spent += cost;
@@ -61,14 +61,18 @@ namespace oqocs
             return spent;
         }
 
-        public bool TryBuyBonus(Skill skill, SkillBonus bonus)
+        public List<SkillBonus> BonusesForSkill(Skill skill)
         {
-            Skill l = Skills.Find(x => x.Name == skill.Name);
-            SkillBonus l2 = Array.Find(l.Bonuses, x => x.Name == bonus.Name);
-            if (l2.CanIncrease && XPH > l2.NextBonusCost)
+            return DefaultSkills.All.FindAll(x => x.Skill.Name == skill.Name);
+        }
+
+        public bool TryBuyBonus(SkillBonus bonus)
+        {
+            var l = Skills.Find(x => x.Name == bonus.Name);
+            if (l.CanIncrease && XPH > l.NextBonusCost)
             {
-                XPH -= l2.NextBonusCost;
-                l2.CurrentBonus++;
+                XPH -= l.NextBonusCost;
+                l.CurrentBonus++;
                 return true;
             }
             else
