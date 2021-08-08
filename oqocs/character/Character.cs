@@ -38,7 +38,7 @@ namespace oqocs.character
         public int MaxTHI { get; set; }
         public int CurrentTHI { get; set; }
 
-        public Character(Species species, int age, KinshipGroup group, int hp, int sta, int ev, int _ins, int per, int slp, int hng, int thi, string hair, string eyes, string height, string weight)
+        public Character(string name, Species species, int age, KinshipGroup group, int hp, int sta, int ev, int _ins, int per, int slp, int hng, int thi, string hair, string eyes, string height, string weight)
         {
             Species = species;
             Age = age;
@@ -52,7 +52,7 @@ namespace oqocs.character
             MaxHNG = CurrentHNG = hng;
             MaxTHI = CurrentTHI = thi;
 
-            Name = "";
+            Name = name;
             Height = height;
             Weight = weight;
             Hair = hair;

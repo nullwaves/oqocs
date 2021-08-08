@@ -23,10 +23,12 @@ namespace oqocs
 
         public static Character GenerateCharacter(Species species, KinshipGroup group)
         {
+            string name = NameGenerator.GenerateName();
             double mod = random.NextDouble();
             int height = species.MinHeightInInches + (int)(mod * (species.MaxHeightInInches - species.MinHeightInInches));
             int weight = species.MinWeightInPounds + (int)(mod * (species.MaxWeightInPounds - species.MinWeightInPounds)) + random.Next(-10, 10);
             Character retVal = new Character(
+                name,
                 species,
                 species.Adulthood,
                 group,
