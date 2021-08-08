@@ -47,5 +47,43 @@ namespace oqocs.character
                 { 1, new SkillBonus[] { DefaultSkills.MiningRate, DefaultSkills.MiningQuality, } },
                 { 2, new SkillBonus[] { DefaultSkills.HandAxes, } },
             });
+
+        public static Profession Guard => new Profession(
+            "Guard",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.ImprovedJoints, DefaultSkills.ShieldTraining, DefaultSkills.HeavyLifting, } },
+                { 2, new SkillBonus[] { DefaultSkills.Polearms, DefaultSkills.HeavyPolearms, } },
+                { 3, new SkillBonus[] { DefaultSkills.Sword, DefaultSkills.HandAxes, DefaultSkills.HeavyAxes, DefaultSkills.Hammers, } },
+                { 4, new SkillBonus[] { DefaultSkills.Shortbow, DefaultSkills.Longbow, DefaultSkills.Crossbow, } },
+            });
+
+        public static Profession Lumberjack => new Profession(
+            "Lumberjack",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.LoggingRate, } },
+                { 2, new SkillBonus[] { DefaultSkills.BaseRate, DefaultSkills.BaseQuality, DefaultSkills.HandAxes, DefaultSkills.HeavyAxes, } },
+            });
+
+        public static Profession Boatsman => new Profession(
+            "Boatsman",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.RodFishing, DefaultSkills.NetFishing, } },
+                { 2, new SkillBonus[] { DefaultSkills.TrapFishing, DefaultSkills.GatherFood, DefaultSkills.GatherFirewood, DefaultSkills.GatherMedicine, } },
+                { 3, new SkillBonus[] { DefaultSkills.SmallGameTracking, DefaultSkills.MediumGameTracking, DefaultSkills.GrasslandTracking, DefaultSkills.HighlandTracking, } },
+            });
+
+        public static Profession Rancher => new Profession(
+            "Rancher",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.HerdSize, } },
+                { 2, new SkillBonus[] { DefaultSkills.Breeding, } },
+                { 3, new SkillBonus[] { DefaultSkills.Training, } },
+                { 4, new SkillBonus[] { DefaultSkills.GatherFood, DefaultSkills.MediumGameTracking, DefaultSkills.Riding, DefaultSkills.Breaking, DefaultSkills.Shortbow, DefaultSkills.Longbow, DefaultSkills.Crossbow,} },
+                { 5, new SkillBonus[] { DefaultSkills.GatherFirewood, DefaultSkills.GatherMedicine, DefaultSkills.SmallGameTracking, DefaultSkills.LargeGameTracking, } },
+            });
     }
 }
