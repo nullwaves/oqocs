@@ -85,5 +85,27 @@ namespace oqocs.character
                 { 4, new SkillBonus[] { DefaultSkills.GatherFood, DefaultSkills.MediumGameTracking, DefaultSkills.Riding, DefaultSkills.Breaking, DefaultSkills.Shortbow, DefaultSkills.Longbow, DefaultSkills.Crossbow,} },
                 { 5, new SkillBonus[] { DefaultSkills.GatherFirewood, DefaultSkills.GatherMedicine, DefaultSkills.SmallGameTracking, DefaultSkills.LargeGameTracking, } },
             });
+
+        public static Profession NomadicHerdsman => new Profession(
+            "Nomadic Herdsman",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.HerdSize, } },
+                { 2, new SkillBonus[] { DefaultSkills.Breeding, } },
+                { 3, new SkillBonus[] { DefaultSkills.Riding, } },
+                { 4, new SkillBonus[] { DefaultSkills.Shortbow, DefaultSkills.Longbow, DefaultSkills.Crossbow, } },
+                { 5, new SkillBonus[] { DefaultSkills.Training, DefaultSkills.Breaking, } },
+                { 6, new SkillBonus[] { DefaultSkills.GatherFood, DefaultSkills.GatherFirewood, DefaultSkills.GatherMedicine, } },
+                { 7, new SkillBonus[] { DefaultSkills.SmallGameTracking, DefaultSkills.MediumGameTracking, DefaultSkills.LargeGameTracking, } },
+            });
+
+        public static Profession Mercenary => new Profession(
+            "Mercenary",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.Daggers, DefaultSkills.Sword, DefaultSkills.HandAxes, DefaultSkills.Polearms, DefaultSkills.Greatswords, DefaultSkills.HeavyAxes, DefaultSkills.Hammers, DefaultSkills.HeavyPolearms, } },
+                { 2, new SkillBonus[] { DefaultSkills.ImprovedJoints, DefaultSkills.ShieldTraining, DefaultSkills.HeavyLifting, } },
+                { 3, new SkillBonus[] { DefaultSkills.Shortbow, DefaultSkills.Longbow, DefaultSkills.Crossbow, DefaultSkills.MountedArchery, } },
+            });
     }
 }
