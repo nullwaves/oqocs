@@ -107,5 +107,110 @@ namespace oqocs.character
                 { 2, new SkillBonus[] { DefaultSkills.ImprovedJoints, DefaultSkills.ShieldTraining, DefaultSkills.HeavyLifting, } },
                 { 3, new SkillBonus[] { DefaultSkills.Shortbow, DefaultSkills.Longbow, DefaultSkills.Crossbow, DefaultSkills.MountedArchery, } },
             });
+
+        public static Profession Weaver => new Profession(
+            "Weaver",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.ThreadworkQuality, } },
+                { 2, new SkillBonus[] { DefaultSkills.ThreadworkRate, } },
+                { 3, new SkillBonus[] { DefaultSkills.ClothingQuality, DefaultSkills.ClothingRate, } },
+            });
+
+        public static Profession Butcher => new Profession(
+            "Butcher",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.NSBoneYield, } },
+                { 2, new SkillBonus[] { DefaultSkills.NSBoneRate, } },
+            });
+
+        public static Profession Butcherpriest => new Profession(
+            "Butcherpriest",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.SapientYield, } },
+                { 2, new SkillBonus[] { DefaultSkills.SapientRate, } },
+                { 3, new SkillBonus[] { DefaultSkills.NSBoneRate, } },
+                { 4, new SkillBonus[] { DefaultSkills.NSBoneYield, } },
+                { 5, new SkillBonus[] { DefaultSkills.RuneRetention, } },
+                { 6, new SkillBonus[] { DefaultSkills.InscriptionQuality, DefaultSkills.InscriptionRate, } },
+            });
+
+        public static Profession Priest => new Profession(
+            "Priest",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.PublicSpeaking, } },
+                { 2, new SkillBonus[] { DefaultSkills.RuneRetention, } },
+                { 3, new SkillBonus[] { DefaultSkills.MedicineQuality, DefaultSkills.MedicineRate, } },
+                { 4, new SkillBonus[] { DefaultSkills.InscriptionQuality, DefaultSkills.InscriptionRate, } },
+                { 5, new SkillBonus[] { DefaultSkills.ResinQuality, DefaultSkills.ResinRate, } },
+                { 6, new SkillBonus[] { DefaultSkills.Trickery, } },
+                { 7, new SkillBonus[] { DefaultSkills.SapientYield, DefaultSkills.SapientRate, DefaultSkills.ComponentPreparation, } },
+                { 8, new SkillBonus[] { DefaultSkills.ThreadworkQuality, DefaultSkills.ThreadworkRate, } },
+                { 9, new SkillBonus[] { DefaultSkills.Deception, } },
+                { 10, new SkillBonus[] { DefaultSkills.Song, DefaultSkills.Dance, } },
+            });
+
+        public static Profession Taxman => new Profession(
+            "Taxman",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.Intimidation, } },
+                { 2, new SkillBonus[] { DefaultSkills.Deception, } },
+                { 3, new SkillBonus[] { DefaultSkills.Daggers, DefaultSkills.Sword, DefaultSkills.HandAxes, DefaultSkills.Polearms, } },
+            });
+
+        public static Profession DebtCollector => new Profession(
+            "Debt Collector",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.Intimidation, } },
+                { 2, new SkillBonus[] { DefaultSkills.Daggers, DefaultSkills.Sword, DefaultSkills.HandAxes, DefaultSkills.Polearms, DefaultSkills.Greatswords, DefaultSkills.HeavyAxes, DefaultSkills.Hammers, DefaultSkills.HeavyPolearms, } },
+                { 3, new SkillBonus[] { DefaultSkills.ImprovedJoints, DefaultSkills.ShieldTraining, DefaultSkills.HeavyLifting, } },
+                { 4, new SkillBonus[] { DefaultSkills.MoveSilently, } },
+                { 5, new SkillBonus[] { DefaultSkills.LockpickingRate, } },
+                { 6, new SkillBonus[] { DefaultSkills.LockpickingAbility, } },
+            });
+
+        public static Profession Banker => new Profession(
+            "Banker",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.PublicSpeaking, } },
+                { 2, new SkillBonus[] { DefaultSkills.ThreadworkQuality, DefaultSkills.ThreadworkRate, } },
+                { 3, new SkillBonus[] { DefaultSkills.Intimidation, DefaultSkills.Deception, } },
+                { 4, new SkillBonus[] { DefaultSkills.Pickpocketing, } },
+            });
+
+        public static Profession Miller => new Profession(
+            "Miller",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.RegionalRate, DefaultSkills.DishQuality, } },
+                { 2, new SkillBonus[] { DefaultSkills.DishRate, DefaultSkills.Brewing, } },
+            });
+
+        public static Profession Brewer => new Profession(
+            "Brewer",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.Brewing, } },
+            });
+
+        public static Profession Distiller => new Profession(
+            "Distiller",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.Distilling, } },
+            });
+
+        public static Profession Winemaker => new Profession(
+            "Winemaker",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.Fermenting, } },
+            });
     }
 }
