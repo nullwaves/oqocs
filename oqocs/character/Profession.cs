@@ -212,5 +212,46 @@ namespace oqocs.character
             {
                 { 1, new SkillBonus[] { DefaultSkills.Fermenting, } },
             });
+
+        public static Profession Cabinetmaker => new Profession(
+            "Cabinetmaker",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.BaseQuality, } },
+                { 2, new SkillBonus[] { DefaultSkills.BaseRate, } },
+                { 3, new SkillBonus[] { DefaultSkills.CabinetryQuality, } },
+                { 4, new SkillBonus[] { DefaultSkills.CabinetryRate, } },
+                { 5, new SkillBonus[] { DefaultSkills.SurfacesQuality, DefaultSkills.SurfacesRate, DefaultSkills.ImprovisedQuality, DefaultSkills.ImprovisedRate, } },
+                { 6, new SkillBonus[] { DefaultSkills.FurnitureQuality, DefaultSkills.FurnitureRate, DefaultSkills.UpholsteryQuality, DefaultSkills.UpholsteryRate, } },
+                { 7, new SkillBonus[] { DefaultSkills.HousingQuality, DefaultSkills.HousingRate, } },
+                { 8, new SkillBonus[] { DefaultSkills.MasonryQuality, DefaultSkills.MasonryRate, } },
+            });
+
+        public static Profession Upholsterer => new Profession(
+            "Upholsterer",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.BaseQuality, } },
+                { 2, new SkillBonus[] { DefaultSkills.BaseRate, } },
+                { 3, new SkillBonus[] { DefaultSkills.UpholsteryQuality, } },
+                { 4, new SkillBonus[] { DefaultSkills.UpholsteryRate, } },
+                { 5, new SkillBonus[] { DefaultSkills.FurnitureQuality, DefaultSkills.FurnitureRate, DefaultSkills.SurfacesQuality, DefaultSkills.SurfacesRate, } },
+                { 6, new SkillBonus[] { DefaultSkills.ImprovisedQuality, DefaultSkills.ImprovisedRate, } },
+                { 7, new SkillBonus[] { DefaultSkills.CabinetryQuality, DefaultSkills.CabinetryRate, } },
+                { 8, new SkillBonus[] { DefaultSkills.MasonryQuality, DefaultSkills.MasonryRate, } },
+            });
+
+        public static Profession Mason => new Profession(
+            "Mason",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.BaseQuality, } },
+                { 2, new SkillBonus[] { DefaultSkills.BaseRate, } },
+                { 3, new SkillBonus[] { DefaultSkills.MasonryQuality, } },
+                { 4, new SkillBonus[] { DefaultSkills.MasonryRate, } },
+                { 5, new SkillBonus[] { DefaultSkills.HousingQuality, } },
+                { 6, new SkillBonus[] { DefaultSkills.HousingRate, } },
+                { 7, new SkillBonus[] { DefaultSkills.ImprovisedQuality, DefaultSkills.ImprovisedRate, } },
+            });
     }
 }
