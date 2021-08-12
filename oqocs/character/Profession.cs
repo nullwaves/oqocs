@@ -536,5 +536,62 @@ namespace oqocs.character
                 { 4, new SkillBonus[] { DefaultSkills.UtilityRate, } },
                 { 5, new SkillBonus[] { DefaultSkills.ImprovisedQuality, DefaultSkills.ImprovisedRate, } },
             });
+
+        public static Profession Assassin => new Profession(
+            "Assassin",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.MoveSilently, } },
+                { 2, new SkillBonus[] { DefaultSkills.Daggers, DefaultSkills.Sword, } },
+                { 3, new SkillBonus[] { DefaultSkills.Deception, } },
+                { 4, new SkillBonus[] { DefaultSkills.Disguise, DefaultSkills.LockpickingRate, DefaultSkills.LockpickingAbility, } },
+                { 5, new SkillBonus[] { DefaultSkills.Shortbow, DefaultSkills.Longbow, DefaultSkills.Crossbow, DefaultSkills.Trickery, } },
+            });
+
+        public static Profession Trader => new Profession(
+            "Trader",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.PublicSpeaking, } },
+                { 2, new SkillBonus[] { DefaultSkills.Deception, DefaultSkills.Riding, } },
+                { 3, new SkillBonus[] { DefaultSkills.UtilityQuality, } },
+                { 4, new SkillBonus[] { DefaultSkills.UtilityRate, } },
+                { 5, new SkillBonus[] { DefaultSkills.Daggers, DefaultSkills.Sword, DefaultSkills.HandAxes, DefaultSkills.Polearms, DefaultSkills.Greatswords, DefaultSkills.HeavyAxes, DefaultSkills.Hammers, DefaultSkills.HeavyPolearms, } },
+                { 6, new SkillBonus[] { DefaultSkills.MountedArchery, } },
+                { 7, new SkillBonus[] { DefaultSkills.Shortbow, DefaultSkills.Longbow, DefaultSkills.Crossbow, } },
+                { 8, new SkillBonus[] { DefaultSkills.InscriptionQuality, } },
+            });
+
+        public static Profession Houselord => new Profession(
+            "Houselord",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.Deception, } },
+                { 2, new SkillBonus[] { DefaultSkills.PublicSpeaking, } },
+                { 3, new SkillBonus[] { DefaultSkills.Intimidation, } },
+                { 4, new SkillBonus[] { DefaultSkills.Daggers, DefaultSkills.Sword, DefaultSkills.HandAxes, DefaultSkills.Polearms, DefaultSkills.Greatswords, DefaultSkills.HeavyAxes, DefaultSkills.Hammers, DefaultSkills.HeavyPolearms, DefaultSkills.Shortbow, DefaultSkills.Longbow, DefaultSkills.Crossbow, } },
+                { 5, new SkillBonus[] { DefaultSkills.Disguise, } },
+            });
+
+        public static Profession Monger => new Profession(
+            "Monger",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.PublicSpeaking, } },
+                { 2, new SkillBonus[] { DefaultSkills.Deception, } },
+                { 3, new SkillBonus[] { DefaultSkills.Intimidation, } },
+                { 4, new SkillBonus[] { DefaultSkills.Disguise, } },
+                { 5, new SkillBonus[] { DefaultSkills.Trickery, } },
+                { 6, new SkillBonus[] { DefaultSkills.Pickpocketing, } },
+                { 4, new SkillBonus[] { DefaultSkills.Daggers, DefaultSkills.Sword, DefaultSkills.HandAxes, DefaultSkills.Polearms, DefaultSkills.Greatswords, DefaultSkills.HeavyAxes, DefaultSkills.Hammers, DefaultSkills.HeavyPolearms, DefaultSkills.Shortbow, DefaultSkills.Longbow, DefaultSkills.Crossbow, } },
+            });
+
+        public static Profession Fletcher => new Profession(
+            "Fletcher",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.WeaponQuality, } },
+                { 2, new SkillBonus[] { DefaultSkills.WeaponRate, } },
+            });
     }
 }
