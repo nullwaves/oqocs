@@ -253,5 +253,288 @@ namespace oqocs.character
                 { 6, new SkillBonus[] { DefaultSkills.HousingRate, } },
                 { 7, new SkillBonus[] { DefaultSkills.ImprovisedQuality, DefaultSkills.ImprovisedRate, } },
             });
+
+        public static Profession Handyman => new Profession(
+            "Handyman",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.BaseQuality, } },
+                { 2, new SkillBonus[] { DefaultSkills.BaseRate, } },
+                { 3, new SkillBonus[] { DefaultSkills.ImprovisedQuality, DefaultSkills.ImprovisedRate, } },
+                { 4, new SkillBonus[] { DefaultSkills.FurnitureQuality, DefaultSkills.FurnitureRate, } },
+                { 5, new SkillBonus[] { DefaultSkills.SurfacesQuality, DefaultSkills.SurfacesRate, } },
+                { 6, new SkillBonus[] { DefaultSkills.MasonryQuality, DefaultSkills.MasonryRate, } },
+                { 7, new SkillBonus[] { DefaultSkills.HousingQuality, DefaultSkills.HousingRate, } },
+                { 8, new SkillBonus[] { DefaultSkills.UtilityQuality, DefaultSkills.UtilityRate, } },
+                { 9, new SkillBonus[] { DefaultSkills.CabinetryQuality, DefaultSkills.CabinetryRate, } },
+                { 10, new SkillBonus[] { DefaultSkills.UpholsteryQuality, DefaultSkills.UpholsteryRate, } },
+            });
+
+        public static Profession Carpenter => new Profession(
+            "Carpenter",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.BaseQuality, DefaultSkills.FurnitureQuality, DefaultSkills.UpholsteryQuality, DefaultSkills.CabinetryQuality, DefaultSkills.SurfacesQuality, DefaultSkills.MasonryQuality, DefaultSkills.HousingQuality, DefaultSkills.UtilityQuality, DefaultSkills.ImprovisedQuality, } },
+                { 2, new SkillBonus[] { DefaultSkills.BaseRate, DefaultSkills.FurnitureRate, DefaultSkills.UpholsteryRate, DefaultSkills.CabinetryRate, DefaultSkills.SurfacesRate, DefaultSkills.MasonryRate, DefaultSkills.HousingRate, DefaultSkills.UtilityRate, DefaultSkills.ImprovisedRate, } },
+            });
+
+        public static Profession Chef => new Profession(
+            "Chef",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.DishQuality, } },
+                { 2, new SkillBonus[] { DefaultSkills.DishRate, } },
+                { 3, new SkillBonus[] { DefaultSkills.RegionalQuality, } },
+                { 4, new SkillBonus[] { DefaultSkills.RegionalRate, } },
+            });
+
+        public static Profession Smith => new Profession(
+            "Smith",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.ToolQuality, } },
+                { 2, new SkillBonus[] { DefaultSkills.ToolRate, } },
+                { 3, new SkillBonus[] { DefaultSkills.WeaponQuality, DefaultSkills.WeaponRate, } },
+                { 4, new SkillBonus[] { DefaultSkills.BaseQuality, DefaultSkills.BaseRate, DefaultSkills.ArmorQuality, DefaultSkills.ArmorRate, } },
+            });
+
+        public static Profession Weaponsmith => new Profession(
+            "Weaponsmith",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.WeaponQuality, } },
+                { 2, new SkillBonus[] { DefaultSkills.WeaponRate, } },
+                { 3, new SkillBonus[] { DefaultSkills.ToolQuality, } },
+                { 4, new SkillBonus[] { DefaultSkills.ToolRate, } },
+                { 5, new SkillBonus[] { DefaultSkills.ArmorQuality, DefaultSkills.ArmorRate, } },
+            });
+
+        public static Profession Armorsmith => new Profession(
+            "Armorsmith",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.ArmorQuality, } },
+                { 2, new SkillBonus[] { DefaultSkills.ArmorRate, } },
+                { 3, new SkillBonus[] { DefaultSkills.WeaponQuality, } },
+                { 4, new SkillBonus[] { DefaultSkills.WeaponRate, } },
+                { 5, new SkillBonus[] { DefaultSkills.ToolQuality, DefaultSkills.ToolRate, } },
+            });
+
+        public static Profession Tailor => new Profession(
+            "Tailor",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.ClothingQuality, } },
+                { 2, new SkillBonus[] { DefaultSkills.ClothingRate, } },
+                { 3, new SkillBonus[] { DefaultSkills.ThreadworkQuality, } },
+                { 4, new SkillBonus[] { DefaultSkills.ThreadworkRate, } },
+                { 5, new SkillBonus[] { DefaultSkills.ArmorQuality, DefaultSkills.ArmorRate, } },
+            });
+
+        public static Profession Hatmaker => new Profession(
+            "Hatmaker",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.ClothingQuality, } },
+                { 2, new SkillBonus[] { DefaultSkills.ClothingRate, } },
+                { 3, new SkillBonus[] { DefaultSkills.ThreadworkQuality, } },
+                { 4, new SkillBonus[] { DefaultSkills.ThreadworkRate, } },
+                { 5, new SkillBonus[] { DefaultSkills.ArmorQuality, DefaultSkills.ArmorRate, } },
+            });
+
+        public static Profession Glovemaker => new Profession(
+            "Glovemaker",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.ClothingQuality, } },
+                { 2, new SkillBonus[] { DefaultSkills.ClothingRate, } },
+                { 3, new SkillBonus[] { DefaultSkills.ThreadworkQuality, } },
+                { 4, new SkillBonus[] { DefaultSkills.ThreadworkRate, } },
+                { 5, new SkillBonus[] { DefaultSkills.ArmorQuality, DefaultSkills.ArmorRate, } },
+            });
+
+        public static Profession Spinner => new Profession(
+            "Spinner",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.ThreadworkQuality, } },
+                { 2, new SkillBonus[] { DefaultSkills.ThreadworkRate, } },
+            });
+
+        public static Profession Medic => new Profession(
+            "Medic",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.MedicineQuality, } },
+                { 2, new SkillBonus[] { DefaultSkills.GatherMedicine, } },
+                { 3, new SkillBonus[] { DefaultSkills.MedicineRate, } },
+            });
+
+        public static Profession Bonecrafter => new Profession(
+            "Bonecrafter",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.InscriptionQuality, } },
+                { 2, new SkillBonus[] { DefaultSkills.InscriptionRate, } },
+                { 3, new SkillBonus[] { DefaultSkills.RuneRetention, DefaultSkills.ResinQuality, } },
+                { 4, new SkillBonus[] { DefaultSkills.ResinRate, } }
+            });
+
+        public static Profession Arborist => new Profession(
+            "Arborist",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.GatherFirewood, } },
+                { 2, new SkillBonus[] { DefaultSkills.GatherMedicine, } },
+                { 3, new SkillBonus[] { DefaultSkills.GatherResinComponents, } },
+                { 4, new SkillBonus[] { DefaultSkills.GatherFood, } },
+                { 5, new SkillBonus[] { DefaultSkills.SnareTraps, DefaultSkills.PitfallTraps, DefaultSkills.CageTraps, } },
+                { 6, new SkillBonus[] { DefaultSkills.ForestTracking, } },
+            });
+
+        public static Profession Farmer => new Profession(
+            "Farmer",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.HerdSize, } },
+                { 2, new SkillBonus[] { DefaultSkills.Riding, } },
+                { 3, new SkillBonus[] { DefaultSkills.Breeding, } },
+                { 4, new SkillBonus[] { DefaultSkills.GatherFirewood, } },
+                { 5, new SkillBonus[] { DefaultSkills.GatherMedicine, } },
+                { 6, new SkillBonus[] { DefaultSkills.GatherFood, } },
+                { 7, new SkillBonus[] { DefaultSkills.MediumGameTracking, } },
+                { 8, new SkillBonus[] { DefaultSkills.GrasslandTracking, } },
+            });
+
+        public static Profession Archer => new Profession(
+            "Archer",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.Shortbow, DefaultSkills.Longbow, DefaultSkills.Crossbow, } },
+                { 2, new SkillBonus[] { DefaultSkills.MountedArchery, } },
+                { 3, new SkillBonus[] { DefaultSkills.ImprovisedThrown, } },
+                { 4, new SkillBonus[] { DefaultSkills.Blades, DefaultSkills.Bones, DefaultSkills.ThrownPolearms } },
+            });
+
+        public static Profession Tanner => new Profession(
+            "Tanner",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.ArmorQuality, DefaultSkills.ArmorRate, DefaultSkills.ClothingQuality, DefaultSkills.ClothingRate, } },
+                { 2, new SkillBonus[] { DefaultSkills.NSBoneYield, DefaultSkills.NSBoneRate, } },
+            });
+
+        public static Profession Leatherworker => new Profession(
+            "Leatherworker",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.ArmorQuality, DefaultSkills.ArmorRate, DefaultSkills.ClothingQuality, DefaultSkills.ClothingRate, } },
+                { 2, new SkillBonus[] { DefaultSkills.NSBoneYield, DefaultSkills.NSBoneRate, } },
+            });
+
+        public static Profession Furrier => new Profession(
+            "Furrier",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.ArmorQuality, DefaultSkills.ArmorRate, DefaultSkills.ClothingQuality, DefaultSkills.ClothingRate, } },
+                { 2, new SkillBonus[] { DefaultSkills.NSBoneYield, DefaultSkills.NSBoneRate, } },
+            });
+
+        public static Profession Harnessmaker => new Profession(
+            "Harnessmaker",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.ArmorQuality, DefaultSkills.ArmorRate, DefaultSkills.ClothingQuality, DefaultSkills.ClothingRate, } },
+                { 2, new SkillBonus[] { DefaultSkills.NSBoneYield, DefaultSkills.NSBoneRate, } },
+            });
+
+        public static Profession Saddler => new Profession(
+            "Saddler",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.ArmorQuality, DefaultSkills.ArmorRate, DefaultSkills.ClothingQuality, DefaultSkills.ClothingRate, } },
+                { 2, new SkillBonus[] { DefaultSkills.NSBoneYield, DefaultSkills.NSBoneRate, } },
+            });
+
+        public static Profession Jeweler => new Profession(
+            "Jeweler",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.ClothingQuality, DefaultSkills.ClothingRate, } },
+                { 2, new SkillBonus[] { DefaultSkills.ThreadworkQuality, DefaultSkills.ThreadworkRate, } },
+            });
+
+        public static Profession Musician => new Profession(
+            "Musician",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.Song, } },
+                { 2, new SkillBonus[] { DefaultSkills.PublicSpeaking, } },
+                { 3, new SkillBonus[] { DefaultSkills.Deception, } },
+                { 4, new SkillBonus[] { DefaultSkills.Trickery, } },
+                { 5, new SkillBonus[] { DefaultSkills.Dance, } },
+            });
+
+        public static Profession Dancer => new Profession(
+            "Dancer",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.Dance, } },
+                { 2, new SkillBonus[] { DefaultSkills.Trickery, } },
+                { 3, new SkillBonus[] { DefaultSkills.Song, } },
+                { 4, new SkillBonus[] { DefaultSkills.PublicSpeaking, } },
+                { 5, new SkillBonus[] { DefaultSkills.Deception, } },
+            });
+
+        public static Profession Actor => new Profession(
+            "Actor",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.PublicSpeaking, } },
+                { 2, new SkillBonus[] { DefaultSkills.Deception, } },
+                { 3, new SkillBonus[] { DefaultSkills.Intimidation, } },
+                { 4, new SkillBonus[] { DefaultSkills.Trickery, } },
+                { 5, new SkillBonus[] { DefaultSkills.Song, DefaultSkills.Dance, } },
+            });
+
+        public static Profession Writer => new Profession(
+            "Writer",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.PublicSpeaking, } },
+                { 2, new SkillBonus[] { DefaultSkills.Deception, } },
+                { 3, new SkillBonus[] { DefaultSkills.Trickery, } },
+            });
+
+        public static Profession Playwrite => new Profession(
+            "Playwrite",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.PublicSpeaking, } },
+                { 2, new SkillBonus[] { DefaultSkills.Deception, } },
+                { 3, new SkillBonus[] { DefaultSkills.Trickery, } },
+            });
+
+        public static Profession Shipwright => new Profession(
+            "Shipwright",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.BaseQuality, } },
+                { 2, new SkillBonus[] { DefaultSkills.BaseRate, } },
+                { 3, new SkillBonus[] { DefaultSkills.UtilityQuality, } },
+                { 4, new SkillBonus[] { DefaultSkills.UtilityRate, } },
+                { 5, new SkillBonus[] { DefaultSkills.ImprovisedQuality, DefaultSkills.ImprovisedRate, } },
+            });
+
+        public static Profession Cartmaker => new Profession(
+            "Cartmaker",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.BaseQuality, } },
+                { 2, new SkillBonus[] { DefaultSkills.BaseRate, } },
+                { 3, new SkillBonus[] { DefaultSkills.UtilityQuality, } },
+                { 4, new SkillBonus[] { DefaultSkills.UtilityRate, } },
+                { 5, new SkillBonus[] { DefaultSkills.ImprovisedQuality, DefaultSkills.ImprovisedRate, } },
+            });
     }
 }
