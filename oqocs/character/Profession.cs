@@ -593,5 +593,146 @@ namespace oqocs.character
                 { 1, new SkillBonus[] { DefaultSkills.WeaponQuality, } },
                 { 2, new SkillBonus[] { DefaultSkills.WeaponRate, } },
             });
+
+        public static Profession Potter => new Profession(
+            "Potter",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.ToolQuality, } },
+                { 2, new SkillBonus[] { DefaultSkills.ToolRate, } },
+            });
+
+        public static Profession Zoologist => new Profession(
+            "Zoologist",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.ExoticTaming, } },
+                { 2, new SkillBonus[] { DefaultSkills.Breeding, } },
+                { 3, new SkillBonus[] { DefaultSkills.Training, } },
+            });
+
+        public static Profession Swordsman => new Profession(
+            "Swordsman",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.Sword, } },
+                { 2, new SkillBonus[] { DefaultSkills.ShieldTraining, } },
+                { 3, new SkillBonus[] { DefaultSkills.ImprovedJoints, DefaultSkills.HeavyLifting, } },
+            });
+
+        public static Profession Soldier => new Profession(
+            "Soldier",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.HandAxes, } },
+                { 2, new SkillBonus[] { DefaultSkills.ShieldTraining, } },
+                { 3, new SkillBonus[] { DefaultSkills.ImprovedJoints, DefaultSkills.HeavyLifting, } },
+            });
+
+        public static Profession Spearman => new Profession(
+             "Spearman",
+             new Dictionary<int, SkillBonus[]>
+             {
+                { 1, new SkillBonus[] { DefaultSkills.Polearms, } },
+                { 2, new SkillBonus[] { DefaultSkills.ShieldTraining, } },
+                { 3, new SkillBonus[] { DefaultSkills.ImprovedJoints, DefaultSkills.HeavyLifting, } },
+             });
+
+        public static Profession TwoHander => new Profession(
+             "Two Hander",
+             new Dictionary<int, SkillBonus[]>
+             {
+                { 1, new SkillBonus[] { DefaultSkills.Greatswords, } },
+                { 2, new SkillBonus[] { DefaultSkills.ImprovedJoints, } },
+                { 3, new SkillBonus[] { DefaultSkills.HeavyLifting, } },
+             });
+
+        public static Profession Barbarian => new Profession(
+             "Barbarian",
+             new Dictionary<int, SkillBonus[]>
+             {
+                { 1, new SkillBonus[] { DefaultSkills.HeavyAxes, DefaultSkills.Hammers, } },
+                { 2, new SkillBonus[] { DefaultSkills.ImprovedJoints, } },
+                { 3, new SkillBonus[] { DefaultSkills.HeavyLifting, } },
+             });
+
+        public static Profession Pikeman => new Profession(
+             "Pikeman",
+             new Dictionary<int, SkillBonus[]>
+             {
+                { 1, new SkillBonus[] { DefaultSkills.HeavyPolearms, } },
+                { 2, new SkillBonus[] { DefaultSkills.ImprovedJoints, } },
+                { 3, new SkillBonus[] { DefaultSkills.HeavyLifting, } },
+             });
+
+        public static Profession Javelineer => new Profession(
+             "Javelineer",
+             new Dictionary<int, SkillBonus[]>
+             {
+                { 1, new SkillBonus[] { DefaultSkills.ImprovisedThrown, } },
+                { 2, new SkillBonus[] { DefaultSkills.ImprovedJoints, } },
+                { 3, new SkillBonus[] { DefaultSkills.HeavyLifting, } },
+             });
+
+        public static Profession WarCaster => new Profession(
+             "War Caster",
+             new Dictionary<int, SkillBonus[]>
+             {
+                { 1, new SkillBonus[] { DefaultSkills.Bones, } },
+                { 2, new SkillBonus[] { DefaultSkills.ImprovedJoints, } },
+                { 3, new SkillBonus[] { DefaultSkills.HeavyLifting, } },
+                { 4, new SkillBonus[] { DefaultSkills.Daggers, DefaultSkills.Sword, } },
+             });
+
+        public static Profession Papermaker => new Profession(
+            "Papermaker",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.ToolQuality, DefaultSkills.ToolRate, } },
+            });
+
+        public static Profession Bookbinder => new Profession(
+            "Bookbinder",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.ToolQuality, DefaultSkills.ToolRate, } },
+            });
+
+        public static Profession Chandler => new Profession(
+            "Chandler",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.ToolQuality, DefaultSkills.ToolRate, } },
+            });
+
+        public static Profession Cooper => new Profession(
+            "Cooper",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.ToolQuality, DefaultSkills.ToolRate, } },
+            });
+
+        public static Profession Locksmith => new Profession(
+            "Locksmith",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.ToolQuality, DefaultSkills.ToolRate, } },
+            });
+
+        public static Profession Scabbardmaker => new Profession(
+            "Scabbardmaker",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.ToolQuality, DefaultSkills.ToolRate, } },
+            });
+
+        public static Profession Bureaucrat => new Profession(
+            "Bureaucrat",
+            new Dictionary<int, SkillBonus[]>
+            {
+                { 1, new SkillBonus[] { DefaultSkills.PublicSpeaking, } },
+                { 2, new SkillBonus[] { DefaultSkills.Deception, } },
+                { 3, new SkillBonus[] { DefaultSkills.Intimidation, } },
+            });
     }
 }
