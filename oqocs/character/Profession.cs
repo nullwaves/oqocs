@@ -18,6 +18,25 @@ namespace oqocs.character
             return Name;
         }
 
+        public static List<Profession> All => new List<Profession>
+        {
+            Laborer, Fisherman, Miner, Guard, Lumberjack,
+            Boatsman, Rancher, NomadicHerdsman, Mercenary, Weaver,
+            Butcher, Butcherpriest, Priest, Taxman, DebtCollector,
+            Banker, Miller, Brewer, Distiller, Winemaker,
+            Cabinetmaker, Upholsterer, Mason, Handyman, Carpenter,
+            Chef, Smith, Weaponsmith, Armorsmith, Tailor,
+            Hatmaker, Glovemaker, Spinner, Medic, Bonecrafter,
+            Arborist, Farmer, Archer, Tanner, Leatherworker,
+            Furrier, Harnessmaker, Saddler, Jeweler, Musician,
+            Dancer, Actor, Writer, Playwrite, Shipwright,
+            Cartmaker, Assassin, Trader, Houselord, Monger,
+            Fletcher, Potter, Zoologist, Swordsman, Soldier,
+            Spearman, TwoHander, Barbarian, Pikeman, Javelineer,
+            WarCaster, Papermaker, Bookbinder, Chandler, Cooper,
+            Locksmith, Scabbardmaker, Bureaucrat,
+        };
+
         public static Profession Laborer => new Profession(
             "Laborer",
             new Dictionary<int, SkillBonus[]>
