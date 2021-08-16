@@ -42,50 +42,6 @@ namespace oqocs
             return spent;
         }
 
-        public int RandomInitBonuses()
-        {
-            int spentXPH = 0;
-            int combatXP = ((XPH / 200) + 1) * 100;
-            if (combatXP < XPH)
-            {
-                Skill combatSkill = Skill.Weapons[RandomService.Instance.Next(Skill.Weapons.Count)];
-                spentXPH += AllocateRandomBonus(combatXP, combatSkill);
-            }
-            Skill remainderSkill = Skill.All[RandomService.Instance.Next(Skill.All.Count)];
-            spentXPH += AllocateRandomBonus(XPH, remainderSkill);
-            return spentXPH;
-        }
-
-        private int AllocateRandomBonus(int spendable, Skill skill)
-        {
-            var bonuses = BonusesForSkill(skill);
-            SkillBonus bonus = bonuses[RandomService.Instance.Next(bonuses.Count)];
-            int spent = 0;
-            for (int i = 0; bonus.CanIncrease; i++)
-            {
-                int cost = bonus.NextBonusCost;
-                if (spendable >= cost && spendable <= XPH)
-                {
-                    if (TryBuyBonus(bonus))
-                    {
-                        spendable -= cost;
-                        spent += cost;
-                        bonus.CurrentBonus++;
-                    }
-                }
-                else
-                {
-                    break;
-                }
-            }
-            return spent;
-        }
-
-        public List<SkillBonus> BonusesForSkill(Skill skill)
-        {
-            return DefaultSkills.All.FindAll(x => x.Skill.Name == skill.Name);
-        }
-
         public int TryBuyBonus(SkillBonus bonus, int spendLimit)
         {
             int spent = 0;
