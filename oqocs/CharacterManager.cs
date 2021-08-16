@@ -1,4 +1,5 @@
 ﻿using oqocs.character;
+using oqocs.lang;
 
 namespace oqocs
 {
@@ -27,7 +28,7 @@ namespace oqocs
 
         public static Character GenerateCharacter(Species species, KinshipGroup group, Profession job)
         {
-            string name = NameGenerator.GenerateName();
+            string name = WordBuilder.BuildWord(RandomService.Instance.Next(2, 4));
             double mod = RandomService.Instance.NextDouble();
             int height = species.MinHeightInInches + (int)(mod * (species.MaxHeightInInches - species.MinHeightInInches));
             int weight = species.MinWeightInPounds + (int)(mod * (species.MaxWeightInPounds - species.MinWeightInPounds)) + RandomService.Instance.Next(-10, 10);
