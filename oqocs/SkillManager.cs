@@ -26,7 +26,7 @@ namespace oqocs
         {
             int spent = 0;
             int jobDepth = 1;
-            int spendable = 0;
+            int spendable;
             while (XPH > 250)
             {
                 spendable = XPH >= 750 ? ((XPH / 200) + 1) * 100 : XPH;
