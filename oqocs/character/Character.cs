@@ -9,6 +9,7 @@ namespace oqocs.character
 
         public Species Species { get; set; }
         public KinshipGroup KinshipGroup { get; set; }
+        public Profession Job { get; set; }
         public int Age { get; set; }
         public string Height { get; set; }
         public string Weight { get; set; }
@@ -16,7 +17,6 @@ namespace oqocs.character
         public string Eyes { get; set; }
         public string Ethnicity { get; set; }
         public string SocialClass { get; set; }
-        public string Job { get; set; }
 
         // Stats & Skills
         public SkillManager Skills { get; set; }
@@ -38,7 +38,7 @@ namespace oqocs.character
         public int MaxTHI { get; set; }
         public int CurrentTHI { get; set; }
 
-        public Character(string name, Species species, int age, KinshipGroup group, int hp, int sta, int ev, int _ins, int per, int slp, int hng, int thi, string hair, string eyes, string height, string weight)
+        public Character(string name, Species species, int age, KinshipGroup group, Profession job, int hp, int sta, int ev, int _ins, int per, int slp, int hng, int thi, string hair, string eyes, string height, string weight)
         {
             Species = species;
             Age = age;
@@ -60,7 +60,7 @@ namespace oqocs.character
             Eyes = eyes;
             Ethnicity = "";
             SocialClass = "";
-            Job = "";
+            Job = job;
             Skills = new SkillManager();
         }
 

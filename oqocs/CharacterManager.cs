@@ -23,6 +23,13 @@ namespace oqocs
 
         public static Character GenerateCharacter(Species species, KinshipGroup group)
         {
+            Profession job = Profession.All[random.Next(Profession.All.Count)];
+            var retVal = GenerateCharacter(species, group, job);
+            return retVal;
+        }
+
+        public static Character GenerateCharacter(Species species, KinshipGroup group, Profession job)
+        {
             string name = NameGenerator.GenerateName();
             double mod = random.NextDouble();
             int height = species.MinHeightInInches + (int)(mod * (species.MaxHeightInInches - species.MinHeightInInches));
@@ -32,6 +39,7 @@ namespace oqocs
                 species,
                 species.Adulthood,
                 group,
+                job,
                 species.HP,
                 species.STA,
                 species.EV,
