@@ -55,7 +55,7 @@ namespace oqocs
                 );
 
             retVal.Skills.GiveXPH(2900);
-            retVal.Skills.RandomInitBonuses();
+            retVal.Skills.AllocateByProfession(retVal.Job);
             return retVal;
         }
     }

@@ -8,20 +8,17 @@ namespace oqocs
     {
         private static void Main(string[] args)
         {
-            Directory.CreateDirectory("output");
-            var fs = File.OpenWrite($"output\\names.txt");
-            var write = new StreamWriter(fs);
-            for (int i = 0; i < 1000; i++)
-            {
-                write.WriteLine(NameGenerator.GenerateName());
-            }
-            write.Flush();
-            write.Close();
-            Console.Write(CharacterManager.GenerateCharacter());
-            ConsoleKeyInfo c = Console.ReadKey();
+            ConsoleKeyInfo c = new ConsoleKeyInfo();
             while (c.Key != ConsoleKey.Escape)
             {
-                Console.Write(CharacterManager.GenerateCharacter());
+                var chr = CharacterManager.GenerateCharacter();
+                Directory.CreateDirectory("output\\chars");
+                var fs = File.OpenWrite($"output\\chars\\{chr.Name}.txt");
+                var write = new StreamWriter(fs);
+                write.Write(chr.ToString());
+                write.Flush();
+                write.Close();
+                Console.WriteLine($"Wrote {chr.Name} to file.");
                 Console.ReadKey();
             }
         }

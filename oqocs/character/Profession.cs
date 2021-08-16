@@ -602,7 +602,7 @@ namespace oqocs.character
                 { 4, new SkillBonus[] { DefaultSkills.Disguise, } },
                 { 5, new SkillBonus[] { DefaultSkills.Trickery, } },
                 { 6, new SkillBonus[] { DefaultSkills.Pickpocketing, } },
-                { 4, new SkillBonus[] { DefaultSkills.Daggers, DefaultSkills.Sword, DefaultSkills.HandAxes, DefaultSkills.Polearms, DefaultSkills.Greatswords, DefaultSkills.HeavyAxes, DefaultSkills.Hammers, DefaultSkills.HeavyPolearms, DefaultSkills.Shortbow, DefaultSkills.Longbow, DefaultSkills.Crossbow, } },
+                { 7, new SkillBonus[] { DefaultSkills.Daggers, DefaultSkills.Sword, DefaultSkills.HandAxes, DefaultSkills.Polearms, DefaultSkills.Greatswords, DefaultSkills.HeavyAxes, DefaultSkills.Hammers, DefaultSkills.HeavyPolearms, DefaultSkills.Shortbow, DefaultSkills.Longbow, DefaultSkills.Crossbow, } },
             });
 
         public static Profession Fletcher => new Profession(
