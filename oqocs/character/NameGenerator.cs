@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Text;
 
 namespace oqocs.character
 {
     public static class NameGenerator
     {
-        internal static Random Random => new Random();
-
         public static List<string> Consonants => new List<string>()
         {
             "p", "t", "k", "q",
@@ -26,9 +23,9 @@ namespace oqocs.character
             "ɛ", "ɑ",
         };
 
-        internal static string RandomConsonant() => Consonants[Random.Next(Consonants.Count)];
+        internal static string RandomConsonant() => Consonants[RandomService.Instance.Next(Consonants.Count)];
 
-        internal static string RandomVowel() => Vowels[Random.Next(Vowels.Count)];
+        internal static string RandomVowel() => Vowels[RandomService.Instance.Next(Vowels.Count)];
 
         public static string GenerateName()
         {
@@ -36,7 +33,7 @@ namespace oqocs.character
             retVal.Append(RandomConsonant());
             retVal.Append(RandomVowel());
             retVal.Append(RandomConsonant());
-            if (Random.NextDouble() < 0.66)
+            if (RandomService.Instance.NextDouble() < 0.66)
             {
                 retVal.Append(RandomConsonant());
             }

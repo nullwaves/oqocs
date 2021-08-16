@@ -1,29 +1,26 @@
 ﻿using oqocs.character;
-using System;
 
 namespace oqocs
 {
     public class CharacterManager
     {
-        private static readonly Random random = new Random();
-
         public static Character GenerateCharacter()
         {
-            Species species = Species.All[random.Next(Species.All.Count)];
+            Species species = Species.All[RandomService.Instance.Next(Species.All.Count)];
             var retVal = GenerateCharacter(species);
             return retVal;
         }
 
         public static Character GenerateCharacter(Species species)
         {
-            KinshipGroup group = KinshipGroup.All[random.Next(KinshipGroup.All.Count)];
+            KinshipGroup group = KinshipGroup.All[RandomService.Instance.Next(KinshipGroup.All.Count)];
             var retVal = GenerateCharacter(species, group);
             return retVal;
         }
 
         public static Character GenerateCharacter(Species species, KinshipGroup group)
         {
-            Profession job = Profession.All[random.Next(Profession.All.Count)];
+            Profession job = Profession.All[RandomService.Instance.Next(Profession.All.Count)];
             var retVal = GenerateCharacter(species, group, job);
             return retVal;
         }
@@ -31,9 +28,9 @@ namespace oqocs
         public static Character GenerateCharacter(Species species, KinshipGroup group, Profession job)
         {
             string name = NameGenerator.GenerateName();
-            double mod = random.NextDouble();
+            double mod = RandomService.Instance.NextDouble();
             int height = species.MinHeightInInches + (int)(mod * (species.MaxHeightInInches - species.MinHeightInInches));
-            int weight = species.MinWeightInPounds + (int)(mod * (species.MaxWeightInPounds - species.MinWeightInPounds)) + random.Next(-10, 10);
+            int weight = species.MinWeightInPounds + (int)(mod * (species.MaxWeightInPounds - species.MinWeightInPounds)) + RandomService.Instance.Next(-10, 10);
             Character retVal = new Character(
                 name,
                 species,
@@ -48,8 +45,8 @@ namespace oqocs
                 species.SLP,
                 species.HNG,
                 species.THI,
-                species.HairColors[random.Next(species.HairColors.Length)],
-                species.EyeColors[random.Next(species.EyeColors.Length)],
+                species.HairColors[RandomService.Instance.Next(species.HairColors.Length)],
+                species.EyeColors[RandomService.Instance.Next(species.EyeColors.Length)],
                 $"{height / 12}ft {height % 12}in",
                 $"{weight}lbs"
                 );

@@ -8,7 +8,6 @@ namespace oqocs
     {
         private BasicRecipe Recipe;
         private readonly List<string> AllComponents;
-        private static readonly Random random = new Random();
 
         public ItemBuilder(List<BasicRecipe> recipes)
         {
@@ -125,7 +124,7 @@ namespace oqocs
             BasicRecipe retItem;
             if (int.TryParse(input, out int matNum))
             {
-                retItem = matNum <= acceptedCrafted.Count ? acceptedCrafted[matNum - 1] : acceptedCrafted[random.Next(acceptedCrafted.Count)];
+                retItem = matNum <= acceptedCrafted.Count ? acceptedCrafted[matNum - 1] : acceptedCrafted[RandomService.Instance.Next(acceptedCrafted.Count)];
                 return retItem;
             }
             return PromptSubRecipe(acceptedCrafted);
@@ -145,7 +144,7 @@ namespace oqocs
             BasicItem retItem;
             if (int.TryParse(input, out int matNum))
             {
-                retItem = matNum <= acceptedInputs.Count ? acceptedInputs[matNum - 1] : acceptedInputs[random.Next(acceptedInputs.Count)];
+                retItem = matNum <= acceptedInputs.Count ? acceptedInputs[matNum - 1] : acceptedInputs[RandomService.Instance.Next(acceptedInputs.Count)];
                 return retItem;
             }
             return PromptMaterial(acceptedInputs);
@@ -213,12 +212,12 @@ namespace oqocs
 
         internal static BasicRecipe ChooseRandomSubRecipe(List<BasicRecipe> acceptedCrafted)
         {
-            return acceptedCrafted[random.Next(acceptedCrafted.Count)];
+            return acceptedCrafted[RandomService.Instance.Next(acceptedCrafted.Count)];
         }
 
         internal static BasicItem ChooseRandomMaterial(List<BasicItem> acceptedInputs)
         {
-            return acceptedInputs[random.Next(acceptedInputs.Count)];
+            return acceptedInputs[RandomService.Instance.Next(acceptedInputs.Count)];
         }
     }
 }

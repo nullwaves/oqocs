@@ -1,6 +1,4 @@
-﻿using oqocs.character;
-using System;
-using System.IO;
+﻿using System;
 
 namespace oqocs
 {

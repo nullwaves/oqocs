@@ -1,5 +1,4 @@
 ﻿using oqocs.character;
-using System;
 using System.Collections.Generic;
 
 namespace oqocs
@@ -8,8 +7,6 @@ namespace oqocs
     {
         public int XPH { get; private set; }
         public List<SkillBonus> Skills { get; private set; }
-
-        private readonly Random random = new Random();
 
         public SkillManager()
         {
@@ -32,12 +29,12 @@ namespace oqocs
                 spendable = XPH >= 750 ? ((XPH / 200) + 1) * 100 : XPH;
                 if (job.PrioritySkills.ContainsKey(jobDepth))
                 {
-                    var bonus = job.PrioritySkills[jobDepth][random.Next(job.PrioritySkills[jobDepth].Length)];
+                    var bonus = job.PrioritySkills[jobDepth][RandomService.Instance.Next(job.PrioritySkills[jobDepth].Length)];
                     spent += TryBuyBonus(bonus, spendable);
                 }
                 else
                 {
-                    var bonus = DefaultSkills.All[random.Next(DefaultSkills.All.Count)];
+                    var bonus = DefaultSkills.All[RandomService.Instance.Next(DefaultSkills.All.Count)];
                     spent += TryBuyBonus(bonus, spendable);
                 }
                 jobDepth++;
@@ -51,10 +48,10 @@ namespace oqocs
             int combatXP = ((XPH / 200) + 1) * 100;
             if (combatXP < XPH)
             {
-                Skill combatSkill = Skill.Weapons[random.Next(Skill.Weapons.Count)];
+                Skill combatSkill = Skill.Weapons[RandomService.Instance.Next(Skill.Weapons.Count)];
                 spentXPH += AllocateRandomBonus(combatXP, combatSkill);
             }
-            Skill remainderSkill = Skill.All[random.Next(Skill.All.Count)];
+            Skill remainderSkill = Skill.All[RandomService.Instance.Next(Skill.All.Count)];
             spentXPH += AllocateRandomBonus(XPH, remainderSkill);
             return spentXPH;
         }
@@ -62,7 +59,7 @@ namespace oqocs
         private int AllocateRandomBonus(int spendable, Skill skill)
         {
             var bonuses = BonusesForSkill(skill);
-            SkillBonus bonus = bonuses[random.Next(bonuses.Count)];
+            SkillBonus bonus = bonuses[RandomService.Instance.Next(bonuses.Count)];
             int spent = 0;
             for (int i = 0; bonus.CanIncrease; i++)
             {
