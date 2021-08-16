@@ -6,7 +6,7 @@ namespace oqocs.lang
     {
         public static List<string> Vowels => new List<string>
         {
-            "i", "u", "ə", "o", "e","a",
+            "i", "u", "ə", "o", "e","a", "ao", "ai", "oi", "ei",
         };
 
         public static List<string> Consonants => new List<string>
