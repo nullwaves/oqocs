@@ -1,5 +1,7 @@
 ﻿using oqocs;
 using oqocs.character;
+using oqocs.lang;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace oqoforms
@@ -44,6 +46,24 @@ namespace oqoforms
         private void GenerateCharacterByJob(object sender, System.EventArgs e)
         {
             TextCharacterOutput.Text = CharacterManager.GenerateCharacter((Profession)ComboJob.SelectedItem).ToString();
+        }
+
+        private void GenerateWords(object sender, System.EventArgs e)
+        {
+            if (int.TryParse(TextNumSyllables.Text, out int syl) && int.TryParse(TextNumWords.Text, out int words))
+            {
+                List<string> ret = new List<string>(words);
+                for (int i = 0; i < words; i++)
+                {
+                    ret.Add(WordBuilder.BuildWord(syl));
+                }
+                TextWordOutput.Clear();
+                TextWordOutput.Lines = ret.ToArray();
+            }
+            else
+            {
+                MessageBox.Show("Both the Syllables field and Number of Words field must be integers.");
+            }
         }
     }
 }
