@@ -688,7 +688,7 @@ namespace oqocs.character
              "Javelineer",
              new Dictionary<int, SkillBonus[]>
              {
-                { 1, new SkillBonus[] { DefaultSkills.ImprovisedThrown, } },
+                { 1, new SkillBonus[] { DefaultSkills.ThrownPolearms, } },
                 { 2, new SkillBonus[] { DefaultSkills.ImprovedJoints, } },
                 { 3, new SkillBonus[] { DefaultSkills.HeavyLifting, } },
              });
