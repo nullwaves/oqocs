@@ -45,7 +45,7 @@ namespace oqocs
         public int TryBuyBonus(SkillBonus bonus, int spendLimit)
         {
             int spent = 0;
-            for (int i = 0; bonus.CanIncrease; i++)
+            for (int i = 0; bonus.CanIncrease && i < bonus.MaxBonus; i++)
             {
                 int cost = bonus.NextBonusCost;
                 if (spendLimit >= cost && spendLimit <= XPH)

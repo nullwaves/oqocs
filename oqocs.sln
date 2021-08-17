@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "oqocs", "oqocs\oqocs.csproj", "{B530EB5A-017E-4F68-B274-B5C4E7030781}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "oqocs", "oqocs\oqocs.csproj", "{B530EB5A-017E-4F68-B274-B5C4E7030781}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "oqocli", "oqocli\oqocli.csproj", "{973657BA-E02F-4CDE-9FAD-B9A810C5DC28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "oqocli", "oqocli\oqocli.csproj", "{973657BA-E02F-4CDE-9FAD-B9A810C5DC28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "oqoforms", "oqoforms\oqoforms.csproj", "{865F32D6-80BB-46F2-AC79-369301F28C21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{973657BA-E02F-4CDE-9FAD-B9A810C5DC28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{973657BA-E02F-4CDE-9FAD-B9A810C5DC28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{973657BA-E02F-4CDE-9FAD-B9A810C5DC28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{865F32D6-80BB-46F2-AC79-369301F28C21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{865F32D6-80BB-46F2-AC79-369301F28C21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{865F32D6-80BB-46F2-AC79-369301F28C21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{865F32D6-80BB-46F2-AC79-369301F28C21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

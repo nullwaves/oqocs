@@ -5,24 +5,32 @@ namespace oqocs
 {
     public class CharacterManager
     {
+        public static Species RandomSpecies() => Species.All[RandomService.Instance.Next(Species.All.Count)];
+
+        public static KinshipGroup RandomKinship() => KinshipGroup.All[RandomService.Instance.Next(KinshipGroup.All.Count)];
+
+        public static Profession RandomJob() => Profession.All[RandomService.Instance.Next(Profession.All.Count)];
+
         public static Character GenerateCharacter()
         {
-            Species species = Species.All[RandomService.Instance.Next(Species.All.Count)];
-            var retVal = GenerateCharacter(species);
+            var retVal = GenerateCharacter(RandomSpecies(), RandomKinship(), RandomJob());
             return retVal;
         }
 
         public static Character GenerateCharacter(Species species)
         {
-            KinshipGroup group = KinshipGroup.All[RandomService.Instance.Next(KinshipGroup.All.Count)];
-            var retVal = GenerateCharacter(species, group);
+            var retVal = GenerateCharacter(species, RandomKinship(), RandomJob());
             return retVal;
+        }
+
+        public static Character GenerateCharacter(Profession job)
+        {
+            return GenerateCharacter(RandomSpecies(), RandomKinship(), job);
         }
 
         public static Character GenerateCharacter(Species species, KinshipGroup group)
         {
-            Profession job = Profession.All[RandomService.Instance.Next(Profession.All.Count)];
-            var retVal = GenerateCharacter(species, group, job);
+            var retVal = GenerateCharacter(species, group, RandomJob());
             return retVal;
         }
 
