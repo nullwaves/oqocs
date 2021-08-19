@@ -73,6 +73,8 @@ namespace oqoforms
         private void BuildItem(object sender, System.EventArgs e)
         {
             var recipe = (BasicRecipe)ComboItemRecipes.SelectedItem;
+            List<string> stack = new List<string> { recipe.Product };
+            // Build Item
         }
     }
 }
