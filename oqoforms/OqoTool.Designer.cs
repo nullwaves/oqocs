@@ -31,34 +31,41 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OqoTool));
             this.Frame = new System.Windows.Forms.TabControl();
             this.PageCharacterGen = new System.Windows.Forms.TabPage();
+            this.ButtonGenerateByJob = new System.Windows.Forms.Button();
+            this.ButtonGenBySpeciesAndGroup = new System.Windows.Forms.Button();
+            this.ButtonGenerateBySpecies = new System.Windows.Forms.Button();
+            this.TextCharacterOutput = new System.Windows.Forms.TextBox();
+            this.ButtonRandomCharacter = new System.Windows.Forms.Button();
+            this.ButtonGenerate = new System.Windows.Forms.Button();
+            this.ComboJob = new System.Windows.Forms.ComboBox();
+            this.lblJob = new System.Windows.Forms.Label();
+            this.ComboKinship = new System.Windows.Forms.ComboBox();
+            this.lblKinship = new System.Windows.Forms.Label();
             this.ComboSpecies = new System.Windows.Forms.ComboBox();
             this.lblSpecies = new System.Windows.Forms.Label();
             this.PageLangGen = new System.Windows.Forms.TabPage();
-            this.ComboKinship = new System.Windows.Forms.ComboBox();
-            this.lblKinship = new System.Windows.Forms.Label();
-            this.ComboJob = new System.Windows.Forms.ComboBox();
-            this.lblJob = new System.Windows.Forms.Label();
-            this.ButtonGenerate = new System.Windows.Forms.Button();
-            this.ButtonRandomCharacter = new System.Windows.Forms.Button();
-            this.TextCharacterOutput = new System.Windows.Forms.TextBox();
-            this.ButtonGenerateBySpecies = new System.Windows.Forms.Button();
-            this.ButtonGenBySpeciesAndGroup = new System.Windows.Forms.Button();
-            this.ButtonGenerateByJob = new System.Windows.Forms.Button();
-            this.lblSyllables = new System.Windows.Forms.Label();
-            this.TextNumSyllables = new System.Windows.Forms.TextBox();
-            this.TextNumWords = new System.Windows.Forms.TextBox();
-            this.lblNumWords = new System.Windows.Forms.Label();
-            this.ButtonGenerateWords = new System.Windows.Forms.Button();
             this.TextWordOutput = new System.Windows.Forms.TextBox();
+            this.ButtonGenerateWords = new System.Windows.Forms.Button();
+            this.lblNumWords = new System.Windows.Forms.Label();
+            this.TextNumWords = new System.Windows.Forms.TextBox();
+            this.TextNumSyllables = new System.Windows.Forms.TextBox();
+            this.lblSyllables = new System.Windows.Forms.Label();
+            this.PageItemGen = new System.Windows.Forms.TabPage();
+            this.ComboItemRecipes = new System.Windows.Forms.ComboBox();
+            this.lblItemToBuild = new System.Windows.Forms.Label();
+            this.ButtonGenerateItem = new System.Windows.Forms.Button();
+            this.TextItemOutput = new System.Windows.Forms.TextBox();
             this.Frame.SuspendLayout();
             this.PageCharacterGen.SuspendLayout();
             this.PageLangGen.SuspendLayout();
+            this.PageItemGen.SuspendLayout();
             this.SuspendLayout();
             // 
             // Frame
             // 
             this.Frame.Controls.Add(this.PageCharacterGen);
             this.Frame.Controls.Add(this.PageLangGen);
+            this.Frame.Controls.Add(this.PageItemGen);
             this.Frame.Location = new System.Drawing.Point(12, 12);
             this.Frame.Name = "Frame";
             this.Frame.SelectedIndex = 0;
@@ -86,6 +93,98 @@
             this.PageCharacterGen.TabIndex = 0;
             this.PageCharacterGen.Text = "Char. Gen.";
             this.PageCharacterGen.UseVisualStyleBackColor = true;
+            // 
+            // ButtonGenerateByJob
+            // 
+            this.ButtonGenerateByJob.Location = new System.Drawing.Point(685, 81);
+            this.ButtonGenerateByJob.Name = "ButtonGenerateByJob";
+            this.ButtonGenerateByJob.Size = new System.Drawing.Size(75, 23);
+            this.ButtonGenerateByJob.TabIndex = 11;
+            this.ButtonGenerateByJob.Text = "By Job";
+            this.ButtonGenerateByJob.UseVisualStyleBackColor = true;
+            this.ButtonGenerateByJob.Click += new System.EventHandler(this.GenerateCharacterByJob);
+            // 
+            // ButtonGenBySpeciesAndGroup
+            // 
+            this.ButtonGenBySpeciesAndGroup.Location = new System.Drawing.Point(685, 37);
+            this.ButtonGenBySpeciesAndGroup.Name = "ButtonGenBySpeciesAndGroup";
+            this.ButtonGenBySpeciesAndGroup.Size = new System.Drawing.Size(75, 38);
+            this.ButtonGenBySpeciesAndGroup.TabIndex = 10;
+            this.ButtonGenBySpeciesAndGroup.Text = "By Species And Kinship";
+            this.ButtonGenBySpeciesAndGroup.UseVisualStyleBackColor = true;
+            this.ButtonGenBySpeciesAndGroup.Click += new System.EventHandler(this.GenerateCharacterBySpeciesAndGroup);
+            // 
+            // ButtonGenerateBySpecies
+            // 
+            this.ButtonGenerateBySpecies.Location = new System.Drawing.Point(685, 8);
+            this.ButtonGenerateBySpecies.Name = "ButtonGenerateBySpecies";
+            this.ButtonGenerateBySpecies.Size = new System.Drawing.Size(75, 23);
+            this.ButtonGenerateBySpecies.TabIndex = 9;
+            this.ButtonGenerateBySpecies.Text = "By Species";
+            this.ButtonGenerateBySpecies.UseVisualStyleBackColor = true;
+            this.ButtonGenerateBySpecies.Click += new System.EventHandler(this.GenerateCharacterBySpecies);
+            // 
+            // TextCharacterOutput
+            // 
+            this.TextCharacterOutput.Location = new System.Drawing.Point(9, 46);
+            this.TextCharacterOutput.Multiline = true;
+            this.TextCharacterOutput.Name = "TextCharacterOutput";
+            this.TextCharacterOutput.Size = new System.Drawing.Size(671, 497);
+            this.TextCharacterOutput.TabIndex = 8;
+            // 
+            // ButtonRandomCharacter
+            // 
+            this.ButtonRandomCharacter.Location = new System.Drawing.Point(605, 8);
+            this.ButtonRandomCharacter.Name = "ButtonRandomCharacter";
+            this.ButtonRandomCharacter.Size = new System.Drawing.Size(75, 23);
+            this.ButtonRandomCharacter.TabIndex = 7;
+            this.ButtonRandomCharacter.Text = "All Random";
+            this.ButtonRandomCharacter.UseVisualStyleBackColor = true;
+            this.ButtonRandomCharacter.Click += new System.EventHandler(this.GenerateRandomCharacter);
+            // 
+            // ButtonGenerate
+            // 
+            this.ButtonGenerate.Location = new System.Drawing.Point(524, 8);
+            this.ButtonGenerate.Name = "ButtonGenerate";
+            this.ButtonGenerate.Size = new System.Drawing.Size(75, 23);
+            this.ButtonGenerate.TabIndex = 6;
+            this.ButtonGenerate.Text = "Generate";
+            this.ButtonGenerate.UseVisualStyleBackColor = true;
+            this.ButtonGenerate.Click += new System.EventHandler(this.GenerateCharacter);
+            // 
+            // ComboJob
+            // 
+            this.ComboJob.FormattingEnabled = true;
+            this.ComboJob.Location = new System.Drawing.Point(397, 10);
+            this.ComboJob.Name = "ComboJob";
+            this.ComboJob.Size = new System.Drawing.Size(121, 21);
+            this.ComboJob.TabIndex = 5;
+            // 
+            // lblJob
+            // 
+            this.lblJob.AutoSize = true;
+            this.lblJob.Location = new System.Drawing.Point(364, 13);
+            this.lblJob.Name = "lblJob";
+            this.lblJob.Size = new System.Drawing.Size(27, 13);
+            this.lblJob.TabIndex = 4;
+            this.lblJob.Text = "Job:";
+            // 
+            // ComboKinship
+            // 
+            this.ComboKinship.FormattingEnabled = true;
+            this.ComboKinship.Location = new System.Drawing.Point(237, 10);
+            this.ComboKinship.Name = "ComboKinship";
+            this.ComboKinship.Size = new System.Drawing.Size(121, 21);
+            this.ComboKinship.TabIndex = 3;
+            // 
+            // lblKinship
+            // 
+            this.lblKinship.AutoSize = true;
+            this.lblKinship.Location = new System.Drawing.Point(187, 13);
+            this.lblKinship.Name = "lblKinship";
+            this.lblKinship.Size = new System.Drawing.Size(44, 13);
+            this.lblKinship.TabIndex = 2;
+            this.lblKinship.Text = "Kinship:";
             // 
             // ComboSpecies
             // 
@@ -120,129 +219,13 @@
             this.PageLangGen.Text = "Lang Gen.";
             this.PageLangGen.UseVisualStyleBackColor = true;
             // 
-            // ComboKinship
+            // TextWordOutput
             // 
-            this.ComboKinship.FormattingEnabled = true;
-            this.ComboKinship.Location = new System.Drawing.Point(237, 10);
-            this.ComboKinship.Name = "ComboKinship";
-            this.ComboKinship.Size = new System.Drawing.Size(121, 21);
-            this.ComboKinship.TabIndex = 3;
-            // 
-            // lblKinship
-            // 
-            this.lblKinship.AutoSize = true;
-            this.lblKinship.Location = new System.Drawing.Point(187, 13);
-            this.lblKinship.Name = "lblKinship";
-            this.lblKinship.Size = new System.Drawing.Size(44, 13);
-            this.lblKinship.TabIndex = 2;
-            this.lblKinship.Text = "Kinship:";
-            // 
-            // ComboJob
-            // 
-            this.ComboJob.FormattingEnabled = true;
-            this.ComboJob.Location = new System.Drawing.Point(397, 10);
-            this.ComboJob.Name = "ComboJob";
-            this.ComboJob.Size = new System.Drawing.Size(121, 21);
-            this.ComboJob.TabIndex = 5;
-            // 
-            // lblJob
-            // 
-            this.lblJob.AutoSize = true;
-            this.lblJob.Location = new System.Drawing.Point(364, 13);
-            this.lblJob.Name = "lblJob";
-            this.lblJob.Size = new System.Drawing.Size(27, 13);
-            this.lblJob.TabIndex = 4;
-            this.lblJob.Text = "Job:";
-            // 
-            // ButtonGenerate
-            // 
-            this.ButtonGenerate.Location = new System.Drawing.Point(524, 8);
-            this.ButtonGenerate.Name = "ButtonGenerate";
-            this.ButtonGenerate.Size = new System.Drawing.Size(75, 23);
-            this.ButtonGenerate.TabIndex = 6;
-            this.ButtonGenerate.Text = "Generate";
-            this.ButtonGenerate.UseVisualStyleBackColor = true;
-            this.ButtonGenerate.Click += new System.EventHandler(this.GenerateCharacter);
-            // 
-            // ButtonRandomCharacter
-            // 
-            this.ButtonRandomCharacter.Location = new System.Drawing.Point(605, 8);
-            this.ButtonRandomCharacter.Name = "ButtonRandomCharacter";
-            this.ButtonRandomCharacter.Size = new System.Drawing.Size(75, 23);
-            this.ButtonRandomCharacter.TabIndex = 7;
-            this.ButtonRandomCharacter.Text = "All Random";
-            this.ButtonRandomCharacter.UseVisualStyleBackColor = true;
-            this.ButtonRandomCharacter.Click += new System.EventHandler(this.GenerateRandomCharacter);
-            // 
-            // TextCharacterOutput
-            // 
-            this.TextCharacterOutput.Location = new System.Drawing.Point(9, 46);
-            this.TextCharacterOutput.Multiline = true;
-            this.TextCharacterOutput.Name = "TextCharacterOutput";
-            this.TextCharacterOutput.Size = new System.Drawing.Size(671, 497);
-            this.TextCharacterOutput.TabIndex = 8;
-            // 
-            // ButtonGenerateBySpecies
-            // 
-            this.ButtonGenerateBySpecies.Location = new System.Drawing.Point(685, 8);
-            this.ButtonGenerateBySpecies.Name = "ButtonGenerateBySpecies";
-            this.ButtonGenerateBySpecies.Size = new System.Drawing.Size(75, 23);
-            this.ButtonGenerateBySpecies.TabIndex = 9;
-            this.ButtonGenerateBySpecies.Text = "By Species";
-            this.ButtonGenerateBySpecies.UseVisualStyleBackColor = true;
-            this.ButtonGenerateBySpecies.Click += new System.EventHandler(this.GenerateCharacterBySpecies);
-            // 
-            // ButtonGenBySpeciesAndGroup
-            // 
-            this.ButtonGenBySpeciesAndGroup.Location = new System.Drawing.Point(685, 37);
-            this.ButtonGenBySpeciesAndGroup.Name = "ButtonGenBySpeciesAndGroup";
-            this.ButtonGenBySpeciesAndGroup.Size = new System.Drawing.Size(75, 38);
-            this.ButtonGenBySpeciesAndGroup.TabIndex = 10;
-            this.ButtonGenBySpeciesAndGroup.Text = "By Species And Kinship";
-            this.ButtonGenBySpeciesAndGroup.UseVisualStyleBackColor = true;
-            this.ButtonGenBySpeciesAndGroup.Click += new System.EventHandler(this.GenerateCharacterBySpeciesAndGroup);
-            // 
-            // ButtonGenerateByJob
-            // 
-            this.ButtonGenerateByJob.Location = new System.Drawing.Point(685, 81);
-            this.ButtonGenerateByJob.Name = "ButtonGenerateByJob";
-            this.ButtonGenerateByJob.Size = new System.Drawing.Size(75, 23);
-            this.ButtonGenerateByJob.TabIndex = 11;
-            this.ButtonGenerateByJob.Text = "By Job";
-            this.ButtonGenerateByJob.UseVisualStyleBackColor = true;
-            this.ButtonGenerateByJob.Click += new System.EventHandler(this.GenerateCharacterByJob);
-            // 
-            // lblSyllables
-            // 
-            this.lblSyllables.AutoSize = true;
-            this.lblSyllables.Location = new System.Drawing.Point(8, 9);
-            this.lblSyllables.Name = "lblSyllables";
-            this.lblSyllables.Size = new System.Drawing.Size(48, 13);
-            this.lblSyllables.TabIndex = 2;
-            this.lblSyllables.Text = "Syllables";
-            // 
-            // TextNumSyllables
-            // 
-            this.TextNumSyllables.Location = new System.Drawing.Point(62, 6);
-            this.TextNumSyllables.Name = "TextNumSyllables";
-            this.TextNumSyllables.Size = new System.Drawing.Size(47, 20);
-            this.TextNumSyllables.TabIndex = 3;
-            // 
-            // TextNumWords
-            // 
-            this.TextNumWords.Location = new System.Drawing.Point(184, 6);
-            this.TextNumWords.Name = "TextNumWords";
-            this.TextNumWords.Size = new System.Drawing.Size(67, 20);
-            this.TextNumWords.TabIndex = 4;
-            // 
-            // lblNumWords
-            // 
-            this.lblNumWords.AutoSize = true;
-            this.lblNumWords.Location = new System.Drawing.Point(115, 9);
-            this.lblNumWords.Name = "lblNumWords";
-            this.lblNumWords.Size = new System.Drawing.Size(63, 13);
-            this.lblNumWords.TabIndex = 5;
-            this.lblNumWords.Text = "# of Words:";
+            this.TextWordOutput.Location = new System.Drawing.Point(11, 46);
+            this.TextWordOutput.Multiline = true;
+            this.TextWordOutput.Name = "TextWordOutput";
+            this.TextWordOutput.Size = new System.Drawing.Size(671, 497);
+            this.TextWordOutput.TabIndex = 9;
             // 
             // ButtonGenerateWords
             // 
@@ -254,13 +237,85 @@
             this.ButtonGenerateWords.UseVisualStyleBackColor = true;
             this.ButtonGenerateWords.Click += new System.EventHandler(this.GenerateWords);
             // 
-            // TextWordOutput
+            // lblNumWords
             // 
-            this.TextWordOutput.Location = new System.Drawing.Point(11, 46);
-            this.TextWordOutput.Multiline = true;
-            this.TextWordOutput.Name = "TextWordOutput";
-            this.TextWordOutput.Size = new System.Drawing.Size(671, 497);
-            this.TextWordOutput.TabIndex = 9;
+            this.lblNumWords.AutoSize = true;
+            this.lblNumWords.Location = new System.Drawing.Point(115, 9);
+            this.lblNumWords.Name = "lblNumWords";
+            this.lblNumWords.Size = new System.Drawing.Size(63, 13);
+            this.lblNumWords.TabIndex = 5;
+            this.lblNumWords.Text = "# of Words:";
+            // 
+            // TextNumWords
+            // 
+            this.TextNumWords.Location = new System.Drawing.Point(184, 6);
+            this.TextNumWords.Name = "TextNumWords";
+            this.TextNumWords.Size = new System.Drawing.Size(67, 20);
+            this.TextNumWords.TabIndex = 4;
+            // 
+            // TextNumSyllables
+            // 
+            this.TextNumSyllables.Location = new System.Drawing.Point(62, 6);
+            this.TextNumSyllables.Name = "TextNumSyllables";
+            this.TextNumSyllables.Size = new System.Drawing.Size(47, 20);
+            this.TextNumSyllables.TabIndex = 3;
+            // 
+            // lblSyllables
+            // 
+            this.lblSyllables.AutoSize = true;
+            this.lblSyllables.Location = new System.Drawing.Point(8, 9);
+            this.lblSyllables.Name = "lblSyllables";
+            this.lblSyllables.Size = new System.Drawing.Size(48, 13);
+            this.lblSyllables.TabIndex = 2;
+            this.lblSyllables.Text = "Syllables";
+            // 
+            // PageItemGen
+            // 
+            this.PageItemGen.Controls.Add(this.TextItemOutput);
+            this.PageItemGen.Controls.Add(this.ButtonGenerateItem);
+            this.PageItemGen.Controls.Add(this.lblItemToBuild);
+            this.PageItemGen.Controls.Add(this.ComboItemRecipes);
+            this.PageItemGen.Location = new System.Drawing.Point(4, 22);
+            this.PageItemGen.Name = "PageItemGen";
+            this.PageItemGen.Size = new System.Drawing.Size(766, 549);
+            this.PageItemGen.TabIndex = 2;
+            this.PageItemGen.Text = "Item Builder";
+            this.PageItemGen.UseVisualStyleBackColor = true;
+            // 
+            // ComboItemRecipes
+            // 
+            this.ComboItemRecipes.FormattingEnabled = true;
+            this.ComboItemRecipes.Location = new System.Drawing.Point(48, 9);
+            this.ComboItemRecipes.Name = "ComboItemRecipes";
+            this.ComboItemRecipes.Size = new System.Drawing.Size(121, 21);
+            this.ComboItemRecipes.TabIndex = 0;
+            // 
+            // lblItemToBuild
+            // 
+            this.lblItemToBuild.AutoSize = true;
+            this.lblItemToBuild.Location = new System.Drawing.Point(12, 12);
+            this.lblItemToBuild.Name = "lblItemToBuild";
+            this.lblItemToBuild.Size = new System.Drawing.Size(30, 13);
+            this.lblItemToBuild.TabIndex = 1;
+            this.lblItemToBuild.Text = "Item:";
+            // 
+            // ButtonGenerateItem
+            // 
+            this.ButtonGenerateItem.Location = new System.Drawing.Point(175, 9);
+            this.ButtonGenerateItem.Name = "ButtonGenerateItem";
+            this.ButtonGenerateItem.Size = new System.Drawing.Size(75, 23);
+            this.ButtonGenerateItem.TabIndex = 8;
+            this.ButtonGenerateItem.Text = "Generate";
+            this.ButtonGenerateItem.UseVisualStyleBackColor = true;
+            this.ButtonGenerateItem.Click += new System.EventHandler(this.BuildItem);
+            // 
+            // TextItemOutput
+            // 
+            this.TextItemOutput.Location = new System.Drawing.Point(3, 36);
+            this.TextItemOutput.Multiline = true;
+            this.TextItemOutput.Name = "TextItemOutput";
+            this.TextItemOutput.Size = new System.Drawing.Size(671, 497);
+            this.TextItemOutput.TabIndex = 10;
             // 
             // OqoTool
             // 
@@ -276,6 +331,8 @@
             this.PageCharacterGen.PerformLayout();
             this.PageLangGen.ResumeLayout(false);
             this.PageLangGen.PerformLayout();
+            this.PageItemGen.ResumeLayout(false);
+            this.PageItemGen.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -303,6 +360,11 @@
         private System.Windows.Forms.Label lblNumWords;
         private System.Windows.Forms.TextBox TextNumWords;
         private System.Windows.Forms.TextBox TextWordOutput;
+        private System.Windows.Forms.TabPage PageItemGen;
+        private System.Windows.Forms.TextBox TextItemOutput;
+        private System.Windows.Forms.Button ButtonGenerateItem;
+        private System.Windows.Forms.Label lblItemToBuild;
+        private System.Windows.Forms.ComboBox ComboItemRecipes;
     }
 }
 

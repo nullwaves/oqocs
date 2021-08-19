@@ -1,5 +1,7 @@
 ﻿using oqocs;
 using oqocs.character;
+using oqocs.items;
+using oqocs.items.recipes;
 using oqocs.lang;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -17,6 +19,8 @@ namespace oqoforms
             ComboKinship.DisplayMember = "Name";
             ComboJob.DataSource = Profession.All;
             ComboJob.DisplayMember = "Name";
+            ComboItemRecipes.DataSource = RecipeCompendium.All;
+            ComboItemRecipes.DisplayMember = "Product";
         }
 
         private void GenerateCharacter(object sender, System.EventArgs e)
@@ -64,6 +68,11 @@ namespace oqoforms
             {
                 MessageBox.Show("Both the Syllables field and Number of Words field must be integers.");
             }
+        }
+
+        private void BuildItem(object sender, System.EventArgs e)
+        {
+            var recipe = (BasicRecipe)ComboItemRecipes.SelectedItem;
         }
     }
 }
