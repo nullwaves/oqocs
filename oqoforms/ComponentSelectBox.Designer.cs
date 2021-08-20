@@ -58,12 +58,12 @@
             this.ComboComponent.FormattingEnabled = true;
             this.ComboComponent.Location = new System.Drawing.Point(20, 41);
             this.ComboComponent.Name = "ComboComponent";
-            this.ComboComponent.Size = new System.Drawing.Size(153, 21);
+            this.ComboComponent.Size = new System.Drawing.Size(299, 21);
             this.ComboComponent.TabIndex = 2;
             // 
             // ButtonSelect
             // 
-            this.ButtonSelect.Location = new System.Drawing.Point(179, 41);
+            this.ButtonSelect.Location = new System.Drawing.Point(325, 41);
             this.ButtonSelect.Name = "ButtonSelect";
             this.ButtonSelect.Size = new System.Drawing.Size(75, 23);
             this.ButtonSelect.TabIndex = 3;
@@ -75,7 +75,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 81);
+            this.ClientSize = new System.Drawing.Size(412, 91);
             this.ControlBox = false;
             this.Controls.Add(this.ButtonSelect);
             this.Controls.Add(this.ComboComponent);
@@ -85,6 +85,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ComponentSelectBox";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Component Selection";
             this.ResumeLayout(false);
             this.PerformLayout();

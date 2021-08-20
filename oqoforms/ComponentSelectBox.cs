@@ -30,7 +30,6 @@ namespace oqoforms
                 }
                 form.TextItemStack.Text = st;
                 form.ComboComponent.DataSource = components;
-                form.ComboComponent.DisplayMember = "Name";
 
                 var dres = form.ShowDialog();
                 return dres == DialogResult.OK ? (BasicItem)form.ComboComponent.SelectedItem : components.First();
@@ -49,7 +48,6 @@ namespace oqoforms
                 }
                 form.TextItemStack.Text = st;
                 form.ComboComponent.DataSource = components;
-                form.ComboComponent.DisplayMember = "Product";
 
                 var dres = form.ShowDialog();
                 return dres == DialogResult.OK ? (BasicRecipe)form.ComboComponent.SelectedItem : components.First();

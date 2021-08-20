@@ -10,6 +10,8 @@ namespace oqocs.items
         public decimal PriceMultiplier { get; set; }
         public decimal DurabilityMultiplier { get; set; }
         public string Knowledge { get; set; }
+
+        public override string ToString() => $"{Product} P.Multi: x{PriceMultiplier} D.Multi: x{DurabilityMultiplier}";
     }
 
     public enum ComponentType

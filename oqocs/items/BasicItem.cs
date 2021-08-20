@@ -3,6 +3,7 @@
     public class BasicItem : IItem
     {
         private string name;
+
         public string Name
         {
             get => name;
@@ -10,6 +11,7 @@
         }
 
         private string description;
+
         public string Description
         {
             get => description;
@@ -17,6 +19,7 @@
         }
 
         private decimal costInPence;
+
         public decimal CostInPence
         {
             get => costInPence;
@@ -24,6 +27,7 @@
         }
 
         private Grade grade;
+
         public Grade Quality
         {
             get => grade;
@@ -31,6 +35,7 @@
         }
 
         private Unit unit;
+
         public Unit Unit
         {
             get => unit;
@@ -38,6 +43,7 @@
         }
 
         private int durability;
+
         public int Durability
         {
             get => durability;
@@ -48,5 +54,7 @@
         {
             return (int)(Quality.PriceMultiplier * CostInPence);
         }
+
+        public override string ToString() => $"{Name} - {CostInPence}p DUR:{Durability}";
     }
 }
