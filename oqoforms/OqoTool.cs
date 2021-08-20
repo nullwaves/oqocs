@@ -73,8 +73,9 @@ namespace oqoforms
         private void BuildItem(object sender, System.EventArgs e)
         {
             var recipe = (BasicRecipe)ComboItemRecipes.SelectedItem;
-            List<string> stack = new List<string> { recipe.Product };
-            // Build Item
+            var finalItem = new ItemBuilder().BuildItem(recipe);
+            TextItemOutput.Text = $"Built {finalItem.Name} Valued at {CurrencyFormatter.PrettyCopperFromPence(finalItem.QualityAdjustedValueInPence())} with DUR {finalItem.Durability}\r\n" +
+                    $"{finalItem.Description}\r\n";
         }
     }
 }

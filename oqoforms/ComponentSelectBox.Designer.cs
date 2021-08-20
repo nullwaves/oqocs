@@ -69,6 +69,7 @@
             this.ButtonSelect.TabIndex = 3;
             this.ButtonSelect.Text = "Go";
             this.ButtonSelect.UseVisualStyleBackColor = true;
+            this.ButtonSelect.Click += new System.EventHandler(this.SelectComponent);
             // 
             // ComponentSelectBox
             // 

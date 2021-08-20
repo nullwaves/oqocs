@@ -49,6 +49,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComponentSelectBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentSelectBox.Designer.cs">
+      <DependentUpon>ComponentSelectBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemBuilder.cs" />
     <Compile Include="OqoTool.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +64,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ComponentSelectBox.resx">
+      <DependentUpon>ComponentSelectBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OqoTool.resx">
       <DependentUpon>OqoTool.cs</DependentUpon>
     </EmbeddedResource>
