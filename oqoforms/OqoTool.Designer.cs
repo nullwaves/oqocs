@@ -51,10 +51,11 @@
             this.TextNumSyllables = new System.Windows.Forms.TextBox();
             this.lblSyllables = new System.Windows.Forms.Label();
             this.PageItemGen = new System.Windows.Forms.TabPage();
-            this.ComboItemRecipes = new System.Windows.Forms.ComboBox();
-            this.lblItemToBuild = new System.Windows.Forms.Label();
-            this.ButtonGenerateItem = new System.Windows.Forms.Button();
             this.TextItemOutput = new System.Windows.Forms.TextBox();
+            this.ButtonGenerateItem = new System.Windows.Forms.Button();
+            this.lblItemToBuild = new System.Windows.Forms.Label();
+            this.ComboItemRecipes = new System.Windows.Forms.ComboBox();
+            this.ButtonGenerateBySpeciesAndJob = new System.Windows.Forms.Button();
             this.Frame.SuspendLayout();
             this.PageCharacterGen.SuspendLayout();
             this.PageLangGen.SuspendLayout();
@@ -74,6 +75,7 @@
             // 
             // PageCharacterGen
             // 
+            this.PageCharacterGen.Controls.Add(this.ButtonGenerateBySpeciesAndJob);
             this.PageCharacterGen.Controls.Add(this.ButtonGenerateByJob);
             this.PageCharacterGen.Controls.Add(this.ButtonGenBySpeciesAndGroup);
             this.PageCharacterGen.Controls.Add(this.ButtonGenerateBySpecies);
@@ -282,22 +284,13 @@
             this.PageItemGen.Text = "Item Builder";
             this.PageItemGen.UseVisualStyleBackColor = true;
             // 
-            // ComboItemRecipes
+            // TextItemOutput
             // 
-            this.ComboItemRecipes.FormattingEnabled = true;
-            this.ComboItemRecipes.Location = new System.Drawing.Point(48, 9);
-            this.ComboItemRecipes.Name = "ComboItemRecipes";
-            this.ComboItemRecipes.Size = new System.Drawing.Size(121, 21);
-            this.ComboItemRecipes.TabIndex = 0;
-            // 
-            // lblItemToBuild
-            // 
-            this.lblItemToBuild.AutoSize = true;
-            this.lblItemToBuild.Location = new System.Drawing.Point(12, 12);
-            this.lblItemToBuild.Name = "lblItemToBuild";
-            this.lblItemToBuild.Size = new System.Drawing.Size(30, 13);
-            this.lblItemToBuild.TabIndex = 1;
-            this.lblItemToBuild.Text = "Item:";
+            this.TextItemOutput.Location = new System.Drawing.Point(3, 36);
+            this.TextItemOutput.Multiline = true;
+            this.TextItemOutput.Name = "TextItemOutput";
+            this.TextItemOutput.Size = new System.Drawing.Size(671, 497);
+            this.TextItemOutput.TabIndex = 10;
             // 
             // ButtonGenerateItem
             // 
@@ -309,13 +302,32 @@
             this.ButtonGenerateItem.UseVisualStyleBackColor = true;
             this.ButtonGenerateItem.Click += new System.EventHandler(this.BuildItem);
             // 
-            // TextItemOutput
+            // lblItemToBuild
             // 
-            this.TextItemOutput.Location = new System.Drawing.Point(3, 36);
-            this.TextItemOutput.Multiline = true;
-            this.TextItemOutput.Name = "TextItemOutput";
-            this.TextItemOutput.Size = new System.Drawing.Size(671, 497);
-            this.TextItemOutput.TabIndex = 10;
+            this.lblItemToBuild.AutoSize = true;
+            this.lblItemToBuild.Location = new System.Drawing.Point(12, 12);
+            this.lblItemToBuild.Name = "lblItemToBuild";
+            this.lblItemToBuild.Size = new System.Drawing.Size(30, 13);
+            this.lblItemToBuild.TabIndex = 1;
+            this.lblItemToBuild.Text = "Item:";
+            // 
+            // ComboItemRecipes
+            // 
+            this.ComboItemRecipes.FormattingEnabled = true;
+            this.ComboItemRecipes.Location = new System.Drawing.Point(48, 9);
+            this.ComboItemRecipes.Name = "ComboItemRecipes";
+            this.ComboItemRecipes.Size = new System.Drawing.Size(121, 21);
+            this.ComboItemRecipes.TabIndex = 0;
+            // 
+            // ButtonGenerateBySpeciesAndJob
+            // 
+            this.ButtonGenerateBySpeciesAndJob.Location = new System.Drawing.Point(685, 110);
+            this.ButtonGenerateBySpeciesAndJob.Name = "ButtonGenerateBySpeciesAndJob";
+            this.ButtonGenerateBySpeciesAndJob.Size = new System.Drawing.Size(75, 38);
+            this.ButtonGenerateBySpeciesAndJob.TabIndex = 12;
+            this.ButtonGenerateBySpeciesAndJob.Text = "By Species And Job";
+            this.ButtonGenerateBySpeciesAndJob.UseVisualStyleBackColor = true;
+            this.ButtonGenerateBySpeciesAndJob.Click += new System.EventHandler(this.GenerateCharacterBySpeciesAndJob);
             // 
             // OqoTool
             // 
@@ -365,6 +377,7 @@
         private System.Windows.Forms.Button ButtonGenerateItem;
         private System.Windows.Forms.Label lblItemToBuild;
         private System.Windows.Forms.ComboBox ComboItemRecipes;
+        private System.Windows.Forms.Button ButtonGenerateBySpeciesAndJob;
     }
 }
 

@@ -77,5 +77,10 @@ namespace oqoforms
             TextItemOutput.Text = $"Built {finalItem.Name} Valued at {CurrencyFormatter.PrettyCopperFromPence(finalItem.QualityAdjustedValueInPence())} with DUR {finalItem.Durability}\r\n" +
                     $"{finalItem.Description}\r\n";
         }
+
+        private void GenerateCharacterBySpeciesAndJob(object sender, System.EventArgs e)
+        {
+            TextCharacterOutput.Text = CharacterManager.GenerateCharacter((Species)ComboSpecies.SelectedItem, CharacterManager.RandomKinship(), (Profession)ComboJob.SelectedItem).ToString();
+        }
     }
 }
