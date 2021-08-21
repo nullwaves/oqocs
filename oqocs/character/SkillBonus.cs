@@ -34,6 +34,11 @@
             }
         }
 
+        public override string ToString()
+        {
+            return $"{Skill.Name} - {Name} {CurrentBonus}/{MaxBonus}";
+        }
+
         public SkillBonus(Skill skill, string name, int[] costs)
         {
             Skill = skill;
