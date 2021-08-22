@@ -10,7 +10,7 @@ namespace oqocs
 
         public SkillManager()
         {
-            Skills = DefaultSkills.All;
+            Skills = SkillFactory.MakeSkillList(DefaultSkills.All);
             XPH = 0;
         }
 
@@ -45,16 +45,16 @@ namespace oqocs
         public int TryBuyBonus(SkillBonus bonus, int spendLimit)
         {
             int spent = 0;
-            for (int i = 0; bonus.CanIncrease && i < bonus.MaxBonus; i++)
+            var l = Skills.Find(x => x.Name == bonus.Name);
+            for (int i = 0; l.CanIncrease && i < l.MaxBonus; i++)
             {
-                int cost = bonus.NextBonusCost;
+                int cost = l.NextBonusCost;
                 if (spendLimit >= cost && spendLimit <= XPH)
                 {
                     if (TryBuyBonus(bonus))
                     {
                         spendLimit -= cost;
                         spent += cost;
-                        bonus.CurrentBonus++;
                     }
                 }
                 else
