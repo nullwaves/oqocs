@@ -81,7 +81,7 @@ namespace oqocs.character
             {
                 if (s.CurrentBonus > 0)
                 {
-                    retVal.AppendLine($"{s.Skill.Name} - {s.Name} - {s.CurrentBonus}");
+                    retVal.AppendLine(s.ToString());
                 }
             };
 

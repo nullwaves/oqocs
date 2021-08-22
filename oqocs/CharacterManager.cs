@@ -11,30 +11,30 @@ namespace oqocs
 
         public static Profession RandomJob() => Profession.All[RandomService.Instance.Next(Profession.All.Count)];
 
-        public static Character GenerateCharacter()
+        public static Character GenerateCharacter(int xph)
         {
-            var retVal = GenerateCharacter(RandomSpecies(), RandomKinship(), RandomJob());
+            var retVal = GenerateCharacter(RandomSpecies(), RandomKinship(), RandomJob(), xph);
             return retVal;
         }
 
-        public static Character GenerateCharacter(Species species)
+        public static Character GenerateCharacter(Species species, int xph)
         {
-            var retVal = GenerateCharacter(species, RandomKinship(), RandomJob());
+            var retVal = GenerateCharacter(species, RandomKinship(), RandomJob(), xph);
             return retVal;
         }
 
-        public static Character GenerateCharacter(Profession job)
+        public static Character GenerateCharacter(Profession job, int xph)
         {
-            return GenerateCharacter(RandomSpecies(), RandomKinship(), job);
+            return GenerateCharacter(RandomSpecies(), RandomKinship(), job, xph);
         }
 
-        public static Character GenerateCharacter(Species species, KinshipGroup group)
+        public static Character GenerateCharacter(Species species, KinshipGroup group, int xph)
         {
-            var retVal = GenerateCharacter(species, group, RandomJob());
+            var retVal = GenerateCharacter(species, group, RandomJob(), xph);
             return retVal;
         }
 
-        public static Character GenerateCharacter(Species species, KinshipGroup group, Profession job)
+        public static Character GenerateCharacter(Species species, KinshipGroup group, Profession job, int xph)
         {
             string name = WordBuilder.BuildWord(RandomService.Instance.Next(2, 4));
             double mod = RandomService.Instance.NextDouble();
@@ -60,7 +60,7 @@ namespace oqocs
                 $"{weight}lbs"
                 );
 
-            retVal.Skills.GiveXPH(2900);
+            retVal.Skills.GiveXPH(xph);
             retVal.Skills.AllocateByProfession(retVal.Job);
             return retVal;
         }

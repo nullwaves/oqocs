@@ -21,6 +21,21 @@ namespace oqoforms
             ComboJob.DisplayMember = "Name";
             ComboItemRecipes.DataSource = RecipeCompendium.All;
             ComboItemRecipes.DisplayMember = "Product";
+            _ = CharGenXPH;
+        }
+
+        private int CharGenXPH
+        {
+            get
+            {
+                if (int.TryParse(TextXPH.Text, out int ret))
+                    return ret;
+                else
+                {
+                    TextXPH.Text = "2900";
+                    return 2900;
+                }
+            }
         }
 
         private void GenerateCharacter(object sender, System.EventArgs e)
@@ -29,27 +44,27 @@ namespace oqoforms
             KinshipGroup group = (KinshipGroup)ComboKinship.SelectedItem;
             Profession job = (Profession)ComboJob.SelectedItem;
 
-            TextCharacterOutput.Text = CharacterManager.GenerateCharacter(species, group, job).ToString();
+            TextCharacterOutput.Text = CharacterManager.GenerateCharacter(species, group, job, CharGenXPH).ToString();
         }
 
         private void GenerateRandomCharacter(object sender, System.EventArgs e)
         {
-            TextCharacterOutput.Text = CharacterManager.GenerateCharacter().ToString();
+            TextCharacterOutput.Text = CharacterManager.GenerateCharacter(CharGenXPH).ToString();
         }
 
         private void GenerateCharacterBySpecies(object sender, System.EventArgs e)
         {
-            TextCharacterOutput.Text = CharacterManager.GenerateCharacter((Species)ComboSpecies.SelectedItem).ToString();
+            TextCharacterOutput.Text = CharacterManager.GenerateCharacter((Species)ComboSpecies.SelectedItem, CharGenXPH).ToString();
         }
 
         private void GenerateCharacterBySpeciesAndGroup(object sender, System.EventArgs e)
         {
-            TextCharacterOutput.Text = CharacterManager.GenerateCharacter((Species)ComboSpecies.SelectedItem, (KinshipGroup)ComboKinship.SelectedItem).ToString();
+            TextCharacterOutput.Text = CharacterManager.GenerateCharacter((Species)ComboSpecies.SelectedItem, (KinshipGroup)ComboKinship.SelectedItem, CharGenXPH).ToString();
         }
 
         private void GenerateCharacterByJob(object sender, System.EventArgs e)
         {
-            TextCharacterOutput.Text = CharacterManager.GenerateCharacter((Profession)ComboJob.SelectedItem).ToString();
+            TextCharacterOutput.Text = CharacterManager.GenerateCharacter((Profession)ComboJob.SelectedItem, CharGenXPH).ToString();
         }
 
         private void GenerateWords(object sender, System.EventArgs e)
@@ -80,7 +95,7 @@ namespace oqoforms
 
         private void GenerateCharacterBySpeciesAndJob(object sender, System.EventArgs e)
         {
-            TextCharacterOutput.Text = CharacterManager.GenerateCharacter((Species)ComboSpecies.SelectedItem, CharacterManager.RandomKinship(), (Profession)ComboJob.SelectedItem).ToString();
+            TextCharacterOutput.Text = CharacterManager.GenerateCharacter((Species)ComboSpecies.SelectedItem, CharacterManager.RandomKinship(), (Profession)ComboJob.SelectedItem, CharGenXPH).ToString();
         }
     }
 }
